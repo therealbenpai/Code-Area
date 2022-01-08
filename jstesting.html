@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Testing</title>
+        <!-- CSS -->
+        <link href="stylesheets/file-specific/js.css" rel="stylesheet" type="text/css">
+        <link href="stylesheets/general/nav.css" rel="stylesheet" type="text/css">
+        <link href="stylesheets/general/svgformat.css" rel="stylesheet" type="text/css">
+        <link href="stylesheets/general/cel.css" rel="stylesheet" type="text/css">
+        <!-- Scripts -->
+        <script src="scripts/jstesting.js"></script>
+        <!-- Imported Scripts -->
+        <script src="https://cdn.jsdelivr.net/gh/sparty182020/jsScripts/randomGenerators.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/sparty182020/jsScripts/websiteGenerators.js"></script>
+    </head>
+    <body>
+        <noticearea>
+            <notice>This page contains scripts that may crash your computer</notice>
+        </noticearea>
+        <br><br>
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="userpage.html">Userpage</a></li>
+                    <li class="selelcted">JS Testing</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="buttonarea" id="ctadiv">
+            <button id="ctab1" class="ctab" onclick="genwin(0,400,400)">Black and White Website</button>
+            <br>
+            <button id="ctab2" class="ctab" onclick="genwin(1,100,300)">Click Counter</button>
+            <br>
+            <button id="ctab3" class="ctab" onclick="genwin(2,100,200)">Random Number</button>
+            <br>
+            <button id="ctab4" class="ctab" onclick="genwin(3,100,200)">Random Name</button>
+            <br>
+            <button id="ctab5" class="ctab" onclick="genwin(4,100,200)">Random Color</button>
+        </div>
+    </body>
+</html>
