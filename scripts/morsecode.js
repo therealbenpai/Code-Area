@@ -48,7 +48,7 @@ const stmca = {
 }
 
 // String to Morse Code
-function stmc(string,sd) {
+function stmc(string, sd) {
     var output = ''
     if (sd !== true) {
         const scRegex = /\w/
