@@ -38,7 +38,7 @@ function sth(string, num) {
         }
         output = output.replace(/[ \t]+$/gmi, '')
     } else {
-        string.toString(16)
+        output = string.toString(16)
     }
     return output
 }
@@ -67,7 +67,7 @@ function stb32(string, num) {
         }
         output = output.replace(/[ \t]+$/gmi, '')
     } else {
-        string.toString(32)
+        output = string.toString(32)
     }
     return output
 }
