@@ -1,53 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Title Here</title>
-        <!-- CSS -->
-        <link href="stylesheets/general/nav.css" rel="stylesheet" type="text/css">
-        <link href="stylesheets/general/svgformat.css" rel="stylesheet" type="text/css">
-        <link href="stylesheets/general/cel.css" rel="stylesheet" type="text/css">
-        <link href="stylesheets/file-specific/text-coverter.css" rel="stylesheet" type="text/css">
-        <!-- Script -->
-        <script src="scripts/converter.js"></script>
-        <script src="scripts/morsecode.js"></script>
-        <script src="scripts/class.js"></script>
-    </head>
-    <body>
-        <div class="navigation">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="userpage.html">Userpage</a></li>
-                    <li class="selelcted">Text Converter</li>
-                </ul>
-            </nav>
+
+<head>
+    <title>Title Here</title>
+    <!-- CSS -->
+    <link href="stylesheets/general/nav.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/general/svgformat.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/general/cel.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/file-specific/text-coverter.css" rel="stylesheet" type="text/css">
+    <!-- Script -->
+    <script src="scripts/converter.js"></script>
+    <script src="scripts/morsecode.js"></script>
+    <script src="scripts/class.js"></script>
+</head>
+
+<body>
+    <div class="navigation">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="userpage.html">Userpage</a></li>
+                <li class="selelcted">Text Converter</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="textarea">
+        <input type="text" id="textinput" name="Text Here: " maxlength="1">
+        <br>
+        <div class="textinfo">
+            <p><strong>Letter: </strong>
+                <ttag id="letter"></ttag>
+            </p>
+            <p><strong>charCode: </strong>
+                <ttag id="charCode"></ttag>
+            </p>
+            <p><strong>Binary: </strong>
+                <ttag id="binary"></ttag>
+            </p>
+            <p><strong>Hex: </strong>
+                <ttag id="hex"></ttag>
+            </p>
+            <p><strong>Base32: </strong>
+                <ttag id="b32"></ttag>
+            </p>
+            <p><strong>Morse Code: </strong>
+                <ttag id="morsecode"></ttag>
+            </p>
         </div>
-        <div class="textarea">
-            <input type="text" id="textinput" name="Text Here: " maxlength="1">
-            <br>
-            <div class="textinfo">
-                <p><strong>Letter: </strong><ttag id="letter"></ttag></p>
-                <p><strong>charCode: </strong><ttag id="charCode"></ttag></p>
-                <p><strong>Binary: </strong><ttag id="binary"></ttag></p>
-                <p><strong>Hex: </strong><ttag id="hex"></ttag></p>
-                <p><strong>Base32: </strong><ttag id="b32"></ttag></p>
-                <p><strong>Morse Code: </strong><ttag id="morsecode"></ttag></p>
-            </div>
-        </div>
-        <script async>
-            function convert(e) {
-                const textel = document.getElementById("textinput")
-                const textv = textel.value
-                document.getElementById("letter").innerText = textv
-                document.getElementById("charCode").innerText = e.keyCode
-                document.getElementById("binary").innerText = stbi(textv)
-                document.getElementById("hex").innerText = sth(textv)
-                document.getElementById("b32").innerText = stb32(textv)
-                document.getElementById("morsecode").innerText = stmc(textv)
-                textel.value = ''
-            }
-            document.getElementById("textinput").addEventListener('keydown',convert)
-        </script>
-    </body>
+    </div>
+    <script async>
+        function convert(e) {
+            const textel = document.getElementById("textinput")
+            const textv = textel.value
+            document.getElementById("letter").innerText = textv
+            document.getElementById("charCode").innerText = e.keyCode
+            document.getElementById("binary").innerText = stbi(e.keyCode, true)
+            document.getElementById("hex").innerText = sth(e.keyCode, true)
+            document.getElementById("b32").innerText = stb32(e.keyCode, true)
+            document.getElementById("morsecode").innerText = stmc(textv)
+            textel.value = ''
+        }
+        document.getElementById("textinput").addEventListener('keydown', convert)
+    </script>
+</body>
+
 </html>
