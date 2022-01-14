@@ -1,6 +1,6 @@
 // String to binary
 function stbi(string, num) {
-    var output = ''
+    let output = ''
     if (num !== true) {
         const length = string.split('').length
         let i;
@@ -18,7 +18,7 @@ function stbi(string, num) {
 function bits(binary) {
     const length = binary.split(' ').length
     let i;
-    var output = ''
+    let output = ''
     for (i = 0; i < length; i++) {
         const splitbi = binary.split(' ')
         const charcode = parseInt(splitbi[i], 2).toString(10)
@@ -29,7 +29,7 @@ function bits(binary) {
 
 // String to hex
 function sth(string, num) {
-    var output = ''
+    let output = ''
     if (num !== true) {
         const length = string.split('').length
         let i;
@@ -47,7 +47,7 @@ function sth(string, num) {
 function hts(hex) {
     const length = hex.split(' ').length
     let i;
-    var output = ''
+    let output = ''
     for (i = 0; i < length; i++) {
         const splith = hex.split(' ')
         const charcode = parseInt(splith[i], 16).toString(10)
@@ -58,7 +58,7 @@ function hts(hex) {
 
 // String to Base32
 function stb32(string, num) {
-    var output = ''
+    let output = ''
     if (num !== true) {
         const length = string.split('').length
         let i;
@@ -76,7 +76,7 @@ function stb32(string, num) {
 function b32ts(b32) {
     const length = b32.split(' ').length
     let i;
-    var output = ''
+    let output = ''
     for (i = 0; i < length; i++) {
         const splitb32 = b32.split(' ')
         const charcode = parseInt(splitb32[i], 32).toString(10)

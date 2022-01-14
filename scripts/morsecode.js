@@ -49,7 +49,7 @@ const stmca = {
 
 // String to Morse Code
 function stmc(string, sd) {
-    var output = ''
+    let output = ''
     if (sd !== true) {
         const scRegex = /\w/
         const ncRegex = /\d/
