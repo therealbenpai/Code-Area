@@ -12,17 +12,18 @@
         <script src="scripts/morsecode.js"></script>
         <script src="scripts/class.js"></script>
         <script>
-            function convert() {
+            function convert(e) {
                 const textel = document.getElementById("textinput")
                 const textv = textel.value
                 document.getElementById("letter").innerText = textv
-                document.getElementById("charCode").innerText = textv.charCodeAt(0)
+                document.getElementById("charCode").innerText = e.keyCode()
                 document.getElementById("binary").innerText = stbi(textv)
                 document.getElementById("hex").innerText = sth(textv)
                 document.getElementById("b32").innerText = stb32(textv)
                 document.getElementById("morsecode").innerText = stmc(textv)
                 textel.value = ''
             }
+            document.addEventListener('keydown',convert(e))
         </script>
     </head>
     <body>
