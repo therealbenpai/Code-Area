@@ -54,11 +54,11 @@
             const textel = document.getElementById("textinput")
             const textv = textel.value
             document.getElementById("letter").innerText = textv
-            document.getElementById("charCode").innerText = await String(e.keyCode)
-            document.getElementById("binary").innerText = await stbi(String(e.keyCode), true)
-            document.getElementById("hex").innerText = await sth(String(e.keyCode), true)
-            document.getElementById("b32").innerText = await stb32(String(e.keyCode), true)
-            document.getElementById("morsecode").innerText = await stmc(String(textv), true);
+            document.getElementById("charCode").innerText = String(e.keyCode)
+            document.getElementById("binary").innerText = stbi(String(e.keyCode), true)
+            document.getElementById("hex").innerText = sth(String(e.keyCode), true)
+            document.getElementById("b32").innerText = stb32(String(e.keyCode), true)
+            document.getElementById("morsecode").innerText = stmc(String(e.key), true);
             textel.value = ''
         }
         document.getElementById("textinput").addEventListener('keydown', convert)
