@@ -1,7 +1,7 @@
 // String to binary
 function stbi(string, num) {
     var output = ''
-    if (num != true) {
+    if (num !== true) {
         const length = string.split('').length
         let i;
         for (i = 0; i < length; i++) {
@@ -30,7 +30,7 @@ function bits(binary) {
 // String to hex
 function sth(string, num) {
     var output = ''
-    if (num != true) {
+    if (num !== true) {
         const length = string.split('').length
         let i;
         for (i = 0; i < length; i++) {
@@ -59,7 +59,7 @@ function hts(hex) {
 // String to Base32
 function stb32(string, num) {
     var output = ''
-    if (num != true) {
+    if (num !== true) {
         const length = string.split('').length
         let i;
         for (i = 0; i < length; i++) {
