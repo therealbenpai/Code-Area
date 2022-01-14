@@ -58,7 +58,7 @@
             document.getElementById("binary").innerText = stbi(String(e.keyCode), true)
             document.getElementById("hex").innerText = sth(String(e.keyCode), true)
             document.getElementById("b32").innerText = stb32(String(e.keyCode), true)
-            document.getElementById("morsecode").innerText = stmc(textv)
+            document.getElementById("morsecode").innerText = stmc(String(textv))
             textel.value = ''
         }
         document.getElementById("textinput").addEventListener('keydown', convert)

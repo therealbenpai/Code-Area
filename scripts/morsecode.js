@@ -151,7 +151,8 @@ function stmc(string) {
             }
         }
     }
-    return output.replace(/^[ \t]+|[ \t]+$/gmi,'')
+    output = output.replace(/^[ \t]+|[ \t]+$/gmi,'')
+    return output
 }
 
 // Morse Code to String
