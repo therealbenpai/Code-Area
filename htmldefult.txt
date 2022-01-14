@@ -16,6 +16,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="login.html">Login</a></li>
                     <li><a href="userpage.html">Userpage</a></li>
+                    <li><a href="text-converter.html">Text Converter</a></li>
                     <li class="selelcted">Page Name Here</li>
                 </ul>
             </nav>
