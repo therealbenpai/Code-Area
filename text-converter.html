@@ -54,10 +54,10 @@
             const textel = document.getElementById("textinput")
             const textv = textel.value
             document.getElementById("letter").innerText = textv
-            document.getElementById("charCode").innerText = e.keyCode
-            document.getElementById("binary").innerText = stbi(e.keyCode, true)
-            document.getElementById("hex").innerText = sth(e.keyCode, true)
-            document.getElementById("b32").innerText = stb32(e.keyCode, true)
+            document.getElementById("charCode").innerText = String(e.keyCode)
+            document.getElementById("binary").innerText = stbi(String(e.keyCode), true)
+            document.getElementById("hex").innerText = sth(String(e.keyCode), true)
+            document.getElementById("b32").innerText = stb32(String(e.keyCode), true)
             document.getElementById("morsecode").innerText = stmc(textv)
             textel.value = ''
         }
