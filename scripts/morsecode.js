@@ -156,39 +156,39 @@ function stmc(string,sd) {
     } else {
         if (string == "a") {
             output = `${stmca.a}`
-        } else if (splitstr[i] == "b") {
+        } else if (string == "b") {
             output = `${stmca.b}`
-        } else if (splitstr[i] == "c") {
+        } else if (string == "c") {
             output = `${stmca.c}`
-        } else if (splitstr[i] == "d") {
+        } else if (string == "d") {
             output = `${stmca.d}`
-        } else if (splitstr[i] == "e") {
+        } else if (string == "e") {
             output = `${stmca.e}`
-        } else if (splitstr[i] == "f") {
+        } else if (string == "f") {
             output = `${stmca.f}`
-        } else if (splitstr[i] == "g") {
+        } else if (string == "g") {
             output = `${stmca.g}`
-        } else if (splitstr[i] == "h") {
+        } else if (string == "h") {
             output = `${stmca.h}`
-        } else if (splitstr[i] == "i") {
+        } else if (string == "i") {
             output = `${stmca.i}`
-        } else if (splitstr[i] == "j") {
+        } else if (string == "j") {
             output = `${stmca.j}`
-        } else if (splitstr[i] == "k") {
+        } else if (string == "k") {
             output = `${stmca.k}`
-        } else if (splitstr[i] == "l") {
+        } else if (string == "l") {
             output = `${stmca.l}`
-        } else if (splitstr[i] == "m") {
+        } else if (string == "m") {
             output = `${stmca.m}`
-        } else if (splitstr[i] == "n") {
+        } else if (string == "n") {
             output = `${stmca.n}`
-        } else if (splitstr[i] == "o") {
+        } else if (string == "o") {
             output = `${stmca.o}`
-        } else if (splitstr[i] == "p") {
+        } else if (string == "p") {
             output = `${stmca.p}`
-        } else if (splitstr[i] == "q") {
+        } else if (string == "q") {
             output = `${stmca.q}`
-        } else if (splitstr[i] == "r") {
+        } else if (string == "r") {
             output = `${stmca.r}`
         } else if (string == "s") {
             output = `${stmca.s}`
