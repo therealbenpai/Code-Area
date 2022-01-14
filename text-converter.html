@@ -11,20 +11,6 @@
         <script src="scripts/converter.js"></script>
         <script src="scripts/morsecode.js"></script>
         <script src="scripts/class.js"></script>
-        <script async>
-            function convert(e) {
-                const textel = document.getElementById("textinput")
-                const textv = textel.value
-                document.getElementById("letter").innerText = textv
-                document.getElementById("charCode").innerText = e.keyCode()
-                document.getElementById("binary").innerText = stbi(textv)
-                document.getElementById("hex").innerText = sth(textv)
-                document.getElementById("b32").innerText = stb32(textv)
-                document.getElementById("morsecode").innerText = stmc(textv)
-                textel.value = ''
-            }
-            document.getElementById("textinput").addEventListener('keydown',convert(e))
-        </script>
     </head>
     <body>
         <div class="navigation">
@@ -49,5 +35,19 @@
                 <p><strong>Morse Code: </strong><ttag id="morsecode"></ttag></p>
             </div>
         </div>
+        <script async>
+            function convert(e) {
+                const textel = document.getElementById("textinput")
+                const textv = textel.value
+                document.getElementById("letter").innerText = textv
+                document.getElementById("charCode").innerText = e.keyCode()
+                document.getElementById("binary").innerText = stbi(textv)
+                document.getElementById("hex").innerText = sth(textv)
+                document.getElementById("b32").innerText = stb32(textv)
+                document.getElementById("morsecode").innerText = stmc(textv)
+                textel.value = ''
+            }
+            document.getElementById("textinput").addEventListener('keydown',convert(e))
+        </script>
     </body>
 </html>
