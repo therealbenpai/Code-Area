@@ -9,7 +9,7 @@ function stbi(string, num) {
         }
         output = output.replace(/[ \t]+$/gmi, '')
     } else {
-        output = string.toString(2)
+        output = parseInt(string,10).toString(2)
     }
     return output
 }
@@ -38,7 +38,7 @@ function sth(string, num) {
         }
         output = output.replace(/[ \t]+$/gmi, '')
     } else {
-        output = string.toString(16)
+        output = parseInt(string,10).toString(16)
     }
     return output
 }
@@ -67,7 +67,7 @@ function stb32(string, num) {
         }
         output = output.replace(/[ \t]+$/gmi, '')
     } else {
-        output = string.toString(32)
+        output = parseInt(string,10).toString(32)
     }
     return output
 }
