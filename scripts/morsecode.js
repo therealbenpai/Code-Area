@@ -1,157 +1,243 @@
 // Morse Code Dictionary
 const stmca = {
-    a : ".-",
-    b : "-...",
-    c : "-.-.",
-    d : "-..",
-    e : ".",
-    f : "..-.",
-    g : "--.",
-    h : "....",
-    i : "..",
-    j : ".---",
-    k : "-.-",
-    l : ".-..",
-    m : "--",
-    n : "-.",
-    o : "---",
-    p : ".--.",
-    q : "--.-",
-    r : ".-.",
-    s : "...",
-    t : "-",
-    u : "..-",
-    v : "...-",
-    w : ".--",
-    x : "-..-",
-    y : "-.--",
-    z : "--..",
-    specials : [{
-        space : "/",
-        period : ".-.-.-",
-        comma : "--..--",
-        dash : "-..-.",
-        slash : "-....-"
+    a: ".-",
+    b: "-...",
+    c: "-.-.",
+    d: "-..",
+    e: ".",
+    f: "..-.",
+    g: "--.",
+    h: "....",
+    i: "..",
+    j: ".---",
+    k: "-.-",
+    l: ".-..",
+    m: "--",
+    n: "-.",
+    o: "---",
+    p: ".--.",
+    q: "--.-",
+    r: ".-.",
+    s: "...",
+    t: "-",
+    u: "..-",
+    v: "...-",
+    w: ".--",
+    x: "-..-",
+    y: "-.--",
+    z: "--..",
+    specials: [{
+        space: "/",
+        period: ".-.-.-",
+        comma: "--..--",
+        dash: "-..-.",
+        slash: "-....-"
     }],
-    numbers : [{
-        0 : "-----",
-        1 : ".----",
-        2 : "..---",
-        3 : "...--",
-        4 : "....-",
-        5 : ".....",
-        6 : "-....",
-        7 : "--...",
-        8 : "---..",
-        9 : "----.",
-    }] 
+    numbers: [{
+        0: "-----",
+        1: ".----",
+        2: "..---",
+        3: "...--",
+        4: "....-",
+        5: ".....",
+        6: "-....",
+        7: "--...",
+        8: "---..",
+        9: "----.",
+    }]
 }
 
 // String to Morse Code
-function stmc(string) {
-    const scRegex = /\w/
-    const ncRegex = /\d/
-    const splitstr = string.toLowerCase().split('')
-    const length = splitstr.length
-    let i;
+function stmc(string,sd) {
     var output = ''
-    for (i=0;i<length;i++) {
-        // Tests if its a "non-word character"
-        if (scRegex.test(splitstr[i]) == false) {
-            // Test if its a number
-            if (ncRegex.test(parseInt(splitstr[i],10)) == true) {
-                if (splitstr[i] == 0) {
-                    output += `${stmca.numbers[0][0]} `
-                } else if (splitstr[i] == 1) {
-                    output += `${stmca.numbers[0][1]} `
-                } else if (splitstr[i] == 2) {
-                    output += `${stmca.numbers[0][2]} `
-                } else if (splitstr[i] == 3) {
-                    output += `${stmca.numbers[0][3]} `
-                } else if (splitstr[i] == 4) {
-                    output += `${stmca.numbers[0][4]} `
-                } else if (splitstr[i] == 5) {
-                    output += `${stmca.numbers[0][5]} `
-                } else if (splitstr[i] == 6) {
-                    output += `${stmca.numbers[0][6]} `
-                } else if (splitstr[i] == 7) {
-                    output += `${stmca.numbers[0][7]} `
-                } else if (splitstr[i] == 8) {
-                    output += `${stmca.numbers[0][8]} `
-                } else if (splitstr[i] == 9) {
-                    output += `${stmca.numbers[0][9]} `
+    if (sd !== true) {
+        const scRegex = /\w/
+        const ncRegex = /\d/
+        const splitstr = string.toLowerCase().split('')
+        const length = splitstr.length
+        let i;
+        for (i = 0; i < length; i++) {
+            // Tests if its a "non-word character"
+            if (scRegex.test(splitstr[i]) == false) {
+                // Test if its a number
+                if (ncRegex.test(parseInt(splitstr[i], 10)) == true) {
+                    if (splitstr[i] == 0) {
+                        output += `${stmca.numbers[0][0]} `
+                    } else if (splitstr[i] == 1) {
+                        output += `${stmca.numbers[0][1]} `
+                    } else if (splitstr[i] == 2) {
+                        output += `${stmca.numbers[0][2]} `
+                    } else if (splitstr[i] == 3) {
+                        output += `${stmca.numbers[0][3]} `
+                    } else if (splitstr[i] == 4) {
+                        output += `${stmca.numbers[0][4]} `
+                    } else if (splitstr[i] == 5) {
+                        output += `${stmca.numbers[0][5]} `
+                    } else if (splitstr[i] == 6) {
+                        output += `${stmca.numbers[0][6]} `
+                    } else if (splitstr[i] == 7) {
+                        output += `${stmca.numbers[0][7]} `
+                    } else if (splitstr[i] == 8) {
+                        output += `${stmca.numbers[0][8]} `
+                    } else if (splitstr[i] == 9) {
+                        output += `${stmca.numbers[0][9]} `
+                    }
+                } else {
+                    if (splitstr[i] == " ") {
+                        output += `${stmca.specials.space} `
+                    } else if (splitstr[i] == ".") {
+                        output += `${stmca.specials.period} `
+                    } else if (splitstr[i] == ",") {
+                        output += `${stmca.specials.comma} `
+                    } else if (splitstr[i] == "-") {
+                        output += `${stmca.specials.dash} `
+                    } else if (splitstr[i] == "/") {
+                        output += `${stmca.specials.slash} `
+                    } else {
+                    }
                 }
             } else {
-                if (splitstr[i] == " ") {
-                    output += `${stmca.specials.space} `
-                } else if (splitstr[i] == ".") {
-                    output += `${stmca.specials.period} `
-                } else if (splitstr[i] == ",") {
-                    output += `${stmca.specials.comma} `
-                } else if (splitstr[i] == "-") {
-                    output += `${stmca.specials.dash} `
-                } else if (splitstr[i] == "/") {
-                    output += `${stmca.specials.slash} `
-                } else {
+                if (splitstr[i] == "a") {
+                    output += `${stmca.a} `
+                } else if (splitstr[i] == "b") {
+                    output += `${stmca.b} `
+                } else if (splitstr[i] == "c") {
+                    output += `${stmca.c} `
+                } else if (splitstr[i] == "d") {
+                    output += `${stmca.d} `
+                } else if (splitstr[i] == "e") {
+                    output += `${stmca.e} `
+                } else if (splitstr[i] == "f") {
+                    output += `${stmca.f} `
+                } else if (splitstr[i] == "g") {
+                    output += `${stmca.g} `
+                } else if (splitstr[i] == "h") {
+                    output += `${stmca.h} `
+                } else if (splitstr[i] == "i") {
+                    output += `${stmca.i} `
+                } else if (splitstr[i] == "j") {
+                    output += `${stmca.j} `
+                } else if (splitstr[i] == "k") {
+                    output += `${stmca.k} `
+                } else if (splitstr[i] == "l") {
+                    output += `${stmca.l} `
+                } else if (splitstr[i] == "m") {
+                    output += `${stmca.m} `
+                } else if (splitstr[i] == "n") {
+                    output += `${stmca.n} `
+                } else if (splitstr[i] == "o") {
+                    output += `${stmca.o} `
+                } else if (splitstr[i] == "p") {
+                    output += `${stmca.p} `
+                } else if (splitstr[i] == "q") {
+                    output += `${stmca.q} `
+                } else if (splitstr[i] == "r") {
+                    output += `${stmca.r} `
+                } else if (splitstr[i] == "s") {
+                    output += `${stmca.s} `
+                } else if (splitstr[i] == "t") {
+                    output += `${stmca.t} `
+                } else if (splitstr[i] == "u") {
+                    output += `${stmca.u} `
+                } else if (splitstr[i] == "v") {
+                    output += `${stmca.v} `
+                } else if (splitstr[i] == "w") {
+                    output += `${stmca.w} `
+                } else if (splitstr[i] == "x") {
+                    output += `${stmca.x} `
+                } else if (splitstr[i] == "y") {
+                    output += `${stmca.y} `
+                } else if (splitstr[i] == "z") {
+                    output += `${stmca.z} `
                 }
             }
-        } else {
-            if (splitstr[i] == "a") {
-                output += `${stmca.a} `
-            } else if (splitstr[i] == "b") {
-                output += `${stmca.b} `
-            } else if (splitstr[i] == "c") {
-                output += `${stmca.c} `
-            } else if (splitstr[i] == "d") {
-                output += `${stmca.d} `
-            } else if (splitstr[i] == "e") {
-                output += `${stmca.e} `
-            } else if (splitstr[i] == "f") {
-                output += `${stmca.f} `
-            } else if (splitstr[i] == "g") {
-                output += `${stmca.g} `
-            } else if (splitstr[i] == "h") {
-                output += `${stmca.h} `
-            } else if (splitstr[i] == "i") {
-                output += `${stmca.i} `
-            } else if (splitstr[i] == "j") {
-                output += `${stmca.j} `
-            } else if (splitstr[i] == "k") {
-                output += `${stmca.k} `
-            } else if (splitstr[i] == "l") {
-                output += `${stmca.l} `
-            } else if (splitstr[i] == "m") {
-                output += `${stmca.m} `
-            } else if (splitstr[i] == "n") {
-                output += `${stmca.n} `
-            } else if (splitstr[i] == "o") {
-                output += `${stmca.o} `
-            } else if (splitstr[i] == "p") {
-                output += `${stmca.p} `
-            } else if (splitstr[i] == "q") {
-                output += `${stmca.q} `
-            } else if (splitstr[i] == "r") {
-                output += `${stmca.r} `
-            } else if (splitstr[i] == "s") {
-                output += `${stmca.s} `
-            } else if (splitstr[i] == "t") {
-                output += `${stmca.t} `
-            } else if (splitstr[i] == "u") {
-                output += `${stmca.u} `
-            } else if (splitstr[i] == "v") {
-                output += `${stmca.v} `
-            } else if (splitstr[i] == "w") {
-                output += `${stmca.w} `
-            } else if (splitstr[i] == "x") {
-                output += `${stmca.x} `
-            } else if (splitstr[i] == "y") {
-                output += `${stmca.y} `
-            } else if (splitstr[i] == "z") {
-                output += `${stmca.z} `
-            }
+        }
+        output = output.replace(/^[ \t]+|[ \t]+$/gmi, '')
+    } else {
+        if (string == "a") {
+            output = `${stmca.a}`
+        } else if (splitstr[i] == "b") {
+            output = `${stmca.b}`
+        } else if (splitstr[i] == "c") {
+            output = `${stmca.c}`
+        } else if (splitstr[i] == "d") {
+            output = `${stmca.d}`
+        } else if (splitstr[i] == "e") {
+            output = `${stmca.e}`
+        } else if (splitstr[i] == "f") {
+            output = `${stmca.f}`
+        } else if (splitstr[i] == "g") {
+            output = `${stmca.g}`
+        } else if (splitstr[i] == "h") {
+            output = `${stmca.h}`
+        } else if (splitstr[i] == "i") {
+            output = `${stmca.i}`
+        } else if (splitstr[i] == "j") {
+            output = `${stmca.j}`
+        } else if (splitstr[i] == "k") {
+            output = `${stmca.k}`
+        } else if (splitstr[i] == "l") {
+            output = `${stmca.l}`
+        } else if (splitstr[i] == "m") {
+            output = `${stmca.m}`
+        } else if (splitstr[i] == "n") {
+            output = `${stmca.n}`
+        } else if (splitstr[i] == "o") {
+            output = `${stmca.o}`
+        } else if (splitstr[i] == "p") {
+            output = `${stmca.p}`
+        } else if (splitstr[i] == "q") {
+            output = `${stmca.q}`
+        } else if (splitstr[i] == "r") {
+            output = `${stmca.r}`
+        } else if (string == "s") {
+            output = `${stmca.s}`
+        } else if (string == "t") {
+            output = `${stmca.t}`
+        } else if (string == "u") {
+            output = `${stmca.u}`
+        } else if (string == "v") {
+            output = `${stmca.v}`
+        } else if (string == "w") {
+            output = `${stmca.w}`
+        } else if (string == "x") {
+            output = `${stmca.x}`
+        } else if (string == "y") {
+            output = `${stmca.y}`
+        } else if (string == "z") {
+            output = `${stmca.z}`
+        } else if (string == 0) {
+            output = `${stmca.numbers[0][0]}`
+        } else if (string == 1) {
+            output = `${stmca.numbers[0][1]}`
+        } else if (string == 2) {
+            output = `${stmca.numbers[0][2]}`
+        } else if (string == 3) {
+            output = `${stmca.numbers[0][3]}`
+        } else if (string == 4) {
+            output = `${stmca.numbers[0][4]}`
+        } else if (string == 5) {
+            output = `${stmca.numbers[0][5]}`
+        } else if (string == 6) {
+            output = `${stmca.numbers[0][6]}`
+        } else if (string == 7) {
+            output = `${stmca.numbers[0][7]}`
+        } else if (string == 8) {
+            output = `${stmca.numbers[0][8]}`
+        } else if (string == 9) {
+            output = `${stmca.numbers[0][9]}`
+        } else if (string == " ") {
+            output = `${stmca.specials.space}`
+        } else if (string == ".") {
+            output = `${stmca.specials.period}`
+        } else if (string == ",") {
+            output = `${stmca.specials.comma}`
+        } else if (string == "-") {
+            output = `${stmca.specials.dash}`
+        } else if (string == "/") {
+            output = `${stmca.specials.slash}`
         }
     }
-    output = output.replace(/^[ \t]+|[ \t]+$/gmi,'')
     return output
 }
 
@@ -161,7 +247,7 @@ function mcts(morseCode) {
     const length = splitMC.length
     let i;
     let output = ''
-    for (i=0;i<length;i++) {
+    for (i = 0; i < length; i++) {
         if (splitMC[i] == stmca.a) {
             output += `a`
         } else if (splitMC[i] == stmca.b) {
