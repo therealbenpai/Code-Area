@@ -50,9 +50,19 @@
         </div>
     </div>
     <script async>
+        function specialKeys(e) {
+            if (e.code.includes('Key' | 'Digit')) {
+                return e.key
+            } else {
+                if (e.code == "Space") {
+                    return ' '
+                }
+            }
+        }
+
         function convert(e) {
             const textel = document.getElementById("textinput")
-            document.getElementById("letter").innerText = e.key
+            document.getElementById("letter").innerText = specialKeys(e)
             document.getElementById("charCode").innerText = String(e.keyCode)
             document.getElementById("binary").innerText = stbi(String(e.keyCode), true)
             document.getElementById("hex").innerText = sth(String(e.keyCode), true)
