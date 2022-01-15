@@ -36,10 +36,6 @@ input {
     font-family: Brush Script MT, cursive;
 }
 
-.textinfo p:last-child {
-    border-bottom: none;
-}
-
 mark {
     background-color: rgba(255, 255, 255, 0.125);
 }
