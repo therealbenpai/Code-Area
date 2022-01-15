@@ -14,13 +14,13 @@ cssr {
     font-size: 16px;
 }
 
-.textinfo {
+.textinfo p{
     border-bottom: 4px solid black;
     padding: 6px;
     font-family: Brush Script MT, cursive;
 }
 
-.textinfo:last-child {
+.textinfo p:last-child {
     border-bottom: none;
 }
 
