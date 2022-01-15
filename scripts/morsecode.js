@@ -206,6 +206,16 @@ function stmc(string, sd) {
             output = `${stmca.y}`
         } else if (string == "z") {
             output = `${stmca.z}`
+        } else if (string == " ") {
+            output = `${stmca.specials.space}`
+        } else if (string == ".") {
+            output = `${stmca.specials.period}`
+        } else if (string == ",") {
+            output = `${stmca.specials.comma}`
+        } else if (string == "-") {
+            output = `${stmca.specials.dash}`
+        } else if (string == "/") {
+            output = `${stmca.specials.slash}`
         } else if (string == "0") {
             output = `${stmca.numbers[0][0]}`
         } else if (string == "1") {
@@ -226,16 +236,6 @@ function stmc(string, sd) {
             output = `${stmca.numbers[0][8]}`
         } else if (string == "9") {
             output = `${stmca.numbers[0][9]}`
-        } else if (string == " ") {
-            output = `${stmca.specials.space}`
-        } else if (string == ".") {
-            output = `${stmca.specials.period}`
-        } else if (string == ",") {
-            output = `${stmca.specials.comma}`
-        } else if (string == "-") {
-            output = `${stmca.specials.dash}`
-        } else if (string == "/") {
-            output = `${stmca.specials.slash}`
         }
     }
     return output
