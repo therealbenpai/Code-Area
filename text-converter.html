@@ -77,12 +77,12 @@
     <script async>
         function sconvert(e) {
             const textel = document.getElementById("sitextinput")
-            document.getElementById("siletter").innerText = e.key
-            document.getElementById("sicharCode").innerText = String(e.keyCode)
-            document.getElementById("sibinary").innerText = stbi(String(e.keyCode), true)
-            document.getElementById("sihex").innerText = sth(String(e.keyCode), true)
-            document.getElementById("sib32").innerText = stb32(String(e.keyCode), true)
-            document.getElementById("simorsecode").innerText = stmc(String(e.key), true);
+            document.getElementById("siletter").innerHTML = `<mark>${e.key}</mark>`
+            document.getElementById("sicharCode").innerHTML = `<mark>${String(e.keyCode)}</mark>`
+            document.getElementById("sibinary").innerHTML = `<mark>${stbi(String(e.keyCode), true)}</mark>`
+            document.getElementById("sihex").innerHTML = `<mark>${sth(String(e.keyCode), true)}</mark>`
+            document.getElementById("sib32").innerHTML = `<mark>${stb32(String(e.keyCode), true)}</mark>`
+            document.getElementById("simorsecode").innerHTML = `<mark>${stmc(String(e.key), true)}</mark>`;
         }
         document.getElementById("sitextinput").addEventListener('keydown', sconvert)
     </script>
@@ -90,10 +90,10 @@
     <script async>
         function mconvert(e) {
             const textel = document.getElementById("mitextinput")
-            document.getElementById("mibinary").innerText = stbi(textel.value)
-            document.getElementById("mihex").innerText = sth(textel.value)
-            document.getElementById("mib32").innerText = stb32(textel.value)
-            document.getElementById("mimorsecode").innerText = stmc(textel.value);
+            document.getElementById("mibinary").innerHTML = `<mark>${stbi(textel.value)}</mark>`
+            document.getElementById("mihex").innerHTML = `<mark>${sth(textel.value)}</mark>`
+            document.getElementById("mib32").innerHTML = `<mark>${stb32(textel.value)}</mark>`
+            document.getElementById("mimorsecode").innerHTML = `<mark>${stmc(textel.value)}</mark>`;
         }
         document.getElementById("mitextinput").addEventListener('keydown', mconvert)
         document.getElementById("mitextinput").addEventListener('keyup', mconvert)
