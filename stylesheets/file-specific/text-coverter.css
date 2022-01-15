@@ -19,7 +19,7 @@ cssr {
     font-size: 16px;
 }
 
-.textinfo {
+.text > .textinfo{
     width: 48%;
     margin: 1%;
     margin-top: auto;
