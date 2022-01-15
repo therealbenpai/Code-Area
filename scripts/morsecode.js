@@ -206,25 +206,25 @@ function stmc(string, sd) {
             output = `${stmca.y}`
         } else if (string == "z") {
             output = `${stmca.z}`
-        } else if (string == 0) {
+        } else if (string == "0") {
             output = `${stmca.numbers[0][0]}`
-        } else if (string == 1) {
+        } else if (string == "1") {
             output = `${stmca.numbers[0][1]}`
-        } else if (string == 2) {
+        } else if (string == "2") {
             output = `${stmca.numbers[0][2]}`
-        } else if (string == 3) {
+        } else if (string == "3") {
             output = `${stmca.numbers[0][3]}`
-        } else if (string == 4) {
+        } else if (string == "4") {
             output = `${stmca.numbers[0][4]}`
-        } else if (string == 5) {
+        } else if (string == "5") {
             output = `${stmca.numbers[0][5]}`
-        } else if (string == 6) {
+        } else if (string == "6") {
             output = `${stmca.numbers[0][6]}`
-        } else if (string == 7) {
+        } else if (string == "7") {
             output = `${stmca.numbers[0][7]}`
-        } else if (string == 8) {
+        } else if (string == "8") {
             output = `${stmca.numbers[0][8]}`
-        } else if (string == 9) {
+        } else if (string == "9") {
             output = `${stmca.numbers[0][9]}`
         } else if (string == " ") {
             output = `${stmca.specials.space}`
