@@ -1,3 +1,8 @@
+.text {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
 cssr {
     color: black;
 }
@@ -15,14 +20,17 @@ cssr {
 }
 
 .textinfo {
-    margin: 0%;
+    width: 48%;
+    margin: 1%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-.textinfo p{
-    display: inline-flex;
+.textinfo p {
+    display: flex;
     border-bottom: 4px solid black;
-    padding: 6px;
     font-family: Brush Script MT, cursive;
+    overflow: scroll;
 }
 
 .textinfo p:last-child {
@@ -30,5 +38,5 @@ cssr {
 }
 
 mark {
-    background-color: rgba(255,255,255,0.125);
+    background-color: rgba(255, 255, 255, 0.125);
 }
