@@ -51,12 +51,10 @@
     </div>
     <script async>
         function specialKeys(e) {
-            if (e.code.includes('Key' | 'Digit')) {
-                return e.key
+            if (e.code == "Space") {
+                return ' '
             } else {
-                if (e.code == "Space") {
-                    return ' '
-                }
+                return e.key
             }
         }
 
