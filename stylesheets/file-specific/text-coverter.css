@@ -1,0 +1,25 @@
+cssr {
+    color: black;
+}
+
+.textinput input {
+    border: 3px solid black;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.textinput label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.textinfo {
+    border-bottom: 4px solid black;
+    padding: 6px;
+    font-family: Brush Script MT, cursive;
+}
+
+.textinfo:last-child {
+    border-bottom: none;
+}

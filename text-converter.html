@@ -26,41 +26,76 @@
         </nav>
     </div>
     <div class="textarea">
-        <input type="text" id="textinput" name="Text Here: " maxlength="1" onkeyup="this.value = ''">
+        <cssr class="textinput">
+            <label for="sitextinput">Enter Letter Here: </label>
+            <input type="text" id="sitextinput" name="" maxlength="1" onkeyup="this.value = ''">
+        </cssr>
         <br>
-        <div class="textinfo">
+        <cssr class="textinfo">
             <p><strong>Letter: </strong>
-                <ttag id="letter"></ttag>
+                <ttag id="siletter"></ttag>
             </p>
             <p><strong>charCode: </strong>
-                <ttag id="charCode"></ttag>
+                <ttag id="sicharCode"></ttag>
             </p>
             <p><strong>Binary: </strong>
-                <ttag id="binary"></ttag>
+                <ttag id="sibinary"></ttag>
             </p>
             <p><strong>Hex: </strong>
-                <ttag id="hex"></ttag>
+                <ttag id="sihex"></ttag>
             </p>
             <p><strong>Base32: </strong>
-                <ttag id="b32"></ttag>
+                <ttag id="sib32"></ttag>
             </p>
             <p><strong>Morse Code: </strong>
-                <ttag id="morsecode"></ttag>
+                <ttag id="simorsecode"></ttag>
             </p>
-        </div>
+        </cssr>
     </div>
+    <div class="textarea">
+        <cssr class="textinput">
+            <label for="mitextinput">Enter Your text term here: </label>
+            <input type="text" id="mitextinput">
+        </cssr>
+        <br>
+        <cssr class="textinfo">
+            <p><strong>Binary: </strong>
+                <ttag id="mibinary"></ttag>
+            </p>
+            <p><strong>Hex: </strong>
+                <ttag id="mihex"></ttag>
+            </p>
+            <p><strong>Base32: </strong>
+                <ttag id="mib32"></ttag>
+            </p>
+            <p><strong>Morse Code: </strong>
+                <ttag id="mimorsecode"></ttag>
+            </p>
+        </cssr>
+    </div>
+    <!-- Script for the singular inputs-->
     <script async>
-        function convert(e) {
-            const textel = document.getElementById("textinput")
-            document.getElementById("letter").innerText = e.key
-            document.getElementById("charCode").innerText = String(e.keyCode)
-            document.getElementById("binary").innerText = stbi(String(e.keyCode), true)
-            document.getElementById("hex").innerText = sth(String(e.keyCode), true)
-            document.getElementById("b32").innerText = stb32(String(e.keyCode), true)
-            document.getElementById("morsecode").innerText = stmc(String(e.key), true);
-            textel.value = ''
+        function sconvert(e) {
+            const textel = document.getElementById("sitextinput")
+            document.getElementById("siletter").innerText = e.key
+            document.getElementById("sicharCode").innerText = String(e.keyCode)
+            document.getElementById("sibinary").innerText = stbi(String(e.keyCode), true)
+            document.getElementById("sihex").innerText = sth(String(e.keyCode), true)
+            document.getElementById("sib32").innerText = stb32(String(e.keyCode), true)
+            document.getElementById("simorsecode").innerText = stmc(String(e.key), true);
         }
-        document.getElementById("textinput").addEventListener('keydown', convert)
+        document.getElementById("sitextinput").addEventListener('keydown', sconvert)
+    </script>
+    <!-- Script for the Mutiple inputs-->
+    <script async>
+        function mconvert(e) {
+            const textel = document.getElementById("mitextinput")
+            document.getElementById("mibinary").innerText = stbi(textel.value)
+            document.getElementById("mihex").innerText = sth(textel.value)
+            document.getElementById("mib32").innerText = stb32(textel.value)
+            document.getElementById("mimorsecode").innerText = stmc(textel.value);
+        }
+        document.getElementById("mitextinput").addEventListener('keydown', mconvert)
     </script>
 </body>
 
