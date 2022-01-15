@@ -50,22 +50,14 @@
         </div>
     </div>
     <script async>
-        function specialKeys(e) {
-            if (e.code == "Space") {
-                return ' '
-            } else {
-                return e.key
-            }
-        }
-
         function convert(e) {
             const textel = document.getElementById("textinput")
-            document.getElementById("letter").innerText = specialKeys(e)
+            document.getElementById("letter").innerText = e.key
             document.getElementById("charCode").innerText = String(e.keyCode)
             document.getElementById("binary").innerText = stbi(String(e.keyCode), true)
             document.getElementById("hex").innerText = sth(String(e.keyCode), true)
             document.getElementById("b32").innerText = stb32(String(e.keyCode), true)
-            document.getElementById("morsecode").innerText = stmc(String(specialKeys(e)), true);
+            document.getElementById("morsecode").innerText = stmc(String(e.key), true);
             textel.value = ''
         }
         document.getElementById("textinput").addEventListener('keydown', convert)
