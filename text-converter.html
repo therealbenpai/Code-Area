@@ -52,8 +52,7 @@
     <script async>
         function convert(e) {
             const textel = document.getElementById("textinput")
-            const textv = textel.value
-            document.getElementById("letter").innerText = textv
+            document.getElementById("letter").innerText = e.key
             document.getElementById("charCode").innerText = String(e.keyCode)
             document.getElementById("binary").innerText = stbi(String(e.keyCode), true)
             document.getElementById("hex").innerText = sth(String(e.keyCode), true)
