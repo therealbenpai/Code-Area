@@ -18,4 +18,4 @@ function passwd() {
     }
 }
 
-document.onload(() => passwd())
+document.body.onload(() => passwd())
