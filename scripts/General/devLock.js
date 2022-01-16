@@ -17,5 +17,3 @@ function passwd() {
         }
     }
 }
-
-document.body.onload(() => passwd())
