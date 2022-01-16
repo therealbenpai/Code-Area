@@ -1,4 +1,4 @@
-media/images<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
