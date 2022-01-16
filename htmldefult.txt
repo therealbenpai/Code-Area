@@ -21,13 +21,6 @@ media/images<!DOCTYPE html>
                 <li><a href="userpage.html">Userpage</a></li>
                 <li><a href="text-converter.html">Text Converter</a></li>
                 <li class="selelcted">Page Name Here</li>
-                <div class="dropdown">
-                    <li>Dev Pages</li>
-                    <div class="dropdown-content">
-                        <a href="">JS Testing</a>
-                        <a href="">Killer Page</a>
-                    </div>
-                </div>
             </ul>
         </nav>
     </div>
