@@ -1,6 +1,6 @@
 function passwd() {
     const sul = localStorage.getItem('drm')
-    if (sul == true) {
+    if (sul == "true") {
         document.body.style.visibility = 'visible'
     } else {
         const passwd = prompt('Developer Password:')
