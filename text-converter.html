@@ -92,7 +92,7 @@
             document.getElementById("sibinary").innerHTML = `<mark>${stbi(String(e.keyCode), true)}</mark>`
             document.getElementById("sihex").innerHTML = `<mark>${sth(String(e.keyCode), true)}</mark>`
             document.getElementById("sib32").innerHTML = `<mark>${stb32(String(e.keyCode), true)}</mark>`
-            document.getElementById("simorsecode").innerHTML = `<mark>${stmc(String(e.key), true)}</mark>`;
+            document.getElementById("simorsecode").innerHTML = `<mark>${stmc(String(e.key).toLowerCase(), true)}</mark>`;
         }
         document.getElementById("sitextinput").addEventListener('keydown', sconvert)
     </script>
@@ -103,7 +103,7 @@
             document.getElementById("mibinary").innerHTML = `<mark>${stbi(textel.value)}</mark>`
             document.getElementById("mihex").innerHTML = `<mark>${sth(textel.value)}</mark>`
             document.getElementById("mib32").innerHTML = `<mark>${stb32(textel.value)}</mark>`
-            document.getElementById("mimorsecode").innerHTML = `<mark>${stmc(textel.value)}</mark>`;
+            document.getElementById("mimorsecode").innerHTML = `<mark>${stmc(textel.value.toLowerCase())}</mark>`;
         }
         document.getElementById("mitextinput").addEventListener('keydown', mconvert)
         document.getElementById("mitextinput").addEventListener('keyup', mconvert)
