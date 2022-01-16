@@ -31,7 +31,10 @@ const stmca = {
         period: ".-.-.-",
         comma: "--..--",
         dash: "-..-.",
-        slash: "-....-"
+        slash: "-....-",
+        apostrophe: ".----.",
+        qmark: "..--..",
+        emark: "-.-.--"
     }],
     numbers: [{
         0: "-----",
@@ -93,7 +96,12 @@ function stmc(string, sd) {
                         output += `${stmca.specials[0].dash} `
                     } else if (splitstr[i] == "/") {
                         output += `${stmca.specials[0].slash} `
-                    } else {
+                    } else if (splitstr[i] == "'") {
+                        output += `${stmca.specials[0].apostrophe} `
+                    } else if (splitstr[i] == "?") {
+                        output += `${stmca.specials[0].qmark} `
+                    } else if (splitstr[i] == "!") {
+                        output += `${stmca.specials[0].emark} `
                     }
                 }
             } else {
@@ -236,6 +244,12 @@ function stmc(string, sd) {
             output = `${stmca.specials[0].dash}`
         } else if (string == '/') {
             output = `${stmca.specials[0].slash}`
+        } else if (string == "'") {
+            output = `${stmca.specials[0].apostrophe}`
+        } else if (string == '?') {
+            output = `${stmca.specials[0].qmark}`
+        } else if (string == '!') {
+            output = `${stmca.specials[0].emark}`
         }
     }
     return output
