@@ -84,15 +84,15 @@ function stmc(string, sd) {
                     }
                 } else {
                     if (splitstr[i] == " ") {
-                        output += `${stmca.specials.space} `
+                        output += `${stmca.specials[0].space} `
                     } else if (splitstr[i] == ".") {
-                        output += `${stmca.specials.period} `
+                        output += `${stmca.specials[0].period} `
                     } else if (splitstr[i] == ",") {
-                        output += `${stmca.specials.comma} `
+                        output += `${stmca.specials[0].comma} `
                     } else if (splitstr[i] == "-") {
-                        output += `${stmca.specials.dash} `
+                        output += `${stmca.specials[0].dash} `
                     } else if (splitstr[i] == "/") {
-                        output += `${stmca.specials.slash} `
+                        output += `${stmca.specials[0].slash} `
                     } else {
                     }
                 }
@@ -226,8 +226,16 @@ function stmc(string, sd) {
             output = `${stmca.numbers[0][8]}`
         } else if (string == "9") {
             output = `${stmca.numbers[0][9]}`
-        } else {
-            output = 'Not Defined or causes errors'
+        } else if (string == ' ') {
+            output = `${stmca.specials[0].space}`
+        } else if (string == '.') {
+            output = `${stmca.specials[0].period}`
+        } else if (string == ',') {
+            output = `${stmca.specials[0].comma}`
+        } else if (string == '-') {
+            output = `${stmca.specials[0].dash}`
+        } else if (string == '/') {
+            output = `${stmca.specials[0].slash}`
         }
     }
     return output
@@ -292,15 +300,15 @@ function mcts(morseCode) {
             output += `y`
         } else if (splitMC[i] == stmca.z) {
             output += `z`
-        } else if (splitMC[i] == stmca.specials.space) {
+        } else if (splitMC[i] == stmca.specials[0].space) {
             output += ` `
-        } else if (splitMC[i] == stmca.specials.period) {
+        } else if (splitMC[i] == stmca.specials[0].period) {
             output += `.`
-        } else if (splitMC[i] == stmca.specials.comma) {
+        } else if (splitMC[i] == stmca.specials[0].comma) {
             output += `,`
-        } else if (splitMC[i] == stmca.specials.dash) {
+        } else if (splitMC[i] == stmca.specials[0].dash) {
             output += `-`
-        } else if (splitMC[i] == stmca.specials.slash) {
+        } else if (splitMC[i] == stmca.specials[0].slash) {
             output += `/`
         } else if (splitMC[i] == stmca.number[0][0]) {
             output += `0`
