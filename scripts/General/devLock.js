@@ -5,7 +5,7 @@ function passwd() {
     } else {
         const passwd = prompt('Developer Password:')
         const epsw = atob('ZGV2cHN3')
-        if (passwd == espw) {
+        if (passwd == epsw) {
             const rm = confirm('Remeber Login (\'Ok\' = True, \'Cancel\' = False)')
             if (rm == true) {
                 localStorage.setItem('drm', 'true')
