@@ -6,12 +6,12 @@ function ranNum(max) {
 
 // Bulk Random Num
 function bRanNum(amount,max) {
-    var bnum = "s"
-    for (var index = 0; index < amount; index++) {
+    let bnum = "s"
+    for (let index = 0; index < amount; index++) {
         const num = ranNum(max)
         bnum += `.${num}`
     }
-    return bnum.split("s.").join('').split('.')
+    return bnum.split('s.').join('').split('.')
 }
 
 // Random Hex Generator
@@ -25,8 +25,8 @@ function randHex(prefix) {
 
 // Bulk Hex Generator
 function bRandHex(amount,prefix) {
-    var hexRaw = 's'
-    for (var index = 0; index < amount; index++) {
+    let hexRaw = 's'
+    for (let index = 0; index < amount; index++) {
         const hex = randHex(prefix)
         hexRaw += `.${hex}`
     }

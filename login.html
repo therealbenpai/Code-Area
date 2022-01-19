@@ -2,11 +2,10 @@
 <html>
     <head>
         <title>Login Page</title>
+        <link rel="icon" href="media/images/icon.ico" type="image/x-icon">
         <link href="stylesheets/file-specific/login.css" rel="stylesheet" type="text/css">
-        <link href="stylesheets/general/nav.css" rel="stylesheet" type="text/css">
-        <link href="stylesheets/general/svgformat.css" rel="stylesheet" type="text/css">
-        <link href="stylesheets/general/cel.css" rel="stylesheet" type="text/css">
-        <script src="scripts/login.js"></script>
+        <link href="stylesheets/general/defults.css" rel="stylesheet" type="text/css">
+        <script src="scripts/File Specific/login.js"></script>
     </head>
     <body>
         <div class="navigation">
@@ -15,10 +14,11 @@
                     <li><a href="index.html">Home</a></li>
                     <li class="selected">Login</li>
                     <li><a href="userpage.html">Userpage</a></li>
+                    <li><a href="text-converter.html">Text Converter</a></li>
                 </ul>
             </nav>
         </div>
-        <form class="box" method="post" onsubmit="pullLogin()">
+        <form class="box" method="get" onsubmit="pullLogin()">
             <h1>Login</h1>
             <input type="text" name="" placeholder="Username" id="username">
             <input type="password" name="" placeholder="Password" id="password">
