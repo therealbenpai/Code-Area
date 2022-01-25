@@ -6,15 +6,21 @@ labels: enhancement
 assignees: ''
 
 ---
+# Feature Request
+Feature name: `Insert Feature Title/Name Here`
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+### Feature Description
+_Insert feature description details here_
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+### Additional Information
+_Insert Any Additional Information For Your Feature Idea Here_
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Link To Feature:** [Implimentation](GitHub Repo Link with feature implimented)
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+***Estimated Work Time Required to be Added:*** `Amount of time likely required, in minutes`
+
+**Files Effected:** `Amount of files effected`
+
+Signed;
+
+(Insert your GitHub Alias Here)
