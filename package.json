@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sparty182020/Code-Area/issues"
   },
-  "homepage": "https://github.com/sparty182020/Code-Area#readme"
+  "homepage": "https://github.com/sparty182020/Code-Area#readme",
+  "dependencies": {
+    "eslint": "^8.7.0"
+  }
 }
