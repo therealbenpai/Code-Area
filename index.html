@@ -1,34 +1,22 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <link rel="icon" href="media/images/icon.ico" type="image/x-icon">
-    <link href="stylesheets/file-specific/index.css" rel="stylesheet" type="text/css">
-    <link href="stylesheets/general/defults.css" rel="stylesheet" type="text/css">
-    <script src="scripts/File Specific/index.js"></script>
     <title>Index</title>
+    <noscript>JavaScript is disabled or not supported</noscript>
+    <script defer>
+        async function redir() {
+            document.getElementById("redir").innerText = 'Redirecting...'
+            await setTimeout(_ => console.log(`${String()}`),2500)
+            const currentHref= location.href
+            location.href = `${currentHref}/html/index.html`
+        }
+        redir()
+    </script>
 </head>
 
 <body>
-    <div class="navigation">
-        <nav>
-            <ul>
-                <li class="selected">Home</li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="userpage.html">Userpage</a></li>
-                <li><a href="text-converter.html">Text Converter</a></li>
-            </ul>
-        </nav>
-    </div>
-    <audio src="media/audio/soundv2.mp3" preload="auto" hidden autoplay></audio>
-    <h1 class="title">Home Page</h1>
-    <p>This is a template made by Sparty182020 using
-        <strong>HTML, CSS, and Vanilla JavaScript</strong>
-        with the help from
-        <a href="vscode.dev/" target="_blank">Visual Studio Code for Web Browsers</a>.
-        This has taken over 20 hours of coding, 3 hours of debuging, and 1 hour of image design.
-        For any questions, contact
-        <a href="mailto:support@sparty182020.anonaddy.com" target="_blank">Us here</a>
-    </p>
+    <h1 id="redir"></h1>
 </body>
 
 </html>
