@@ -4,7 +4,11 @@
 <head>
     <title>Index</title>
     <noscript>JavaScript is disabled or not supported</noscript>
-    <script defer>
+</head>
+
+<body>
+    <h1 id="redir"></h1>
+    <script>
         async function redir() {
             document.getElementById("redir").innerText = 'Redirecting...'
             await setTimeout(_ => console.log(`${String()}`),2500)
@@ -13,10 +17,6 @@
         }
         redir()
     </script>
-</head>
-
-<body>
-    <h1 id="redir"></h1>
 </body>
 
 </html>
