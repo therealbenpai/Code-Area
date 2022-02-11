@@ -11,9 +11,8 @@
     <script>
         async function redir() {
             document.getElementById("redir").innerText = 'Redirecting...'
-            await new Promise.resolve().then(_ => console.log(`${String()}`),2500)
-            const currentHref= location.origin
-            await (_ => location.href = `${currentHref}/Code-Area/html/index.html`)
+            const currentHref = location.origin
+            await setTimeout(_ => location.href = `${currentHref}/Code-Area/html/index.html`, 2500)
         }
         redir()
     </script>
