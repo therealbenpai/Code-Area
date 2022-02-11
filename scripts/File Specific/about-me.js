@@ -6,7 +6,9 @@ const text = 'About Me'
 function animation() {
     const element = document.getElementById('aboutme')
     if (i < text.length) {
-        element.innerText += text.charAt(i)
+        const ct = element.innerText
+        const nt = ct + text.charAt(i)
+        element.innerText = nt
         i++;
         setTimeout(animation, speed);
     }
