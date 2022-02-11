@@ -13,7 +13,7 @@
             document.getElementById("redir").innerText = 'Redirecting...'
             await setTimeout(_ => console.log(`${String()}`),2500)
             const currentHref= location.href
-            location.href = `${currentHref}/html/index.html`
+            await (_ => location.href = `${currentHref}/html/index.html`)
         }
         redir()
     </script>
