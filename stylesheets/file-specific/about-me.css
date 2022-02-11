@@ -1,6 +1,5 @@
 #aboutme {
     font-family: 'Assistant', sans-serif;
-    width: 24em;
     border-right: 2px solid rgba(255, 255, 255, .75);
     font-size: 180%;
     white-space: nowrap;
@@ -19,7 +18,7 @@
     }
 
     to {
-        width: 24em;
+        width: max-content;
     }
 }
 
