@@ -13,3 +13,9 @@ div#toolbox-container h1 {
     font-size: 24px;
     animation: rainbow 4s cubic-bezier(0.31, -0.06, 0.65, 0.96) infinite;
 }
+
+@keyframes rainbow { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 50%}
+}
