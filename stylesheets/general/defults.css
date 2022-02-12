@@ -33,7 +33,7 @@ lb {
     background-color: #B577B5;
     border: 2px solid Black;
     border-radius: 10px;
-    font-family: sans-serif;
+    font-family: 'Assistant', sans-serif;
     font-weight: bold;
     padding: 16px;
     width: fit-content;
@@ -66,9 +66,17 @@ lb {
 
 /* SVG Background */
 
-html {
-    height: 100vh;
+:root {
+    min-width: 100vw;
     width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
+    font-family: 'Assistant', sans-serif;
+}
+
+html {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
