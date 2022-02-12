@@ -8,7 +8,7 @@ const w5 = ""
 // Functions
 class Util {
     constructor() {
-        this.currentText = navigator.clipboard.readText().then(function (text) {return text;}),
+        this.currentText = navigator.clipboard.readText().then(data => {return data}),
         this.current = navigator.clipboard.read().then(function (data) {return data;})
         this.time = this.getTime()
         this.date = this.getDate()
