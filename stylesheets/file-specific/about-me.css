@@ -1,3 +1,11 @@
+:root {
+    font-size: 16px;
+}
+
 #aboutme {
+    font-family: 'Assistant', sans-serif;
+}
+
+div.info {
     font-family: 'Assistant', sans-serif;
 }
