@@ -1,0 +1,15 @@
+div#toolbox-container {
+    border: 3px solid rgba(100,100,100,1);
+    border-radius: 6px;
+}
+
+div#toolbox-container h1 {
+    background-image: repeating-linear-gradient(to right, red 10%,blue 20%);
+    text-align: center;
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 24px;
+    animation: rainbow 4s cubic-bezier(0.31, -0.06, 0.65, 0.96) infinite;
+}
