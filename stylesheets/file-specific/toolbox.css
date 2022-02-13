@@ -13,7 +13,7 @@ div#toolbox-container h1 {
     background-clip: text;
     color: transparent;
     font-size: 24px;
-    animation: rainbow 4s cubic-bezier(0.31, -0.06, 0.65, 0.96) infinite;
+    animation: rainbow 4s cubic-bezier(0.405, 0.945, 0.685, 0.080) infinite;
 }
 
 @keyframes rainbow { 
