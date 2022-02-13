@@ -21,3 +21,9 @@ div#toolbox-container h1 {
     50%{background-position:100% 25%}
     100%{background-position:0% 50%}
 }
+
+button {
+    background-image: url("https://combinatronics.com/sparty182020/imagehost/main/background1.svg");
+    background-size: cover;
+    width: auto;
+}

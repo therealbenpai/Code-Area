@@ -27,12 +27,13 @@
     </div>
     <div id="toolbox-container">
         <h1>Benjamin's Coding Toolbox</h1>
-        <button onclick="readClipboard()">Read Clipboard</button>
-        <button onclick="writeClipboard(1)">Write 1</button>
-        <button onclick="writeClipboard(2)">Write 2</button>
-        <button onclick="writeClipboard(3)">Write 3</button>
-        <button onclick="writeClipboard(4)">Write 4</button>
-        <button onclick="writeClipboard(5)">Write 5</button>
+        <div class="innerdiv">
+            <button onclick="domutil.writeClipboard(1)">Write 1</button>
+            <button onclick="domutil.writeClipboard(2)">Write 2</button>
+            <button onclick="domutil.writeClipboard(3)">Write 3</button>
+            <button onclick="domutil.writeClipboard(4)">Write 4</button>
+            <button onclick="domutil.writeClipboard(5)">Write 5</button>
+        </div>
     </div>
 </body>
 
