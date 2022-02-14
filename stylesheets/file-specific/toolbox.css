@@ -36,7 +36,7 @@ div#toolbox-container div.innerdiv {
     align-content: space-around;
 }
 
-div#toolbox-container div.innerdiv>button {
+div#toolbox-container div.innerdiv > button {
     width: -webkit-fill-available;
     margin: 6px;
     margin-bottom: auto;
