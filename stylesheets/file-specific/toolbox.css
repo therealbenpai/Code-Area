@@ -37,13 +37,20 @@ div#toolbox-container div.innerdiv {
 }
 
 div#toolbox-container div.innerdiv > button {
-    width: -webkit-fill-available;
-    margin: 6px;
+    width: 15%;
+    margin: 1%;
     margin-bottom: auto;
     background: transparent;
     border: 4px solid black;
     border-radius: 8px;
     font-size: 16px;
+}
+div#toolbox-container div.innerdiv > button:first-child {
+    margin-left: none;
+}
+
+div#toolbox-container div.innerdiv > button:last-child {
+    margin-right: none;
 }
 
 div#toolbox-container div.innerdiv > button:hover {
@@ -55,7 +62,7 @@ div#toolbox-container div.innerdiv > button:hover {
       transform: scale(1);
     }
     100% {
-      transform: scale(1.5);
+      transform: scale(1.125);
     }
   }
   
