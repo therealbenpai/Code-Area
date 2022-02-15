@@ -1,8 +1,7 @@
-/* Custom Elements */
-
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&display=swap');
 
+/* Custom Elements */
 noticearea {
     background: rgba(255, 10, 10, 0.5);
     position: absolute;
@@ -22,7 +21,8 @@ notice {
 }
 
 lb {
-    padding: 128px;
+    height: 5vh;
+    width: 100vw;
 }
 
 /* Navigation Management */
