@@ -32,3 +32,21 @@ function bRandHex(amount,prefix) {
     }
     return hexRaw.split('s.').join('').split('.')
 }
+
+function customNumberGenerator(min,max) {
+    // Bug Check
+    if (max <= 0 || min <= 0) {
+        return new Error("Values need to be above 0")
+    }
+    if (min >= max) {
+        return new Error("Min must be less than max")
+    }
+    if (max > Math.pow(10,6)) {
+        return new Error(`Max must be less than ${Math.pow(10,6)}`)
+    }
+    min = Number(min)
+    max = Number(max)
+    const fmax = max - min
+    const random = Math.round(Math.random()*fmax) + min
+    return random
+}
