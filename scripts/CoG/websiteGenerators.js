@@ -17,7 +17,7 @@ function genwin(version, width, height) {
     version = parseInt(version)
     // Checks if the version is correct
     if (version < 0 || version > varnum) {
-        return 'Bad Version'
+        throw new Error('Bad Version')
     }
     if (width == undefined || width == null) {
         width = 300
@@ -109,6 +109,6 @@ function genwin(version, width, height) {
         // Writes The Styles
         writeStyles()
     } else {
-        return 'Bad Size'
+        throw new Error('Bad Size')
     }
 }

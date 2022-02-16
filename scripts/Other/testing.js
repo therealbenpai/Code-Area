@@ -1,3 +1,11 @@
+import Util from '../File-Specific/toolbox.js'
+
+class Key {
+    constructor() {
+        this.constructionTime = new Util().getFullDate()
+    }
+}
+
 const l4KeyGen = function () {
     return Math.ceil(Math.random() * 8) * 1000 + Math.ceil(Math.random() * 8) * 100 + Math.ceil(Math.random() * 8) * 10 + Math.ceil(Math.random() * 8)
 }

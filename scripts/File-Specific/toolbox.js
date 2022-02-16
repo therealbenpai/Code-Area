@@ -52,3 +52,5 @@ class Util {
 }
 
 const domUtil = new Util()
+
+exports.Util = Util

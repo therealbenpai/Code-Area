@@ -14,10 +14,10 @@ function passwd() {
                 document.body.style.visibility = 'visible'
             } else {
                 alert('Bad Password')
-                new Error('Bad Passkey entered. password: ' + passwd)
+                throw new Error('Bad Passkey entered. password: ' + passwd)
             }
-        } catch (error) {
-            console.error(error)
+        } catch (e) {
+            console.error(e)
         }
     }
 }

@@ -3,7 +3,7 @@
 function loop(method, info, times) {
     const testmethod = /(alert)|(console)|(prompt)|(confirm)/gmi
     if (testmethod.test(method) == true) {
-        for (i = 0; i < parseInt(times); i++) {
+        for (let i = 0; i < parseInt(times); i++) {
             if (method == "alert") {
                 alert(info)
                 continue
@@ -34,15 +34,14 @@ function checkdiv(x, y) {
 // 3x+1 math problem
 
 function specialMath(start, cap) {
-    var index;
     var curval = parseInt(start)
     if (isNaN(cap) == true) {
-        for (index = 0; index <= 1000; index++) {
-            if (index === 1000) {
-                return "error"
+        for (let i = 0; i <= 1000; i++) {
+            if (i === 1000) {
+                throw new Error("Cap Reached")
             } else {
                 if (curval == 4) {
-                    return index
+                    return i
                 } else {
                     if (curval % 2 == 0) {
                         curval = curval / 2
@@ -53,12 +52,12 @@ function specialMath(start, cap) {
             }
         }
     } else {
-        for (index = 0; index <= cap; index++) {
-            if (index === cap) {
+        for (let i = 0; i <= cap; i++) {
+            if (i === cap) {
                 return "error"
             } else {
                 if (curval == 4) {
-                    return index
+                    return i
                 } else {
                     if (curval % 2 == 0) {
                         curval = curval / 2
