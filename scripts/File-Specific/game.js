@@ -1,5 +1,7 @@
 class Counter {
+    #st
     constructor() {
+        this.#st = Date.now()
         this.vcr = 0;
         this.ti = 0;
         this.tia = this.ti;
@@ -55,6 +57,28 @@ class Counter {
             return false;
         }
     }
+    xPerSecond() {
+        const now = Date.now()
+        const msDiff = now - this.#st
+        const sDiff = msDiff/1000
+        const fs = String(sDiff).split('.')
+        const ss = fs[1].split('')
+        const fsDiff = Number(`${fs[0]}.${ss[0]}`)
+        const array = [
+            msDiff,sDiff,fsDiff
+        ]
+        return array
+    }
+    keyPerSecond() {
+        const data = this.xPerSecond()
+        const kps = `${(this.ti / data[0])*1000} Keys per second`
+        return kps
+    }
+    clickPerSecond() {
+        const data = this.xPerSecond()
+        const cps = `${(this.ci / data[0])*1000} Clicks per second`
+        return cps
+    }
 }
 
 //Document Vars
@@ -97,4 +121,4 @@ document.onclick = function () {
 
 document.body.style.cursor = "auto";
 
-const x = new Counter();  
+const x = new Counter();

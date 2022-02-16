@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <script defer src="../scripts/File-Specific/game.js"></script>
     <title>Game Area</title>
 </head>
+
 <body>
     <div class="navigation">
         <nav>
@@ -27,15 +29,18 @@
     </div>
     <div class="main">
         <div id="typing">
-          <h1>Type Here</h1>
-          <p class="counter">Keys hit: <span id="type_counter">0</span></p>
-          <input id="text_input" type="text" onKeyUp="this.value=''" onKeyPress="x.addKeyHit()" hidden></input>
+            <h1>Type Here</h1>
+            <p class="counter">Keys hit: <span id="type_counter">0</span></p>
+            <p class="xps">Keys per second: <span id="kps">0</span></p>
+            <input id="text_input" type="text" onKeyUp="this.value=''" onKeyPress="x.addKeyHit()" hidden></input>
         </div>
         <div id="clicking">
-          <h1>Click Here</h1>
-          <button onClick="x.addMouseHit()" id="clicker_button" hidden></button>
-          <p class="counter">Clicks: <span id="click_counter">0</span></p>
+            <h1>Click Here</h1>
+            <p class="counter">Clicks: <span id="click_counter">0</span></p>
+            <p class="xps">Clicks per second: <span id="cps">0</span></p>
+            <button onClick="x.addMouseHit()" id="clicker_button" hidden></button>
         </div>
-      </div>
+    </div>
 </body>
+
 </html>
