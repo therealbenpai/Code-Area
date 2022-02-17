@@ -2,12 +2,7 @@
 
 // Classes
 class Util {
-    constructor() {
-        this.time = this.getTime()
-        this.date = this.getDate()
-        this.fullDate = this.getFullDate()
-    }
-    getTime() {
+    static getTime() {
         const datemod = new Date()
         const time = datemod.toLocaleTimeString(
             'en-US',
@@ -17,7 +12,7 @@ class Util {
         )
         return time
     }
-    getDate() {
+    static getDate() {
         const datemod = new Date();
         const date = datemod.toLocaleDateString(
             'en-US',
@@ -30,12 +25,12 @@ class Util {
         )
         return date;
     }
-    getFullDate() {
+    static getFullDate() {
         const date = this.getDate()
         const time = this.getTime()
         return `${date} ${time}`
     }
-    writeClipboard(index) {
+    static writeClipboard(index) {
         const writeables = [
             "",
             "",
@@ -50,7 +45,3 @@ class Util {
         }
     }
 }
-
-const domUtil = new Util()
-
-exports.Util = Util
