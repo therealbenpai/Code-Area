@@ -33,9 +33,9 @@ class Counter {
             } else {
                 this.ci = Number(cc.innerText);
                 this.cia = Number(cc.innerText);
-                console.error("Anti-Cheat Triggered ( Reason=clicking var boosting)");
                 this.vcr++;
                 this.vcrCheck();
+                throw new Error("Anti-Cheat Triggered (Reason = clicking var boosting)")
             }
         }
     }
@@ -52,9 +52,9 @@ class Counter {
             } else {
                 this.ti = Number(tc.innerText);
                 this.tia = Number(tc.innerText);
-                console.error("Anti-Cheat Triggered (Reason = typing var boosting)");
                 this.vcr++;
                 this.vcrCheck();
+                throw new Error("Anti-Cheat Triggered (Reason = typing var boosting)")
             }
         }
     }
@@ -94,7 +94,7 @@ class Counter {
             const kps3 = `${kps2[0]}.${kps2[1].charAt(0)}`
             return kps3
         } catch (e) {
-
+            console.error(e)
         }
     }
     clicksPerSecond() {
@@ -105,7 +105,7 @@ class Counter {
             const cps3 = `${cps2[0]}.${cps2[1].charAt(0)}`
             return cps3
         } catch (e) {
-
+            console.error(e)
         }
     }
 }
