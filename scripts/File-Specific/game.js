@@ -1,3 +1,15 @@
+// Typing Elements
+const typing = document.getElementById("typing");
+const tc = document.getElementById("type_counter");
+const kpse = document.getElementById("kps")
+const element1 = document.getElementById("text_input");
+
+// Clicking Elements
+const clicking = document.getElementById("clicking");
+const cc = document.getElementById("click_counter");
+const cpse = document.getElementById("cps")
+const element2 = document.getElementById("clicker_button");
+
 class Counter {
     #st
     constructor() {
@@ -69,23 +81,18 @@ class Counter {
         ]
         return array
     }
-    keyPerSecond() {
+    keysPerSecond() {
         const data = this.xPerSecond()
-        const kps = `${(this.ti / data[0])*1000} Keys per second`
+        const kps = `${(this.ti / data[0])*1000}`
         return kps
     }
-    clickPerSecond() {
+    clicksPerSecond() {
         const data = this.xPerSecond()
-        const cps = `${(this.ci / data[0])*1000} Clicks per second`
+        const cps = `${(this.ci / data[0])*1000}`
         return cps
     }
 }
 
-//Document Vars
-var typing = document.getElementById("typing");
-var clicking = document.getElementById("clicking");
-var tc = document.getElementById("type_counter");
-var cc = document.getElementById("click_counter");
 //Message Var
 const lockmsg = "Counters Disabled (Reason=Too many violations developing from Anti-Cheat System)";
 //Anti-Right Click
@@ -105,7 +112,6 @@ var quickRemoveEL = function () {
     document.onclick = function () {};
 };
 //Full Text Area
-let element1 = document.getElementById("text_input");
 document.onkeypress = function () {
     element1.dispatchEvent(
         new KeyboardEvent("keypress", {
@@ -114,7 +120,6 @@ document.onkeypress = function () {
     );
 };
 //Full Click Area
-let element2 = document.getElementById("clicker_button");
 document.onclick = function () {
     element2.dispatchEvent(new MouseEvent("click"));
 };
@@ -122,3 +127,5 @@ document.onclick = function () {
 document.body.style.cursor = "auto";
 
 const x = new Counter();
+
+const ci = setInterval(function() {kpse.innerText = x.keysPerSecond(); cpse.innerText = x.clicksPerSecond()}, 125)
