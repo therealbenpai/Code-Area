@@ -94,7 +94,6 @@ class Counter {
             const kps3 = `${kps2[0]}.${kps2[1].charAt(0)}`
             return kps3
         } catch (e) {
-            console.error(e)
         }
     }
     clicksPerSecond() {
@@ -105,7 +104,6 @@ class Counter {
             const cps3 = `${cps2[0]}.${cps2[1].charAt(0)}`
             return cps3
         } catch (e) {
-            console.error(e)
         }
     }
 }
