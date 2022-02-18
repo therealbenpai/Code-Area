@@ -20,7 +20,7 @@ class Counter {
         this.ci = 0;
         this.cia = this.ci;
     }
-    static addMouseHit() {
+    addMouseHit() {
         var cr = this.vcrCheck();
         if (cr == true) {
             return;
@@ -39,7 +39,7 @@ class Counter {
             }
         }
     }
-    static addKeyHit() {
+    addKeyHit() {
         var cr = this.vcrCheck();
         if (cr == true) {
             return;
@@ -58,7 +58,7 @@ class Counter {
             }
         }
     }
-    static vcrCheck() {
+    vcrCheck() {
         if (this.vcr >= 2) {
             console.error(lockmsg);
             window.alert(lockmsg);
@@ -69,7 +69,7 @@ class Counter {
             return false;
         }
     }
-    static xPerSecond() {
+    xPerSecond() {
         try {
             const now = Date.now()
             const msDiff = now - this.#st
@@ -86,7 +86,7 @@ class Counter {
 
         }
     }
-    static keysPerSecond() {
+    keysPerSecond() {
         try {
             const data = this.xPerSecond()
             const kps1 = `${(this.ti / data[1])}`
@@ -96,7 +96,7 @@ class Counter {
         } catch (e) {
         }
     }
-    static clicksPerSecond() {
+    clicksPerSecond() {
         try {
             const data = this.xPerSecond()
             const cps1 = `${(this.ci / data[1])}`
