@@ -70,30 +70,42 @@ class Counter {
         }
     }
     xPerSecond() {
-        const now = Date.now()
-        const msDiff = now - this.#st
-        const sDiff = msDiff/1000
-        const fs = String(sDiff).split('.')
-        const ss = fs[1].split('')
-        const fsDiff = Number(`${fs[0]}.${ss[0]}`)
-        const array = [
-            msDiff,sDiff,fsDiff
-        ]
-        return array
+        try {
+            const now = Date.now()
+            const msDiff = now - this.#st
+            const sDiff = msDiff / 1000
+            const fs = String(sDiff).split('.')
+            const ss = fs[1].split('')
+            const fsDiff = Number(`${fs[0]}.${ss[0]}`)
+            const array = [
+                msDiff, sDiff, fsDiff
+            ]
+            return array
+        } catch (e) {
+
+        }
     }
     keysPerSecond() {
-        const data = this.xPerSecond()
-        const kps1 = `${(this.ti / data[1])}`
-        const kps2 = kps1.split('.')
-        const kps3 = `${kps2[0]}.${kps2[1].charAt(0)}`
-        return kps3
+        try {
+            const data = this.xPerSecond()
+            const kps1 = `${(this.ti / data[1])}`
+            const kps2 = kps1.split('.')
+            const kps3 = `${kps2[0]}.${kps2[1].charAt(0)}`
+            return kps3
+        } catch (e) {
+
+        }
     }
     clicksPerSecond() {
-        const data = this.xPerSecond()
-        const cps1 = `${(this.ci / data[1])}`
-        const cps2 = cps1.split('.')
-        const cps3 = `${cps2[0]}.${cps2[1].charAt(0)}`
-        return cps3
+        try {
+            const data = this.xPerSecond()
+            const cps1 = `${(this.ci / data[1])}`
+            const cps2 = cps1.split('.')
+            const cps3 = `${cps2[0]}.${cps2[1].charAt(0)}`
+            return cps3
+        } catch (e) {
+
+        }
     }
 }
 
@@ -111,9 +123,9 @@ var quickText = function (e) {
 var quickRemoveEL = function () {
     document.body.style.cursor = "not-allowed";
     document.getElementById("text_input").disabled = true;
-    document.onkeypress = function () {};
+    document.onkeypress = function () { };
     document.getElementById("clicker_button").disabled = true;
-    document.onclick = function () {};
+    document.onclick = function () { };
 };
 //Full Text Area
 document.onkeypress = function () {
@@ -134,4 +146,4 @@ const x = new Counter();
 
 let ci;
 
-setTimeout(ci = setInterval(function() {kpse.innerText = x.keysPerSecond(); cpse.innerText = x.clicksPerSecond()}, 125),1000)
+setTimeout(ci = setInterval(function () { kpse.innerText = x.keysPerSecond(); cpse.innerText = x.clicksPerSecond() }, 125), 1000)
