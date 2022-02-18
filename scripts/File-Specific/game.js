@@ -20,7 +20,7 @@ class Counter {
         this.ci = 0;
         this.cia = this.ci;
     }
-    addMouseHit() {
+    static addMouseHit() {
         var cr = this.vcrCheck();
         if (cr == true) {
             return;
@@ -39,7 +39,7 @@ class Counter {
             }
         }
     }
-    addKeyHit() {
+    static addKeyHit() {
         var cr = this.vcrCheck();
         if (cr == true) {
             return;
@@ -58,7 +58,7 @@ class Counter {
             }
         }
     }
-    vcrCheck() {
+    static vcrCheck() {
         if (this.vcr >= 2) {
             console.error(lockmsg);
             window.alert(lockmsg);
@@ -69,14 +69,14 @@ class Counter {
             return false;
         }
     }
-    xPerSecond() {
+    static xPerSecond() {
         try {
             const now = Date.now()
             const msDiff = now - this.#st
             const sDiff = msDiff / 1000
             const fs = String(sDiff).split('.')
             let ss;
-            if (fs[1] == undefined) {ss = [0]} else {ss = fs[1].split('')}
+            if (fs[1] == undefined) { ss = [0] } else { ss = fs[1].split('') }
             const fsDiff = Number(`${fs[0]}.${ss[0]}`)
             const array = [
                 msDiff, sDiff, fsDiff
@@ -86,7 +86,7 @@ class Counter {
 
         }
     }
-    keysPerSecond() {
+    static keysPerSecond() {
         try {
             const data = this.xPerSecond()
             const kps1 = `${(this.ti / data[1])}`
@@ -96,7 +96,7 @@ class Counter {
         } catch (e) {
         }
     }
-    clicksPerSecond() {
+    static clicksPerSecond() {
         try {
             const data = this.xPerSecond()
             const cps1 = `${(this.ci / data[1])}`
@@ -107,6 +107,15 @@ class Counter {
         }
     }
 }
+
+// Device platform
+function deviceType() {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))|Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/i.test(ua)) {
+        return "tablet";
+    }
+    return "desktop";
+};
 
 //Message Var
 const lockmsg = "Counters Disabled (Reason=Too many violations developing from Anti-Cheat System)";
@@ -145,4 +154,26 @@ const x = new Counter();
 
 let ci;
 
-setTimeout(ci = setInterval(function () { kpse.innerText = x.keysPerSecond(); cpse.innerText = x.clicksPerSecond() }, 125), 1000)
+const d = deviceType()
+
+if (d != "desktop") {
+    setTimeout(
+        ci = setInterval(
+            function () {
+                cpse.innerText = x.clicksPerSecond()
+            }
+            , 125)
+        , 1000)
+    document.getElementById("text_input").disabled = true;
+    document.onkeypress = function () { };
+    document.getElementById("typing").style.visibility = "hidden"
+} else {
+    setTimeout(
+        ci = setInterval(
+            function () {
+                kpse.innerText = x.keysPerSecond();
+                cpse.innerText = x.clicksPerSecond();
+            }
+            , 125)
+        , 1000)
+}

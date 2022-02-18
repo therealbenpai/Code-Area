@@ -1,3 +1,17 @@
+html {
+    text-align: center;
+    cursor: unset;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .main {
     display: flex;
     justify-content: space-evenly;
@@ -14,11 +28,6 @@ div#clicking {
     border-radius: 16px;
 }
 
-html {
-    text-align: center;
-    cursor: unset;
-}
-
 .counter {
     color: rgba(200, 150, 180, 0.95);
     text-decoration: underline;
@@ -27,13 +36,4 @@ html {
 
 .counter span {
     color: red;
-}
-
-body {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
