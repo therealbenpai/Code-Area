@@ -156,24 +156,28 @@ let ci;
 
 const d = deviceType()
 
-if (d != "desktop") {
-    setTimeout(
-        ci = setInterval(
-            function () {
-                cpse.innerText = x.clicksPerSecond()
-            }
-            , 125)
-        , 1000)
-    document.getElementById("text_input").disabled = true;
-    document.onkeypress = function () { };
-    document.getElementById("typing").style.visibility = "hidden"
-} else {
-    setTimeout(
-        ci = setInterval(
-            function () {
-                kpse.innerText = x.keysPerSecond();
-                cpse.innerText = x.clicksPerSecond();
-            }
-            , 125)
-        , 1000)
+async function load() {
+    if (d != "desktop") {
+        setTimeout(
+            ci = setInterval(
+                function () {
+                    cpse.innerText = x.clicksPerSecond()
+                }
+                , 125)
+            , 1000)
+        document.getElementById("text_input").disabled = true;
+        document.onkeypress = function () { };
+        document.getElementById("typing").style.visibility = "hidden"
+    } else {
+        setTimeout(
+            ci = setInterval(
+                function () {
+                    kpse.innerText = x.keysPerSecond();
+                    cpse.innerText = x.clicksPerSecond();
+                }
+                , 125)
+            , 1000)
+    }
 }
+
+load()
