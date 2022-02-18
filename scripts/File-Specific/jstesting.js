@@ -1,71 +1,60 @@
-// Loop Function
-
-function loop(method, info, times) {
-    const testmethod = /(alert)|(console)|(prompt)|(confirm)/gmi
-    if (testmethod.test(method) == true) {
-        for (let i = 0; i < parseInt(times); i++) {
-            if (method == "alert") {
-                alert(info)
-                continue
-            } else if (method == "console") {
-                console.error(info)
-                continue
-            } else if (method == "prompt") {
-                prompt(info, null)
-                continue
+class PageFunctions {
+    static ft() {
+        const uspf = function() {
+            const v = prompt("Please Enter a Password:");
+            if (v == null || v == undefined) {
+                uspf()
+            } else if (typeof v === "string") {
+                return v;
             } else {
-                confirm(info)
-                continue
+                throw new Error("Error in First-Time uspf Logic")
             }
+        }
+        let usp = uspf()
+        const hashed = CryptoJS.MD5(usp)
+        localStorage.setItem('kpsw',hashed.toString())
+    }
+    static signin() {
+        const uepf = function() {
+            const v = prompt("Please Enter Your Password:");
+            if (v == null || v == undefined) {
+                uepf()
+            } else if (typeof v === "string") {
+                return v;
+            } else {
+                throw new Error("Error in Sign-in uepf Logic")
+            }
+        }
+        const uep = uepf()
+        const hashed = CryptoJS.MD5(uep)
+        const kpswe = localStorage.getItem('kpsw')
+        try {
+            if (kpswe == hashed.toString()) {
+                return true
+            } else {
+                throw new Error("Incorrect Password")
+            }
+        } catch (e) {
+            console.error(e)
+            return false;
         }
     }
 }
 
-// Testing if a number is devisible by another number
-
-function checkdiv(x, y) {
-    if (parseInt(x) % parseInt(y) == 0) {
-        return true
+const start = function() {
+    let r;
+    if (typeof localStorage.getItem('kpsw') !== "string") {
+        PageFunctions.ft()
+        r = true
     } else {
-        return false
+        r = PageFunctions.signin()
     }
-}
-
-// 3x+1 math problem
-
-function specialMath(start, cap) {
-    var curval = parseInt(start)
-    if (isNaN(cap) == true) {
-        for (let i = 0; i <= 1000; i++) {
-            if (i === 1000) {
-                throw new Error("Cap Reached")
-            } else {
-                if (curval == 4) {
-                    return i
-                } else {
-                    if (curval % 2 == 0) {
-                        curval = curval / 2
-                    } else {
-                        curval = (3 * curval) + 1
-                    }
-                }
-            }
-        }
+    if (r == true) {
+        document.body.style.visibility = 'visible'
+    } else if (r == false) {
+        alert("password incorrect")
+        start()
     } else {
-        for (let i = 0; i <= cap; i++) {
-            if (i === cap) {
-                return "error"
-            } else {
-                if (curval == 4) {
-                    return i
-                } else {
-                    if (curval % 2 == 0) {
-                        curval = curval / 2
-                    } else {
-                        curval = (3 * curval) + 1
-                    }
-                }
-            }
-        }
+        throw new Error("Error in start logic step one")
     }
 }
