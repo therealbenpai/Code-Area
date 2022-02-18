@@ -83,12 +83,12 @@ class Counter {
     }
     keysPerSecond() {
         const data = this.xPerSecond()
-        const kps = `${(this.ti / data[0])*1000}`
+        const kps = `${(this.ti / data[1])}`
         return kps
     }
     clicksPerSecond() {
         const data = this.xPerSecond()
-        const cps = `${(this.ci / data[0])*1000}`
+        const cps = `${(this.ci / data[1])}`
         return cps
     }
 }
@@ -128,4 +128,6 @@ document.body.style.cursor = "auto";
 
 const x = new Counter();
 
-const ci = setInterval(function() {kpse.innerText = x.keysPerSecond(); cpse.innerText = x.clicksPerSecond()}, 125)
+let ci;
+
+setTimeout(ci = setInterval(function() {kpse.innerText = x.keysPerSecond(); cpse.innerText = x.clicksPerSecond()}, 125),1000)
