@@ -5,18 +5,11 @@
     <title>Index</title>
     <noscript>JavaScript is disabled or not supported</noscript>
     <link href="./stylesheets/general/defults.css" rel="stylesheet" type="text/css">
+    <script defer src="./scripts/File-Specific/redir.js"></script>
 </head>
 
 <body>
     <h1 id="redir"></h1>
-    <script>
-        async function redir() {
-            document.getElementById("redir").innerText = 'Redirecting...'
-            const currentHref = location.origin
-            await setTimeout(_ => location.href = `${currentHref}/Code-Area/html/index.html`, 2500)
-        }
-        redir()
-    </script>
 </body>
 
 </html>
