@@ -84,15 +84,15 @@ class Counter {
     keysPerSecond() {
         const data = this.xPerSecond()
         const kps1 = `${(this.ti / data[1])}`
-        const kps2 = kps1.split('.').join('').split('')
-        const kps3 = `${kps2[0]}.${kps2[1]}`
+        const kps2 = kps1.split('.')
+        const kps3 = `${kps2[0]}.${kps2[1].charAt(0)}`
         return kps3
     }
     clicksPerSecond() {
         const data = this.xPerSecond()
         const cps1 = `${(this.ci / data[1])}`
-        const cps2 = cps1.split('.').join('').split('')
-        const cps3 = `${cps2[0]}.${cps2[1]}`
+        const cps2 = cps1.split('.')
+        const cps3 = `${cps2[0]}.${cps2[1].charAt(0)}`
         return cps3
     }
 }
