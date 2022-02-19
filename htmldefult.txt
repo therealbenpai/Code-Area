@@ -4,7 +4,6 @@
 <head>
     <!-- Meta Data -->
     <meta name="author" content="sparty182020">
-    <meta name="vmethod" content="RSA">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +13,8 @@
     <!-- Website Title-->
     <title>Website Title Here</title>
     <!-- RSA Public Key -->
-    <pubkey data="RSA-public" type="key/rsa" public>
-        -----BEGIN PUBLIC KEY-----
-        MIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgGoNgzyx9opU9Az3kiO7kE0MuLdE
-        kIdBULRwShhtEssZAIoiyxkriK2NYKze010JQpkQekxIqvlI+AI/zqS3TLLPwKiB
-        kjSAmR7qfVpBen+r4joSOExI2QuPQ7DmFejTTklHz22oOsxu27m7CNOmNDuKR936
-        UIhPSHzKkFHVUqxnAgMBAAE=
-        -----END PUBLIC KEY-----
+    <pubkey data="AES" type="aes" public>
+        jXMse+XgSP5AseADxO7HHfe/PbloL4rTR6Z5s6Fc3oeKYufIJDNTXlmWQdsYRBr8RuJyAL/l8qiG/OuSuG3n1g==
     </pubkey>
 </head>
 
