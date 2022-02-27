@@ -23,10 +23,17 @@
                 <li><a href="./userpage.html">Userpage</a></li>
                 <li><a href="./text-converter.html">Text Converter</a></li>
                 <li><a href="./game.html">Game</a></li>
-                <li class="selelcted">Socials/li>
+                <li class="selelcted">Socials</li>
             </ul>
         </nav>
     </div>
+    <script>
+        async function redir() {
+            const destination = new URL("https://sparty182020.carrd.co/")
+            location.href = destination
+        }
+        setTimeout(_ => { redir() }, 1500)
+    </script>
 </body>
 
 </html>
