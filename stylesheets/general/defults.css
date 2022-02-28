@@ -1,4 +1,6 @@
 /* Fonts */
+
+/* Assistant */
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&display=swap');
 
 /* Custom Elements */
@@ -23,6 +25,38 @@ notice {
 lb {
     height: 5vh;
     width: 100vw;
+    background-color: rgba(0,0,0,0);
+    color: rgba(0,0,0,0);
+}
+
+error {
+    width:90vw;
+    margin-left: 10vw;
+    margin-top: 20vh;
+    height: 70vh;
+    background-color: rgba(255,0,0,0.4);
+    text-align: center;
+    padding-top: 40%;
+    font-size: 20%;
+}
+
+errormsg {
+    color: orangered;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 1000;
+}
+errormsg::before, errormsg::after {
+    content: "  ❌  ";
+}
+
+error p {
+    font-size: 32px;
+    font-family: 'Assistant';
+    font-weight: 1000;
+}
+
+error p::before {
+    content: "DETAILS: ";
 }
 
 /* Navigation Management */
@@ -33,7 +67,6 @@ lb {
     background-color: #B577B5;
     border: 2px solid Black;
     border-radius: 10px;
-    font-family: 'Assistant', sans-serif;
     font-weight: bold;
     padding: 16px;
     width: fit-content;
