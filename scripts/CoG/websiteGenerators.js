@@ -1,17 +1,15 @@
-// Sparty182020 JavaScript Code for Special Website Generation
-
-/*
-Usage: genwin(version:Number)
-Verson key:
-0 -> mouseMove Black and White Background Switch
-1 -> Click Counter
-2 -> Random Number
-3 -> Random Name
-4 -> Random Color
-5 -> Blank
+/**
+* @copyright GNU GENERAL PUBLIC LICENSE (v3)
 */
 
-// Window Generator Function
+/**
+ * @description This function Generates a window using a required "version" value and an optional "width" and "height" value
+ * @param {Number} version The window "version"
+ * @param {Number=} width The width of the window
+ * @param {Number=} height The height of the window
+ * @returns {Window} Window Object
+ * @author sparty182020
+ */
 function genwin(version, width, height) {
     const varnum = 5
     version = parseInt(version)
@@ -33,29 +31,36 @@ function genwin(version, width, height) {
         4: [300, 100],
         5: [150, 150]
     }
-    if (width >= mindem[version][0] && height >= mindem[version][1]) {
-        // Vars
-        var hiddenvar;
-        var nw = window.open('', '', `height:500,width:500`)
-        nw.resizeTo(width, height)
-        var nwwrite = function (content) { nw.document.write(content) }
-        const bodyareastyle = nw.document.body.style
-        // Writes Styleing Function
-        function writeStyles() {
-            // Creates a 'close' button
-            nwwrite('<br>\n<button onclick=window.close() id=\'button\'>Close The Window</button>')
-            // DOM short vars
-            const buttonElement = nw.document.getElementById('button')
-            // Actual Styles
-            bodyareastyle.fontFamily = 'Brush Script MT, cursive'
-            buttonElement.style.background = 'linear-gradient(45deg,red,blue)'
-            buttonElement.style.border = 'transparent'
-            buttonElement.style.borderRadius = '16px'
-            buttonElement.style.padding = '16px'
-            buttonElement.style.margin = '8px'
-        }
-        // Finds the website version from list
-        if (version == 0) {
+    if (width < mindem[version][0] || height < mindem[version][1]) {
+        throw new RangeError("Version value is invalid")
+    }
+    // Vars
+    var hiddenvar;
+    var nw = window.open('', '', `height:500,width:500`)
+    nw.resizeTo(width, height)
+    /**
+    * @param {String} content Content of the window
+    */
+    var nwwrite = function (content) { nw.document.write(content) }
+    const bodyareastyle = nw.document.body.style
+    // Writes Styleing Function
+    function writeStyles() {
+        // Creates a 'close' button
+        nwwrite('<br>\n<button onclick=window.close() id=\'button\'>Close The Window</button>')
+        // DOM short vars
+        const buttonElement = nw.document.getElementById('button')
+        // Actual Styles
+        bodyareastyle.fontFamily = 'Brush Script MT, cursive'
+        buttonElement.style.background = 'linear-gradient(45deg,red,blue)'
+        buttonElement.style.border = 'transparent'
+        buttonElement.style.borderRadius = '16px'
+        buttonElement.style.padding = '16px'
+        buttonElement.style.margin = '8px'
+    }
+    // Finds the website version from list
+    switch (version) {
+        case 0:
+            // 0 -> mouseMove Black and White Background Switch
             nwwrite('<h1>Move Your Mouse</h1>')
             var baw = function () {
                 if (nw.document.body.style.backgroundColor == 'black') {
@@ -67,7 +72,8 @@ function genwin(version, width, height) {
                 }
             }
             nw.document.onmousemove = hiddenvar => baw()
-        } else if (version == 1) {
+        case 1:
+            // 1 -> Click Counter
             nwwrite('<h1 id=\'counter\'>Counter = 0</h1>')
             var i = 0
             function incr() {
@@ -78,13 +84,15 @@ function genwin(version, width, height) {
                 const counter = incr()
                 nw.document.getElementById('counter').innerText = `Counter = ${counter}`
             }
-        } else if (version == 2) {
+        case 2:
+            // 2 -> Random Number
             function randnum() {
                 const num = Math.round(Math.random() * Math.pow(10, 6))
                 nwwrite(`<h1>Your Number is: ${num}</h1>`)
             }
             randnum()
-        } else if (version == 3) {
+        case 3:
+            // 3 -> Random Name
             function randname() {
                 var name = ''
                 const letters = Math.floor(Math.random() * 5) + 3
@@ -95,7 +103,8 @@ function genwin(version, width, height) {
                 return name
             }
             nwwrite(`Your name is: ${randname()}\n`)
-        } else if (version == 4) {
+        case 4:
+            // 4 -> Random Color
             function hgen() {
                 const hex = `#${Math.floor(Math.random() * Math.pow(16, 6)).toString(16)}`
                 return hex
@@ -103,12 +112,10 @@ function genwin(version, width, height) {
             const thex = hgen()
             nwwrite(`Your Color is: ${thex}`)
             nw.document.body.style.background = thex
-        } else if (version == 5) {
+        case 5:
+            // 5 -> Blank
             nwwrite('<span>Blank Page</span>')
-        }
-        // Writes The Styles
-        writeStyles()
-    } else {
-        throw new Error('Bad Size')
     }
+    // Writes The Styles
+    writeStyles()
 }
