@@ -1,6 +1,6 @@
 class PageFunctions {
     static ft() {
-        const uspf = function() {
+        const uspf = function () {
             const v = prompt("Please Enter a Password:");
             if (v == null || v == undefined) {
                 uspf()
@@ -12,10 +12,10 @@ class PageFunctions {
         }
         let usp = uspf()
         const hashed = CryptoJS.MD5(usp)
-        localStorage.setItem('kpsw',hashed.toString())
+        localStorage.setItem('kpsw', hashed.toString())
     }
     static signin() {
-        const uepf = function() {
+        const uepf = function () {
             const v = prompt("Please Enter Your Password:");
             if (v == null || v == undefined) {
                 uepf()
@@ -41,7 +41,7 @@ class PageFunctions {
     }
 }
 
-const start = function() {
+const start = function () {
     let r;
     if (typeof localStorage.getItem('kpsw') !== "string") {
         PageFunctions.ft()
@@ -101,8 +101,8 @@ class cFunction {
     * @description Runs the collatz conjecture using only vanilla Javascript code
     * @param {Number} sn Starting Number
     * @param {Number=} mi Max Iterations
-    * @returns {Array} The Details of your input
     * @author Sparty182020
+    * @returns {Console}
     **/
     static collatz(sn, mi) {
         if (sn <= 0) {
@@ -149,16 +149,39 @@ class cFunction {
             }
         }
         const results = {
-            iterations : it,
-            maxNumber : mn,
-            maxNumberIndex : mnp,
-            completed : f
+            iterations: it,
+            maxNumber: mn,
+            maxNumberIndex: mnp,
+            completed: f
         }
-        return results
+        switch(results.completed) {
+            case true:
+                return console.log(
+                    `%cResults:
+                    Iterations = ${results.iterations}
+                    Highest Number Reached = ${results.maxNumber}
+                    Highest Number Reached at Step #${results.maxNumberIndex}
+                    Loop started before function ended = %cTrue`
+                    ,
+                    'font-size:32px;text-decoration:underline;font-weight:700;color:blue'
+                    ,
+                    'font-size:32px;text-decoration:underline;font-weight:700;color:green'
+                    )
+            case false:
+                return console.log(
+                    `%cResults:
+                    Iterations = ${results.iterations}
+                    Highest Number Reached = ${results.maxNumber}
+                    Highest Number Reached at Step #${results.maxNumberIndex}
+                    Loop started before function ended = %cFalse`
+                    ,
+                    'font-size:32px;text-decoration:underline;font-weight:700;color:blue'
+                    ,
+                    'font-size:32px;text-decoration:underline;font-weight:700;color:red'
+                    )
+        }
     }
 }
-
-/* ========== SPLITER ========== */
 
 class Key {
     constructor(length) {
