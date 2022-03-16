@@ -154,7 +154,7 @@ class cFunction {
             maxNumberIndex: mnp,
             completed: f
         }
-        switch(results.completed) {
+        switch (results.completed) {
             case true:
                 return console.log(
                     `%cResults:
@@ -166,7 +166,7 @@ class cFunction {
                     'font-size:32px;text-decoration:underline;font-weight:700;color:blue'
                     ,
                     'font-size:32px;text-decoration:underline;font-weight:700;color:green'
-                    )
+                )
             case false:
                 return console.log(
                     `%cResults:
@@ -178,7 +178,7 @@ class cFunction {
                     'font-size:32px;text-decoration:underline;font-weight:700;color:blue'
                     ,
                     'font-size:32px;text-decoration:underline;font-weight:700;color:red'
-                    )
+                )
         }
     }
 }
