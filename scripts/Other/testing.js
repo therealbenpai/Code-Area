@@ -59,6 +59,8 @@ const start = function() {
     }
 }
 
+/* ========== SPLITER ========== */
+
 class cFunction {
     static getTime() {
         const datemod = new Date()
@@ -156,10 +158,12 @@ class cFunction {
     }
 }
 
+/* ========== SPLITER ========== */
+
 class Key {
     constructor(length) {
         this.constructionTime = cFunction.getFullDate()
         this.key = cFunction.keyGen(length)
         this.keyLength = length
     }
-}
+} 
