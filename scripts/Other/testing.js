@@ -95,37 +95,64 @@ class cFunction {
         }
         return key / 10
     }
+    /** 
+    * @description Runs the collatz conjecture using only vanilla Javascript code
+    * @param {Number} sn Starting Number
+    * @param {Number=} mi Max Iterations
+    * @returns {Array} The Details of your input
+    * @author Sparty182020
+    **/
     static collatz(sn, mi) {
-        // mi = Max Iterations
-        // sn = Starting Number
-        // fmi = Formated Max Iterations
-        // f = Finished
-        // it = Iterations
         if (sn <= 0) {
             throw new Error('Starting Number must be greater than 0')
         }
+        // fmi = Formated Max Iterations
         let fmi = 0
+        // it = Iterations
         let it = 0
+        // f = Finished
         let f;
+        // mn = Max Number
+        let mn = sn
+        // mnp = Max Number Index
+        let mnp = 1
         if (mi != null || mi != undefined) {
             fmi = mi;
         } else {
             fmi = 1000;
         }
-        for (let i = 0; i < fmi; i++) {
+        for (let i = 0; i <= fmi; i++) {
+            // Runs if max iterations have been reached
+            if (i == fmi) {
+                it = i
+                f = false
+                break
+            }
+            // Main Section
             if (sn % 2 == 1) {
                 sn = (sn * 3) + 1;
             } else {
                 sn = sn / 2;
             }
-            if (sn == 8) {
+            // Statitistics
+            if (sn > mn) {
+                mn = sn
+                mnp = i + 1
+            }
+            // Stops the script once the program has reached the number 4 (Loop begins here)
+            if (sn == 4) {
                 it = i;
                 f = true;
                 break;
             }
         }
-        console.log(`%cRepeating starts at ${it} iterations`, 'color: lightblue;')
-        return;
+        const results = {
+            iterations : it,
+            maxNumber : mn,
+            maxNumberIndex : mnp,
+            completed : f
+        }
+        return results
     }
 }
 
