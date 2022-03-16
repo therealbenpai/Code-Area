@@ -1,3 +1,7 @@
+/**
+* @copyright GNU GENERAL PUBLIC LICENSE (v3)
+*/
+
 // String to binary
 function stbi(string, num) {
     let output = ''

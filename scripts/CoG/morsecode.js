@@ -1,3 +1,7 @@
+/**
+* @copyright GNU GENERAL PUBLIC LICENSE (v3)
+*/
+
 // Morse Code Dictionary
 const stmca = {
     a: ".-",

@@ -1,3 +1,7 @@
+/**
+* @copyright GNU GENERAL PUBLIC LICENSE (v3)
+*/
+
 // Random number
 function ranNum(max) {
     if (max < 1) {throw new Error('Max must be at least 1')}
