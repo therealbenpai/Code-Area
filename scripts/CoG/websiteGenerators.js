@@ -7,10 +7,11 @@
  * @param {Number} version The window "version"
  * @param {Number=} width The width of the window
  * @param {Number=} height The height of the window
+ * @param {Boolean=} fullscreen Fullscreen the window
  * @returns {Window} Window Object
  * @author sparty182020
  */
-function genwin(version, width, height) {
+function genwin(version, fullscreen, width, height) {
     const varnum = 5
     version = parseInt(version)
     // Checks if the version is correct
@@ -46,7 +47,7 @@ function genwin(version, width, height) {
     // Writes Styleing Function
     function writeStyles() {
         // Creates a 'close' button
-        nwwrite('<br>\n<button onclick=window.close() id=\'button\'>Close The Window</button>')
+        nwwrite('<br>\n<button id=\'button\'>Close The Window</button>')
         // DOM short vars
         const buttonElement = nw.document.getElementById('button')
         // Actual Styles
@@ -56,6 +57,11 @@ function genwin(version, width, height) {
         buttonElement.style.borderRadius = '16px'
         buttonElement.style.padding = '16px'
         buttonElement.style.margin = '8px'
+        buttonElement.style.position = 'absolute'
+        buttonElement.style.left = `50%`
+        buttonElement.style.top = '50%'
+        buttonElement.style.transform = 'translate(-50%,-50%)'
+        buttonElement.onclick = function() {nw.window.close()}
     }
     // Finds the website version from list
     switch (version) {
@@ -72,6 +78,7 @@ function genwin(version, width, height) {
                 }
             }
             nw.document.onmousemove = hiddenvar => baw()
+            break
         case 1:
             // 1 -> Click Counter
             nwwrite('<h1 id=\'counter\'>Counter = 0</h1>')
@@ -84,6 +91,7 @@ function genwin(version, width, height) {
                 const counter = incr()
                 nw.document.getElementById('counter').innerText = `Counter = ${counter}`
             }
+            break
         case 2:
             // 2 -> Random Number
             function randnum() {
@@ -91,6 +99,7 @@ function genwin(version, width, height) {
                 nwwrite(`<h1>Your Number is: ${num}</h1>`)
             }
             randnum()
+            break
         case 3:
             // 3 -> Random Name
             function randname() {
@@ -103,6 +112,7 @@ function genwin(version, width, height) {
                 return name
             }
             nwwrite(`Your name is: ${randname()}\n`)
+            break
         case 4:
             // 4 -> Random Color
             function hgen() {
@@ -112,10 +122,16 @@ function genwin(version, width, height) {
             const thex = hgen()
             nwwrite(`Your Color is: ${thex}`)
             nw.document.body.style.background = thex
+            break
         case 5:
             // 5 -> Blank
             nwwrite('<span>Blank Page</span>')
+            break
     }
     // Writes The Styles
     writeStyles()
+    if (fullscreen === true) {
+        nwwrite('<br>\n<button id=\'Fullscreen\' hidden onclick=nw.document.body.requestFullscreen()>Fullscreen the window</button>')
+        nw.document.getElementById('Fullscreen').dispatchEvent(new MouseEvent('click'))
+    }
 }
