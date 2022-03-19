@@ -157,27 +157,19 @@ class cFunction {
         switch (results.completed) {
             case true:
                 return console.log(
-                    `%cResults:
-                    Iterations = ${results.iterations}
-                    Highest Number Reached = ${results.maxNumber}
-                    Highest Number Reached at Step #${results.maxNumberIndex}
-                    Loop started before function ended = %cTrue`
+                    `%cResults:\nIterations = ${results.iterations}\nHighest Number Reached = ${results.maxNumber}\nHighest Number Reached at Step #${results.maxNumberIndex}\nLoop started before function ended = %cTrue`
                     ,
-                    'font-size:32px;text-decoration:underline;font-weight:700;color:blue'
+                    'font-size:16px;text-decoration:underline;font-weight:700;color:blue'
                     ,
-                    'font-size:32px;text-decoration:underline;font-weight:700;color:green'
+                    'font-size:16px;text-decoration:underline;font-weight:700;color:green'
                 )
             case false:
                 return console.log(
-                    `%cResults:
-                    Iterations = ${results.iterations}
-                    Highest Number Reached = ${results.maxNumber}
-                    Highest Number Reached at Step #${results.maxNumberIndex}
-                    Loop started before function ended = %cFalse`
+                    `%cResults:\nIterations = ${results.iterations}\nHighest Number Reached = ${results.maxNumber}\nHighest Number Reached at Step #${results.maxNumberIndex}\nLoop started before function ended = %cFalse`
                     ,
-                    'font-size:32px;text-decoration:underline;font-weight:700;color:blue'
+                    'font-size:16px;text-decoration:underline;font-weight:700;color:blue'
                     ,
-                    'font-size:32px;text-decoration:underline;font-weight:700;color:red'
+                    'font-size:16px;text-decoration:underline;font-weight:700;color:red'
                 )
         }
     }
