@@ -181,4 +181,4 @@ class Key {
         this.key = cFunction.keyGen(length)
         this.keyLength = length
     }
-} 
+}
