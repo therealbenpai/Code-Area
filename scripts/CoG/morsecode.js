@@ -43,8 +43,8 @@ const stmca = {
         colon: "---...",
         equal: "-...-",
         add: ".-.-.",
-        oper: "-.--.-",
-        cper: "-.--.",
+        oper: "-.--.",
+        cper: "-.--.-",
         ampersand: ".-...",
         at: ".--.-"
     },
