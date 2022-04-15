@@ -16,7 +16,7 @@ function genwin(version, fullscreen, width, height) {
     version = parseInt(version)
     // Checks if the version is correct
     if (version < 0 || version > varnum) {
-        throw new Error('Bad Version')
+        throw new RangeError('Bad Version')
     }
     if (width == undefined || width == null) {
         width = 300
@@ -127,11 +127,22 @@ function genwin(version, fullscreen, width, height) {
             // 5 -> Blank
             nwwrite('<span>Blank Page</span>')
             break
+        default: 
+            throw new RangeError('Bad Version, but in the switch case statement')
     }
     // Writes The Styles
     writeStyles()
     if (fullscreen === true) {
-        nwwrite('<br>\n<button id=\'Fullscreen\' hidden onclick=nw.document.body.requestFullscreen()>Fullscreen the window</button>')
-        nw.document.getElementById('Fullscreen').dispatchEvent(new MouseEvent('click'))
+        nwwrite(
+            `<br>
+            <button id='Fullscreen' onclick=nw.document.body.requestFullscreen()>Fullscreen the window</button>`
+        )
+        setTimeout(_ => {
+            try {
+                nw.document.getElementById('Fullscreen').dispatchEvent(new MouseEvent('click'))
+            } catch (err) {
+                console.log(err)
+            }
+        },1500)
     }
 }
