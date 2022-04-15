@@ -157,7 +157,7 @@ let ci;
 const d = deviceType()
 
 async function load() {
-    if (d != "desktop") {
+    if (navigator.userAgentData.mobile) {
         setTimeout(
             ci = setInterval(
                 function () {
