@@ -30,7 +30,7 @@ const stmca = {
     x: "-..-",
     y: "-.--",
     z: "--..",
-    specials: [{
+    specials: {
         space: "/",
         period: ".-.-.-",
         comma: "--..--",
@@ -38,9 +38,17 @@ const stmca = {
         slash: "-....-",
         apostrophe: ".----.",
         qmark: "..--..",
-        emark: "-.-.--"
-    }],
-    numbers: [{
+        emark: "-.-.--",
+        quote: ".-..-.",
+        colon: "---...",
+        equal: "-...-",
+        add: ".-.-.",
+        oper: "-.--.-",
+        cper: "-.--.",
+        ampersand: ".-...",
+        at: ".--.-"
+    },
+    numbers: {
         0: "-----",
         1: ".----",
         2: "..---",
@@ -51,7 +59,7 @@ const stmca = {
         7: "--...",
         8: "---..",
         9: "----.",
-    }]
+    }
 }
 
 // String to Morse Code
@@ -69,43 +77,59 @@ function stmc(string, sd) {
                 // Test if its a number
                 if (ncRegex.test(parseInt(splitstr[i], 10)) == true) {
                     if (splitstr[i] == 0) {
-                        output += `${stmca.numbers[0][0]} `
+                        output += `${stmca.numbers[0]} `
                     } else if (splitstr[i] == 1) {
-                        output += `${stmca.numbers[0][1]} `
+                        output += `${stmca.numbers[1]} `
                     } else if (splitstr[i] == 2) {
-                        output += `${stmca.numbers[0][2]} `
+                        output += `${stmca.numbers[2]} `
                     } else if (splitstr[i] == 3) {
-                        output += `${stmca.numbers[0][3]} `
+                        output += `${stmca.numbers[3]} `
                     } else if (splitstr[i] == 4) {
-                        output += `${stmca.numbers[0][4]} `
+                        output += `${stmca.numbers[4]} `
                     } else if (splitstr[i] == 5) {
-                        output += `${stmca.numbers[0][5]} `
+                        output += `${stmca.numbers[5]} `
                     } else if (splitstr[i] == 6) {
-                        output += `${stmca.numbers[0][6]} `
+                        output += `${stmca.numbers[6]} `
                     } else if (splitstr[i] == 7) {
-                        output += `${stmca.numbers[0][7]} `
+                        output += `${stmca.numbers[7]} `
                     } else if (splitstr[i] == 8) {
-                        output += `${stmca.numbers[0][8]} `
+                        output += `${stmca.numbers[8]} `
                     } else if (splitstr[i] == 9) {
-                        output += `${stmca.numbers[0][9]} `
+                        output += `${stmca.numbers[9]} `
                     }
                 } else {
                     if (splitstr[i] == " ") {
-                        output += `${stmca.specials[0].space} `
+                        output += `${stmca.specials.space} `
                     } else if (splitstr[i] == ".") {
-                        output += `${stmca.specials[0].period} `
+                        output += `${stmca.specials.period} `
                     } else if (splitstr[i] == ",") {
-                        output += `${stmca.specials[0].comma} `
+                        output += `${stmca.specials.comma} `
                     } else if (splitstr[i] == "-") {
-                        output += `${stmca.specials[0].dash} `
+                        output += `${stmca.specials.dash} `
                     } else if (splitstr[i] == "/") {
-                        output += `${stmca.specials[0].slash} `
+                        output += `${stmca.specials.slash} `
                     } else if (splitstr[i] == "'") {
-                        output += `${stmca.specials[0].apostrophe} `
+                        output += `${stmca.specials.apostrophe} `
                     } else if (splitstr[i] == "?") {
-                        output += `${stmca.specials[0].qmark} `
+                        output += `${stmca.specials.qmark} `
                     } else if (splitstr[i] == "!") {
-                        output += `${stmca.specials[0].emark} `
+                        output += `${stmca.specials.emark} `
+                    } else if (splitstr[i] == "\"") {
+                        output += `${stmca.specials.quote} `
+                    } else if (splitstr[i] == ":") {
+                        output += `${stmca.specials.colon} `
+                    } else if (splitstr[i] == "=") {
+                        output += `${stmca.specials.equal} `
+                    } else if (splitstr[i] == "+") {
+                        output += `${stmca.specials.add} `
+                    } else if (splitstr[i] == "(") {
+                        output += `${stmca.specials.oper} `
+                    } else if (splitstr[i] == ")") {
+                        output += `${stmca.specials.cper} `
+                    } else if (splitstr[i] == "&") {
+                        output += `${stmca.specials.ampersand} `
+                    } else if (splitstr[i] == "@") {
+                        output += `${stmca.specials.at} `
                     }
                 }
             } else {
@@ -219,41 +243,57 @@ function stmc(string, sd) {
         } else if (string == "z") {
             output = `${stmca.z}`
         } else if (string == "0") {
-            output = `${stmca.numbers[0][0]}`
+            output = `${stmca.numbers[0]}`
         } else if (string == "1") {
-            output = `${stmca.numbers[0][1]}`
+            output = `${stmca.numbers[1]}`
         } else if (string == "2") {
-            output = `${stmca.numbers[0][2]}`
+            output = `${stmca.numbers[2]}`
         } else if (string == "3") {
-            output = `${stmca.numbers[0][3]}`
+            output = `${stmca.numbers[3]}`
         } else if (string == "4") {
-            output = `${stmca.numbers[0][4]}`
+            output = `${stmca.numbers[4]}`
         } else if (string == "5") {
-            output = `${stmca.numbers[0][5]}`
+            output = `${stmca.numbers[5]}`
         } else if (string == "6") {
-            output = `${stmca.numbers[0][6]}`
+            output = `${stmca.numbers[6]}`
         } else if (string == "7") {
-            output = `${stmca.numbers[0][7]}`
+            output = `${stmca.numbers[7]}`
         } else if (string == "8") {
-            output = `${stmca.numbers[0][8]}`
+            output = `${stmca.numbers[8]}`
         } else if (string == "9") {
-            output = `${stmca.numbers[0][9]}`
+            output = `${stmca.numbers[9]}`
         } else if (string == ' ') {
-            output = `${stmca.specials[0].space}`
+            output = `${stmca.specials.space}`
         } else if (string == '.') {
-            output = `${stmca.specials[0].period}`
+            output = `${stmca.specials.period}`
         } else if (string == ',') {
-            output = `${stmca.specials[0].comma}`
+            output = `${stmca.specials.comma}`
         } else if (string == '-') {
-            output = `${stmca.specials[0].dash}`
+            output = `${stmca.specials.dash}`
         } else if (string == '/') {
-            output = `${stmca.specials[0].slash}`
+            output = `${stmca.specials.slash}`
         } else if (string == "'") {
-            output = `${stmca.specials[0].apostrophe}`
+            output = `${stmca.specials.apostrophe}`
         } else if (string == '?') {
-            output = `${stmca.specials[0].qmark}`
+            output = `${stmca.specials.qmark}`
         } else if (string == '!') {
-            output = `${stmca.specials[0].emark}`
+            output = `${stmca.specials.emark}`
+        } else if (string == "\"") {
+            output = `${stmca.specials.quote} `
+        } else if (string == ":") {
+            output = `${stmca.specials.colon} `
+        } else if (string == "=") {
+            output = `${stmca.specials.equal} `
+        } else if (string == "+") {
+            output = `${stmca.specials.add} `
+        } else if (string == "(") {
+            output = `${stmca.specials.oper} `
+        } else if (string == ")") {
+            output = `${stmca.specials.cper} `
+        } else if (string == "&") {
+            output = `${stmca.specials.ampersand} `
+        } else if (string == "@") {
+            output = `${stmca.specials.at} `
         }
     }
     return output
@@ -318,35 +358,51 @@ function mcts(morseCode) {
             output += `y`
         } else if (splitMC[i] == stmca.z) {
             output += `z`
-        } else if (splitMC[i] == stmca.specials[0].space) {
+        } else if (splitMC[i] == stmca.specials.space) {
             output += ` `
-        } else if (splitMC[i] == stmca.specials[0].period) {
+        } else if (splitMC[i] == stmca.specials.period) {
             output += `.`
-        } else if (splitMC[i] == stmca.specials[0].comma) {
+        } else if (splitMC[i] == stmca.specials.comma) {
             output += `,`
-        } else if (splitMC[i] == stmca.specials[0].dash) {
+        } else if (splitMC[i] == stmca.specials.dash) {
             output += `-`
-        } else if (splitMC[i] == stmca.specials[0].slash) {
+        } else if (splitMC[i] == stmca.specials.slash) {
             output += `/`
-        } else if (splitMC[i] == stmca.number[0][0]) {
+        } else if (splitMC[i] == stmca.specials.quote) {
+            output += `"`
+        } else if (splitMC[i] == stmca.specials.colon) {
+            output += `:`
+        } else if (splitMC[i] == stmca.specials.equal) {
+            output += `=`
+        } else if (splitMC[i] == stmca.specials.add) {
+            output += `+`
+        } else if (splitMC[i] == stmca.specials.oper) {
+            output += `(`
+        } else if (splitMC[i] == stmca.specials.cper) {
+            output += `)`
+        } else if (splitMC[i] == stmca.specials.ampersand) {
+            output += `&`
+        } else if (splitMC[i] == stmca.specials.at) {
+            output += `@`
+        } else if (splitMC[i] == stmca.numbers[0]) {
             output += `0`
-        } else if (splitMC[i] == stmca.number[0][1]) {
+        } else if (splitMC[i] == stmca.numbers[1]) {
             output += `1`
-        } else if (splitMC[i] == stmca.number[0][2]) {
+        } else if (splitMC[i] == stmca.numbers[2]) {
             output += `2`
-        } else if (splitMC[i] == stmca.number[0][3]) {
+        } else if (splitMC[i] == stmca.numbers[3]) {
             output += `3`
-        } else if (splitMC[i] == stmca.number[0][4]) {
+        } else if (splitMC[i] == stmca.numbers[4]) {
             output += `4`
-        } else if (splitMC[i] == stmca.number[0][5]) {
+        } else if (splitMC[i] == stmca.numbers[5]) {
             output += `5`
-        } else if (splitMC[i] == stmca.number[0][6]) {
+        } else if (splitMC[i] == stmca.numbers[6]) {
             output += `6`
-        } else if (splitMC[i] == stmca.number[0][7]) {
+        } else if (splitMC[i] == stmca.numbers[7]) {
             output += `7`
-        } else if (splitMC[i] == stmca.number[0][8]) {
+        } else if (splitMC[i] == stmca.numbers[8]) {
             output += `8`
-        } else if (splitMC[i] == stmca.number[0][9]) {
+        } else if (splitMC[i] == stmca.numbers[9]) {
             output += `9`
         }
     }
