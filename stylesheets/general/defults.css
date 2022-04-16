@@ -23,6 +23,7 @@ notice {
 }
 
 lb {
+    display: block;
     height: 5vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0);
@@ -57,6 +58,9 @@ error p::before {
 }
 
 /* Navigation Management */
+.navigation nav {
+    padding-bottom: 10px;
+}
 
 .navigation nav ul {
     text-align: center;
@@ -119,6 +123,7 @@ html {
     font-weight: 400;
     src: url(https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
 }
+
 icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -136,18 +141,63 @@ icons {
     -webkit-font-smoothing: antialiased;
     transform: translateY(23%);
 }
-icons.md-18 { font-size: 18px; }
-icons.md-24 { font-size: 24px; }
-icons.md-36 { font-size: 36px; } /* Default */
-icons.md-48 { font-size: 48px; }
-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-icons.md-light { color: rgba(255, 255, 255, 1); }
-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-icons.md-light { color: rgba(255, 255, 255, 1); }
-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+icons.md-18 {
+    font-size: 18px;
+}
+
+icons.md-24 {
+    font-size: 24px;
+}
+
+icons.md-36 {
+    font-size: 36px;
+}
+
+/* Default */
+icons.md-48 {
+    font-size: 48px;
+}
+
+icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Icons 2 */
+
+@font-face {
+    font-family: "IcoFont";
+    font-weight: normal;
+    font-style: "Regular";
+    src: url("../../fonts/icofont.woff2") format("woff2"),
+        url("../../fonts/icofont.woff") format("woff");
+}
+icons2 {
+    font-family: 'IcoFont' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    line-height: 1;
+    -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+}
 
 /* Extras */
 
