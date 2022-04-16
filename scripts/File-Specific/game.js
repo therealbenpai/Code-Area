@@ -31,6 +31,9 @@ class Counter {
             if (this.cia == this.ci && this.ci == this.cia) {
                 this.ci++;
                 cc.innerHTML = this.ci;
+                if (this.ci % 100 === 0) {
+                    navigator.vibrate([Math.ceil(Math.random() * 5)*100, 75, Math.ceil(Math.random() * 5)*100, 75, Math.ceil(Math.random() * 5)*100])
+                }
                 this.cia = this.ci;
                 return this.cia;
             } else {
