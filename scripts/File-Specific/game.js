@@ -50,6 +50,9 @@ class Counter {
             if (this.tia == this.ti && this.ti == this.tia) {
                 this.ti++;
                 tc.innerHTML = this.ti;
+                if (this.ti % 100 === 0) {
+                    navigator.vibrate([Math.ceil(Math.random() * 5)*100, 75, Math.ceil(Math.random() * 5)*100, 75, Math.ceil(Math.random() * 5)*100])
+                }
                 this.tia = this.ti;
                 return this.tia;
             } else {
@@ -181,3 +184,5 @@ async function load() {
     }
     x.start()
 }
+
+load()
