@@ -45,13 +45,19 @@
     </div>
     <div class="main">
         <div id="typing">
-            <h1>Type Here</h1>
+            <h1>
+                Type Here
+                <icons class="md-36">keyboard</icons>
+            </h1>
             <p class="counter">Keys hit: <span id="type_counter">0</span></p>
             <p class="xps">Keys per second: <span id="kps">0</span></p>
             <input id="text_input" type="text" onKeyUp="this.value=''" onKeyPress="x.addKeyHit()" hidden></input>
         </div>
         <div id="clicking">
-            <h1>Click Here</h1>
+            <h1>
+                Click Here
+                <icons class="md-36">mouse</icons>
+            </h1>
             <p class="counter">Clicks: <span id="click_counter">0</span></p>
             <p class="xps">Clicks per second: <span id="cps">0</span></p>
             <button onClick="x.addMouseHit()" id="clicker_button" hidden></button>
