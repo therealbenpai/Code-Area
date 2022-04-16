@@ -174,7 +174,7 @@ async function load() {
             , 1000)
         document.getElementById("text_input").disabled = true;
         document.onkeypress = function () { };
-        document.getElementById("typing").style.visibility = "hidden"
+        typing.remove();
     } else {
         setTimeout(
             ci = setInterval(
