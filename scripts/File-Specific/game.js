@@ -13,12 +13,15 @@ const element2 = document.getElementById("clicker_button");
 class Counter {
     #st
     constructor() {
-        this.#st = Date.now()
+        this.#st = null;
         this.vcr = 0;
         this.ti = 0;
         this.tia = this.ti;
         this.ci = 0;
         this.cia = this.ci;
+    }
+    start() {
+        this.#st = Date.now()
     }
     addMouseHit() {
         var cr = this.vcrCheck();
@@ -135,20 +138,6 @@ var quickRemoveEL = function () {
     document.getElementById("clicker_button").disabled = true;
     document.onclick = function () { };
 };
-//Full Text Area
-document.onkeypress = function () {
-    element1.dispatchEvent(
-        new KeyboardEvent("keypress", {
-            key: "a"
-        })
-    );
-};
-//Full Click Area
-document.onclick = function () {
-    element2.dispatchEvent(new MouseEvent("click"));
-};
-
-document.body.style.cursor = "auto";
 
 const x = new Counter();
 
@@ -157,7 +146,19 @@ let ci;
 const d = deviceType()
 
 async function load() {
-    if (navigator.userAgentData.mobile) {
+    //Full Text Area
+    document.onkeypress = function () {
+        element1.dispatchEvent(
+            new KeyboardEvent("keypress", {
+                key: "a"
+            })
+        );
+    };
+    //Full Click Area
+    document.onclick = function () {
+        element2.dispatchEvent(new MouseEvent("click"));
+    };
+    if (d !== "desktop") {
         setTimeout(
             ci = setInterval(
                 function () {
@@ -178,6 +179,5 @@ async function load() {
                 , 125)
             , 1000)
     }
+    x.start()
 }
-
-load()
