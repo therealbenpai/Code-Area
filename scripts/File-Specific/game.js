@@ -85,7 +85,7 @@ class Counter {
             const sDiff = msDiff / 1000
             const fs = String(sDiff).split('.')
             let ss;
-            if (fs[1] == undefined) { ss = [0] } else { ss = fs[1].split('') }
+            if (fs[1] == undefined) { ss = [[0]] } else { ss = fs[1].split('') }
             const fsDiff = Number(`${fs[0]}.${ss[0]}`)
             const array = [
                 msDiff, sDiff, fsDiff
