@@ -32,7 +32,7 @@ class Counter {
                 this.ci++;
                 cc.innerHTML = this.ci;
                 if (this.ci % 100 === 0) {
-                    navigator.vibrate([Math.ceil(Math.random() * 5)*100, 75, Math.ceil(Math.random() * 5)*100, 75, Math.ceil(Math.random() * 5)*100])
+                    navigator.vibrate([Math.ceil(Math.random() * 5) * 100, 75, Math.ceil(Math.random() * 5) * 100, 75, Math.ceil(Math.random() * 5) * 100])
                 }
                 this.cia = this.ci;
                 return this.cia;
@@ -54,7 +54,7 @@ class Counter {
                 this.ti++;
                 tc.innerHTML = this.ti;
                 if (this.ti % 100 == 0) {
-                    navigator.vibrate([Math.ceil(Math.random() * 5)*100, 75, Math.ceil(Math.random() * 5)*100, 75, Math.ceil(Math.random() * 5)*100])
+                    navigator.vibrate([Math.ceil(Math.random() * 5) * 100, 75, Math.ceil(Math.random() * 5) * 100, 75, Math.ceil(Math.random() * 5) * 100])
                 }
                 this.tia = this.ti;
                 return this.tia;
@@ -86,7 +86,7 @@ class Counter {
             const fullSeconds = sDiff.getSeconds()
             const milliseconds = sDiff.getMilliseconds()
             const tenthSecond = String(milliseconds).charAt(0)
-            const fsDiff = parseFloat(Number(`${fullSeconds}.${tenthSecond}`).toFixed(1))
+            const fsDiff = parseFloat(`${fullSeconds}.${tenthSecond}`)
             const array = [
                 msDiff, fullSeconds, milliseconds, fsDiff
             ]
@@ -98,7 +98,7 @@ class Counter {
     keysPerSecond() {
         try {
             const data = this.xPerSecond()
-            const kps = Number(`${(this.ti / data[3])}`).toFixed(1)
+            const kps = (this.ti / data[3]).toFixed(1)
             return kps
         } catch (e) {
         }
@@ -106,7 +106,7 @@ class Counter {
     clicksPerSecond() {
         try {
             const data = this.xPerSecond()
-            const cps = Number(`${(this.ci / data[3])}`).toFixed(1)
+            const cps = (this.ci / data[3]).toFixed(1)
             return cps
         } catch (e) {
         }
