@@ -97,16 +97,16 @@ class Counter {
     }
     keysPerSecond() {
         try {
-            const data = this.xPerSecond()
-            const kps = (this.ti / data[3]).toFixed(1)
+            const data = this.xPerSecond()[3]
+            const kps = (this.ti / data).toFixed(1)
             return kps
         } catch (e) {
         }
     }
     clicksPerSecond() {
         try {
-            const data = this.xPerSecond()
-            const cps = (this.ci / data[3]).toFixed(1)
+            const data = this.xPerSecond()[3]
+            const cps = (this.ci / data).toFixed(1)
             return cps
         } catch (e) {
         }
