@@ -82,13 +82,13 @@ class Counter {
         try {
             const now = Date.now()
             const msDiff = now - this.#st
-            const sDiff = msDiff / 1000
-            const fs = String(sDiff).split('.')
-            let ss;
-            if (fs[1] == undefined) { ss = 0 } else { ss = fs[1].split('')[0] }
-            const fsDiff = Number(`${fs[0]}.${ss}`)
+            const sDiff = new Date(msDiff)
+            const fullSeconds = sDiff.getSeconds()
+            const milliseconds = sDiff.getMilliseconds()
+            const tenthSecond = String(milliseconds).charAt(0)
+            const fsDiff = parseFloat(Number(`${fullSeconds}.${tenthSecond}`).toFixed(1))
             const array = [
-                msDiff, sDiff, fsDiff
+                msDiff, fullSeconds, milliseconds, fsDiff
             ]
             return array
         } catch (e) {
@@ -98,9 +98,9 @@ class Counter {
     keysPerSecond() {
         try {
             const data = this.xPerSecond()
-            const kps1 = `${(this.ti / data[1])}`
+            const kps1 = Number(`${(this.ti / data[3])}`).toFixed(1)
             const kps2 = kps1.split('.')
-            const kps3 = `${kps2[0]}.${kps2[1].charAt(0)}`
+            const kps3 = `${kps2[0]}.${kps2[1]}`
             return kps3
         } catch (e) {
         }
@@ -108,9 +108,9 @@ class Counter {
     clicksPerSecond() {
         try {
             const data = this.xPerSecond()
-            const cps1 = `${(this.ci / data[1])}`
+            const cps1 = Number(`${(this.ci / data[3])}`).toFixed(1)
             const cps2 = cps1.split('.')
-            const cps3 = `${cps2[0]}.${cps2[1].charAt(0)}`
+            const cps3 = `${cps2[0]}.${cps2[1]}`
             return cps3
         } catch (e) {
         }
