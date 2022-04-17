@@ -191,6 +191,8 @@ icons2 {
     font-variant: normal;
     text-transform: none;
     white-space: nowrap;
+    font-size: 32px;
+    transform: translateY(25%);
     word-wrap: normal;
     direction: ltr;
     line-height: 1;
