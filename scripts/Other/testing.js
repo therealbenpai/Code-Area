@@ -58,7 +58,8 @@ const start = function () {
         r = PageFunctions.signin()
     }
     if (r == true) {
-        document.body.style.visibility = 'visible'
+        document.getElementById("blocker").style.visibility = 'hidden'
+        document.getElementById("LockNotice").style.visibility = 'hidden'
     } else if (r == false) {
         alert("password incorrect")
         start()
