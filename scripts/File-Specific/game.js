@@ -98,20 +98,16 @@ class Counter {
     keysPerSecond() {
         try {
             const data = this.xPerSecond()
-            const kps1 = Number(`${(this.ti / data[3])}`).toFixed(1)
-            const kps2 = kps1.split('.')
-            const kps3 = `${kps2[0]}.${kps2[1]}`
-            return kps3
+            const kps = Number(`${(this.ti / data[3])}`).toFixed(1)
+            return kps
         } catch (e) {
         }
     }
     clicksPerSecond() {
         try {
             const data = this.xPerSecond()
-            const cps1 = Number(`${(this.ci / data[3])}`).toFixed(1)
-            const cps2 = cps1.split('.')
-            const cps3 = `${cps2[0]}.${cps2[1]}`
-            return cps3
+            const cps = Number(`${(this.ci / data[3])}`).toFixed(1)
+            return cps
         } catch (e) {
         }
     }
