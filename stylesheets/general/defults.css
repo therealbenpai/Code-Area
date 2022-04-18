@@ -213,11 +213,14 @@ icons2 {
 /* Page Locking */
 #LockNotice {
     display: block;
-    height: 100%;
-    width: 100%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     border: 16px solid red;
     border-radius: 16px;
     background-color: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #LockNotice h1 {
