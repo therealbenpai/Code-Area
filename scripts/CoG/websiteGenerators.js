@@ -12,10 +12,10 @@
  * @author sparty182020
  */
 function genwin(version, fullscreen, width, height) {
-    const varnum = 5
+    const varnum = 6
     version = parseInt(version)
     // Checks if the version is correct
-    if (version < 0 || version > varnum) {
+    if (version <= 0 || version > varnum) {
         throw new RangeError('Bad Version')
     }
     if (width == undefined || width == null) {
@@ -25,12 +25,12 @@ function genwin(version, fullscreen, width, height) {
         height = 300
     }
     var mindem = {
-        0: [250, 250],
-        1: [300, 100],
+        1: [250, 250],
         2: [300, 100],
         3: [300, 100],
         4: [300, 100],
-        5: [150, 150]
+        5: [300, 100],
+        6: [150, 150]
     }
     if (width < mindem[version][0] || height < mindem[version][1]) {
         throw new RangeError("Version value is invalid")
@@ -65,8 +65,8 @@ function genwin(version, fullscreen, width, height) {
     }
     // Finds the website version from list
     switch (version) {
-        case 0:
-            // 0 -> mouseMove Black and White Background Switch
+        case 1:
+            // 1 -> mouseMove Black and White Background Switch
             nwwrite('<h1>Move Your Mouse</h1>')
             var baw = function () {
                 if (nw.document.body.style.backgroundColor == 'black') {
@@ -79,8 +79,8 @@ function genwin(version, fullscreen, width, height) {
             }
             nw.document.onmousemove = hiddenvar => baw()
             break
-        case 1:
-            // 1 -> Click Counter
+        case 2:
+            // 2 -> Click Counter
             nwwrite('<h1 id=\'counter\'>Counter = 0</h1>')
             var i = 0
             function incr() {
@@ -92,16 +92,16 @@ function genwin(version, fullscreen, width, height) {
                 nw.document.getElementById('counter').innerText = `Counter = ${counter}`
             }
             break
-        case 2:
-            // 2 -> Random Number
+        case 3:
+            // 3 -> Random Number
             function randnum() {
                 const num = Math.round(Math.random() * Math.pow(10, 6))
                 nwwrite(`<h1>Your Number is: ${num}</h1>`)
             }
             randnum()
             break
-        case 3:
-            // 3 -> Random Name
+        case 4:
+            // 4 -> Random Name
             function randname() {
                 var name = ''
                 const letters = Math.floor(Math.random() * 5) + 3
@@ -113,8 +113,8 @@ function genwin(version, fullscreen, width, height) {
             }
             nwwrite(`Your name is: ${randname()}\n`)
             break
-        case 4:
-            // 4 -> Random Color
+        case 5:
+            // 5 -> Random Color
             function hgen() {
                 const hex = `#${Math.floor(Math.random() * Math.pow(16, 6)).toString(16)}`
                 return hex
@@ -123,8 +123,8 @@ function genwin(version, fullscreen, width, height) {
             nwwrite(`Your Color is: ${thex}`)
             nw.document.body.style.background = thex
             break
-        case 5:
-            // 5 -> Blank
+        case 6:
+            // 6 -> Blank
             nwwrite('<span>Blank Page</span>')
             break
         default: 
