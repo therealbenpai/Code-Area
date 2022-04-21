@@ -1,9 +1,26 @@
-/* Fonts */
+/* Assistant Font */
 
-/* Assistant */
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&display=swap');
 
+/* Icon Fonts */
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: "IcoFont";
+    font-weight: normal;
+    font-style: "Regular";
+    src: url("../../fonts/icofont.woff2") format("woff2"),
+        url("../../fonts/icofont.woff") format("woff");
+}
+
 /* Custom Elements */
+
 noticearea {
     background: rgba(255, 10, 10, 0.5);
     position: absolute;
@@ -57,7 +74,59 @@ error p::before {
     content: "DETAILS: ";
 }
 
+icons2 {
+    font-family: 'IcoFont' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    white-space: nowrap;
+    font-size: 32px;
+    transform: translateY(25%);
+    word-wrap: normal;
+    direction: ltr;
+    line-height: 1;
+    -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+}
+
+icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    transform: translateY(23%);
+}
+
+icons.dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+icons.dark.inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+icons.light {
+    color: rgba(255, 255, 255, 1);
+}
+
+icons.light.inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
 /* Navigation Management */
+
 .navigation nav {
     padding-bottom: 10px;
 }
@@ -115,92 +184,6 @@ html {
     background-image: url("https://combinatronics.com/sparty182020/imagehost/main/background1.svg");
 }
 
-/* Icons */
-
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-}
-
-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 36px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
-    transform: translateY(23%);
-}
-
-icons.md-18 {
-    font-size: 18px;
-}
-
-icons.md-24 {
-    font-size: 24px;
-}
-
-icons.md-36 {
-    font-size: 36px;
-}
-
-/* Default */
-icons.md-48 {
-    font-size: 48px;
-}
-
-icons.md-dark {
-    color: rgba(0, 0, 0, 0.54);
-}
-
-icons.md-dark.md-inactive {
-    color: rgba(0, 0, 0, 0.26);
-}
-
-icons.md-light {
-    color: rgba(255, 255, 255, 1);
-}
-
-icons.md-light.md-inactive {
-    color: rgba(255, 255, 255, 0.3);
-}
-
-/* Icons 2 */
-
-@font-face {
-    font-family: "IcoFont";
-    font-weight: normal;
-    font-style: "Regular";
-    src: url("../../fonts/icofont.woff2") format("woff2"),
-        url("../../fonts/icofont.woff") format("woff");
-}
-icons2 {
-    font-family: 'IcoFont' !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    white-space: nowrap;
-    font-size: 32px;
-    transform: translateY(25%);
-    word-wrap: normal;
-    direction: ltr;
-    line-height: 1;
-    -webkit-font-feature-settings: "liga";
-    font-feature-settings: "liga";
-    -webkit-font-smoothing: antialiased;
-}
-
 /* Extras */
 
 .title {
@@ -211,6 +194,7 @@ icons2 {
 }
 
 /* Page Locking */
+
 #LockNotice {
     display: block;
     height: -webkit-fill-available;
