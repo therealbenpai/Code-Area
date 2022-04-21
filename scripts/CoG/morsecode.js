@@ -49,16 +49,16 @@ const stmca = {
         at: ".--.-"
     },
     numbers: {
-        0: "-----",
-        1: ".----",
-        2: "..---",
-        3: "...--",
-        4: "....-",
-        5: ".....",
-        6: "-....",
-        7: "--...",
-        8: "---..",
-        9: "----.",
+        zero: "-----",
+        one: ".----",
+        two: "..---",
+        three: "...--",
+        four: "....-",
+        five: ".....",
+        six: "-....",
+        seven: "--...",
+        eight: "---..",
+        nine: "----.",
     }
 }
 
@@ -71,25 +71,25 @@ function stmc(string, sd) {
         let i;
         for (i = 0; i < length; i++) {
             if (splitstr[i] == 0) {
-                output += `${stmca.numbers[0]} `
+                output += `${stmca.numbers.zero} `
             } else if (splitstr[i] == "1") {
-                output += `${stmca.numbers[1]} `
+                output += `${stmca.numbers.one} `
             } else if (splitstr[i] == "2") {
-                output += `${stmca.numbers[2]} `
+                output += `${stmca.numbers.two} `
             } else if (splitstr[i] == "3") {
-                output += `${stmca.numbers[3]} `
+                output += `${stmca.numbers.three} `
             } else if (splitstr[i] == "4") {
-                output += `${stmca.numbers[4]} `
+                output += `${stmca.numbers.four} `
             } else if (splitstr[i] == "5") {
-                output += `${stmca.numbers[5]} `
+                output += `${stmca.numbers.five} `
             } else if (splitstr[i] == "6") {
-                output += `${stmca.numbers[6]} `
+                output += `${stmca.numbers.six} `
             } else if (splitstr[i] == "7") {
-                output += `${stmca.numbers[7]} `
+                output += `${stmca.numbers.seven} `
             } else if (splitstr[i] == "8") {
-                output += `${stmca.numbers[8]} `
+                output += `${stmca.numbers.eight} `
             } else if (splitstr[i] == "9") {
-                output += `${stmca.numbers[9]} `
+                output += `${stmca.numbers.nine} `
             } else if (splitstr[i] == " ") {
                 output += `${stmca.specials.space} `
             } else if (splitstr[i] == ".") {
@@ -231,25 +231,25 @@ function stmc(string, sd) {
         } else if (string == "z") {
             output = `${stmca.z}`
         } else if (string == "0") {
-            output = `${stmca.numbers[0]}`
+            output = `${stmca.numbers.zero}`
         } else if (string == "1") {
-            output = `${stmca.numbers[1]}`
+            output = `${stmca.numbers.one}`
         } else if (string == "2") {
-            output = `${stmca.numbers[2]}`
+            output = `${stmca.numbers.two}`
         } else if (string == "3") {
-            output = `${stmca.numbers[3]}`
+            output = `${stmca.numbers.three}`
         } else if (string == "4") {
-            output = `${stmca.numbers[4]}`
+            output = `${stmca.numbers.four}`
         } else if (string == "5") {
-            output = `${stmca.numbers[5]}`
+            output = `${stmca.numbers.five}`
         } else if (string == "6") {
-            output = `${stmca.numbers[6]}`
+            output = `${stmca.numbers.six}`
         } else if (string == "7") {
-            output = `${stmca.numbers[7]}`
+            output = `${stmca.numbers.seven}`
         } else if (string == "8") {
-            output = `${stmca.numbers[8]}`
+            output = `${stmca.numbers.eight}`
         } else if (string == "9") {
-            output = `${stmca.numbers[9]}`
+            output = `${stmca.numbers.nine}`
         } else if (string == ' ') {
             output = `${stmca.specials.space}`
         } else if (string == '.') {
