@@ -70,7 +70,7 @@ function stmc(string, sd) {
         const length = splitstr.length
         let i;
         for (i = 0; i < length; i++) {
-            if (splitstr[i] == 0) {
+            if (splitstr[i] == "0") {
                 output += `${stmca.numbers.zero} `
             } else if (splitstr[i] == "1") {
                 output += `${stmca.numbers.one} `
