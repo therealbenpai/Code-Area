@@ -15,37 +15,61 @@ function genwin(version, fullscreen, width, height) {
     const varnum = 6
     version = parseInt(version)
     // Checks if the version is correct
-    if (version <= 0 || version > varnum) {
-        throw new RangeError('Bad Version')
+    if (version <= 0 ||
+        version > varnum
+    ) {
+        console.error(RangeError(`Bad Version\n\n Version must be between 0 and ${varnum}`))
+        return;
     }
-    if (width == undefined || width == null) {
+    if (isNaN(width)) {
         width = 300
     }
-    if (height == undefined || height == null) {
+    if (isNaN(height)) {
         height = 300
     }
     var mindem = {
-        1: [250, 250],
-        2: [300, 100],
-        3: [300, 100],
-        4: [300, 100],
-        5: [300, 100],
-        6: [150, 150]
+        1: [
+            250,
+            250
+        ],
+        2: [
+            300,
+            100
+        ],
+        3: [
+            300,
+            100
+        ],
+        4: [
+            300,
+            100
+        ],
+        5: [
+            300,
+            100
+        ],
+        6: [
+            150,
+            150
+        ]
     }
-    if (width < mindem[version][0] || height < mindem[version][1]) {
-        throw new RangeError("Version value is invalid")
+    if (
+        width < mindem[version][0] || // checks if the width is not valid
+        height < mindem[version][1] // checks if the height is not valid
+    ) {
+        throw new RangeError("Dimensions value is invalid")
     }
     // Vars
     var hiddenvar;
-    var nw = window.open('', '', `height:500,width:500`)
+    const nw = window.open('', '', `height:500,width:500`)
     nw.resizeTo(width, height)
     /**
     * @param {String} content Content of the window
     */
-    var nwwrite = function (content) { nw.document.write(content) }
+    const nwwrite = function (content) { nw.document.write(content) }
     const bodyareastyle = nw.document.body.style
     // Writes Styleing Function
-    function writeStyles() {
+    const writeStyles = function() {
         // Creates a 'close' button
         nwwrite('<br>\n<button id=\'button\'>Close The Window</button>')
         // DOM short vars
@@ -61,14 +85,14 @@ function genwin(version, fullscreen, width, height) {
         buttonElement.style.left = `50%`
         buttonElement.style.top = '50%'
         buttonElement.style.transform = 'translate(-50%,-50%)'
-        buttonElement.onclick = function() {nw.window.close()}
+        buttonElement.onclick = void function() { nw.window.close() }
     }
     // Finds the website version from list
     switch (version) {
         case 1:
             // 1 -> mouseMove Black and White Background Switch
             nwwrite('<h1>Move Your Mouse</h1>')
-            var baw = function () {
+            const baw = function () {
                 if (nw.document.body.style.backgroundColor == 'black') {
                     nw.document.body.style.backgroundColor = 'white'
                     nw.document.body.style.color = 'black'
@@ -82,53 +106,62 @@ function genwin(version, fullscreen, width, height) {
         case 2:
             // 2 -> Click Counter
             nwwrite('<h1 id=\'counter\'>Counter = 0</h1>')
-            var i = 0
+            let i = 0
             function incr() {
                 i++
                 return i
             }
             nw.document.onclick = function () {
                 const counter = incr()
-                nw.document.getElementById('counter').innerText = `Counter = ${counter}`
+                nw.document.getElementById('counter')
+                    .innerText = `Counter = ${counter}`;
             }
             break
         case 3:
             // 3 -> Random Number
-            function randnum() {
-                const num = Math.round(Math.random() * Math.pow(10, 6))
-                nwwrite(`<h1>Your Number is: ${num}</h1>`)
+            const randnum = function() {
+                const num = Math.round(
+                    Math.random() * Math.pow(10, 6)
+                );
+                return num
             }
-            randnum()
-            break
+            nwwrite(`<h1>Your Number is: ${randnum()}</h1>`)
+            break;
         case 4:
             // 4 -> Random Name
-            function randname() {
-                var name = ''
-                const letters = Math.floor(Math.random() * 5) + 3
-                for (var index = 0; index < letters; index++) {
-                    const lettergen = (Math.floor(Math.random() * 22) + 10).toString(32)
-                    name += lettergen
+            const randname = function() {
+                let name = ''
+                const letters = Math.floor(
+                    Math.random() * 5
+                ) + 3;
+                for (let i = 0; i < letters; i++) {
+                    const lettergen = (
+                        Math.floor(
+                            Math.random() * 22
+                        ) + 10
+                    ).toString(32);
+                    name += lettergen;
                 }
-                return name
+                return name;
             }
-            nwwrite(`Your name is: ${randname()}\n`)
-            break
+            nwwrite(`Your name is: ${randname()}\n`);
+            break;
         case 5:
             // 5 -> Random Color
-            function hgen() {
-                const hex = `#${Math.floor(Math.random() * Math.pow(16, 6)).toString(16)}`
-                return hex
+            const hgen = function() {
+                const hex = `#${Math.floor(Math.random() * Math.pow(16, 6)).toString(16)}`;
+                return hex;
             }
-            const thex = hgen()
-            nwwrite(`Your Color is: ${thex}`)
-            nw.document.body.style.background = thex
-            break
+            const thex = hgen();
+            nwwrite(`Your Color is: ${thex}`);
+            nw.document.body.style.background = thex;
+            break;
         case 6:
             // 6 -> Blank
-            nwwrite('<span>Blank Page</span>')
-            break
-        default: 
-            throw new RangeError('Bad Version, but in the switch case statement')
+            nwwrite('<span>Blank Page</span>');
+            break;
+        default:
+            throw new RangeError('Bad Version, but in the switch case statement');
     }
     // Writes The Styles
     writeStyles()
@@ -139,10 +172,13 @@ function genwin(version, fullscreen, width, height) {
         )
         setTimeout(_ => {
             try {
-                nw.document.getElementById('Fullscreen').dispatchEvent(new MouseEvent('click'))
+                nw.document.getElementById('Fullscreen')
+                    .dispatchEvent(
+                        new MouseEvent('click')
+                    )
             } catch (err) {
                 console.log(err)
             }
-        },1500)
+        }, 1500)
     }
 }
