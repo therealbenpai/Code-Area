@@ -32,7 +32,7 @@ class Util {
     }
     static writeClipboard(index) {
         const writeables = [
-            "",
+            "to",
             "",
             "",
             "",

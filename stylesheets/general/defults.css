@@ -19,6 +19,27 @@
         url("../../fonts/icofont.woff") format("woff");
 }
 
+@font-face {
+    font-family: 'Material Symbols';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../fonts/materialSymbols.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Material Symbols Sharp';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../fonts/materialSymbolsSharp.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Material Symbols Rounded';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../fonts/materialSymbolsRounded.woff2") format('woff2');
+}
+
 /* Custom Elements */
 
 noticearea {
@@ -75,6 +96,23 @@ error p::before {
     content: "DETAILS: ";
 }
 
+icons3 {
+    font-family: 'Material Symbols';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+}
+
 icons2 {
     font-family: 'IcoFont' !important;
     font-style: normal;
@@ -110,19 +148,19 @@ icons {
     transform: translateY(23%);
 }
 
-icons.dark {
+.dark {
     color: var(--dark700);
 }
 
-icons.dark.inactive {
+.dark.inactive {
     color: var(--dark300);
 }
 
-icons.light {
+.light {
     color: rgba(255, 255, 255, 1);
 }
 
-icons.light.inactive {
+.light.inactive {
     color: rgba(255, 255, 255, 0.3);
 }
 
@@ -234,19 +272,19 @@ html {
 /* Custom Vars */
 
 :root {
-    --rtb : linear-gradient(45deg, red, blue);
-    --dark000 : #696969;
-    --dark100 : #545454;
-    --dark200 : #4B4B4B;
-    --dark300 : #454545;
-    --dark400 : #404040;
-    --dark500 : #353535;
-    --dark600 : #272727;
-    --dark700 : #1A1A1A;
-    --dark800 : #121212;
-    --dark900 : #040404;
-    --trans : rgba(0,0,0,0);
-    --mvw : 100vw;
-    --mvh : 100vh;
-    --ma : 100%;
+    --rtb: linear-gradient(45deg, red, blue);
+    --dark000: #696969;
+    --dark100: #545454;
+    --dark200: #4B4B4B;
+    --dark300: #454545;
+    --dark400: #404040;
+    --dark500: #353535;
+    --dark600: #272727;
+    --dark700: #1A1A1A;
+    --dark800: #121212;
+    --dark900: #040404;
+    --trans: rgba(0, 0, 0, 0);
+    --mvw: 100vw;
+    --mvh: 100vh;
+    --ma: 100%;
 }
