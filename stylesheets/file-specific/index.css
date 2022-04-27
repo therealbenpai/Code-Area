@@ -1,7 +1,7 @@
 html {
     font-family: sans-serif;
-    min-height: 100%;
-    min-width: 100%;
+    min-height: var(--ma);
+    min-width: var(--ma);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

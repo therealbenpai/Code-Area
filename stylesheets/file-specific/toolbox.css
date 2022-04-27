@@ -1,5 +1,5 @@
 div#toolbox-container {
-    border: 3px solid rgba(100, 100, 100, 1);
+    border: 3px solid var(--dark200);
     border-radius: 6px;
 }
 
