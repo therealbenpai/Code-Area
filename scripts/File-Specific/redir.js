@@ -1,7 +1,24 @@
+function fixedRedir(file, go) {
+    try {
+        go = Boolean(go)
+    } catch (err) {
+        console.error("An error was thrown: " + err)
+    }
+        const splittedHref = location.href.split('/')
+        const curFile = splittedHref[splittedHref.length - 1]
+        const removedFileHref = location.href.replace(curFile, '')
+        const fixedHref = removedFileHref + `${file}`
+        if (go == true) {
+            location.href = fixedHref
+            return
+        } else {
+            return fixedHref
+        }
+}
+
 async function redir() {
     document.getElementById("redir").innerText = 'Redirecting...'
-    const currentHref = location.origin
-    location.href = `${currentHref}/Code-Area/html/index.html`
+    location.href = fixedRedir('html/index.html',false)
 }
 
 async function sessionSetup() {
