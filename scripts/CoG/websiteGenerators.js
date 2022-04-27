@@ -1,3 +1,32 @@
+// Disclamer Function for usage in special windows
+/**
+ * @param {String} disclamer Disclamer Reason
+ * @returns {Boolean}
+ */
+function disclamer(disclamer) {
+    if (disclamer == null || disclamer == undefined) return;
+    let reason;
+    switch (disclamer) {
+        case "ep":
+            reason = "Epileptic Triggers including flashing lights"
+            break;
+        case "lag":
+            reason = "Lag-causing function calls"
+            break;
+        case "bug":
+            reason = "Buggy code and/or Beta pages"
+            break;
+        default:
+            console.error(TypeError("Disclamer Type isn't valid"))
+            return;
+    }
+    const disclamerPrompt = confirm(`WARNING!
+    By opening this window type, you understand the fact that this may happen:
+    ${reason}
+    To continue, press OK. Otherwise, press cancel`)
+    return disclamerPrompt;
+}
+
 /**
 * @copyright GNU GENERAL PUBLIC LICENSE (v3)
 */
@@ -7,11 +36,10 @@
  * @param {Number} version The window "version"
  * @param {Number=} width The width of the window
  * @param {Number=} height The height of the window
- * @param {Boolean=} fullscreen Fullscreen the window
  * @returns {Window} Window Object
  * @author sparty182020
  */
-function genwin(version, fullscreen, width, height) {
+function genwin(version, width, height) {
     const varnum = 6
     version = parseInt(version)
     // Checks if the version is correct
@@ -60,7 +88,6 @@ function genwin(version, fullscreen, width, height) {
         throw new RangeError("Dimensions value is invalid")
     }
     // Vars
-    var hiddenvar;
     const nw = window.open('', '', `height:500,width:500`)
     nw.resizeTo(width, height)
     /**
@@ -69,27 +96,30 @@ function genwin(version, fullscreen, width, height) {
     const nwwrite = function (content) { nw.document.write(content) }
     const bodyareastyle = nw.document.body.style
     // Writes Styleing Function
-    const writeStyles = function() {
-        // Creates a 'close' button
-        nwwrite('<br>\n<button id=\'button\'>Close The Window</button>')
+    const writeStyles = function () {
+        nwwrite('<br>')
         // DOM short vars
-        const buttonElement = nw.document.getElementById('button')
+        const buttonElement = nw.document.createElement('button')
+        buttonElement.innerText = "Press This Button To Close The Window"
         // Actual Styles
         bodyareastyle.fontFamily = 'Brush Script MT, cursive'
         buttonElement.style.background = 'linear-gradient(45deg,red,blue)'
-        buttonElement.style.border = 'transparent'
+        buttonElement.style.border = '0px solid transparent'
         buttonElement.style.borderRadius = '16px'
         buttonElement.style.padding = '16px'
         buttonElement.style.margin = '8px'
-        buttonElement.style.position = 'absolute'
+        buttonElement.style.position = 'fixed'
         buttonElement.style.left = `50%`
         buttonElement.style.top = '50%'
         buttonElement.style.transform = 'translate(-50%,-50%)'
-        buttonElement.onclick = void function() { nw.window.close() }
+        buttonElement.onclick = function (e) { nw.close() }
+        nw.document.body.insertAdjacentElement('afterbegin', buttonElement)
     }
     // Finds the website version from list
     switch (version) {
         case 1:
+            const ver = disclamer('ep')
+            if (!ver) {nw.close(); console.log('no consent'); return;}
             // 1 -> mouseMove Black and White Background Switch
             nwwrite('<h1>Move Your Mouse</h1>')
             const baw = function () {
@@ -101,7 +131,7 @@ function genwin(version, fullscreen, width, height) {
                     nw.document.body.style.color = 'white'
                 }
             }
-            nw.document.onmousemove = hiddenvar => baw()
+            nw.document.onmousemove = (e) => baw()
             break
         case 2:
             // 2 -> Click Counter
@@ -119,7 +149,7 @@ function genwin(version, fullscreen, width, height) {
             break
         case 3:
             // 3 -> Random Number
-            const randnum = function() {
+            const randnum = function () {
                 const num = Math.round(
                     Math.random() * Math.pow(10, 6)
                 );
@@ -129,7 +159,7 @@ function genwin(version, fullscreen, width, height) {
             break;
         case 4:
             // 4 -> Random Name
-            const randname = function() {
+            const randname = function () {
                 let name = ''
                 const letters = Math.floor(
                     Math.random() * 5
@@ -148,7 +178,7 @@ function genwin(version, fullscreen, width, height) {
             break;
         case 5:
             // 5 -> Random Color
-            const hgen = function() {
+            const hgen = function () {
                 const hex = `#${Math.floor(Math.random() * Math.pow(16, 6)).toString(16)}`;
                 return hex;
             }
@@ -165,20 +195,4 @@ function genwin(version, fullscreen, width, height) {
     }
     // Writes The Styles
     writeStyles()
-    if (fullscreen === true) {
-        nwwrite(
-            `<br>
-            <button id='Fullscreen' onclick=nw.document.body.requestFullscreen()>Fullscreen the window</button>`
-        )
-        setTimeout(_ => {
-            try {
-                nw.document.getElementById('Fullscreen')
-                    .dispatchEvent(
-                        new MouseEvent('click')
-                    )
-            } catch (err) {
-                console.log(err)
-            }
-        }, 1500)
-    }
 }
