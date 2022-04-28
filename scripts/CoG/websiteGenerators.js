@@ -126,9 +126,7 @@ async function genwin(version, width, height) {
         buttonElement.onclick = function (e) { nw.close() }
         nw.document.body.insertAdjacentElement('afterbegin', buttonElement)
         const cStyle = nw.document.createElement('style')
-        cStyle.innerHTML = `@import https://raw.githubusercontent.com/sparty182020/Code-Area/master/stylesheets/general/defults.css
-        
-:root {
+        cStyle.innerHTML = `body > * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -137,10 +135,6 @@ async function genwin(version, width, height) {
     user-select: none;
     font-size: 32px;
     font-weight: bolder;
-}
-
-mark {
-    background-color: var(--dark100)
 }`
         nw.document.getElementsByTagName('head')[0].insertAdjacentElement('beforeend',cStyle)
     }

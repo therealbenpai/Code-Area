@@ -1,4 +1,4 @@
-/* Assistant Font */
+/* Fonts */
 
 @font-face {
     font-family: 'Assistant';
@@ -6,8 +6,6 @@
     font-weight: 400;
     src: url('../../fonts/Assisstant1.woff2') format('woff2');
 }
-
-/* Icon Fonts */
 
 @font-face {
     font-family: 'Material Icons';
@@ -184,6 +182,21 @@ icons {
     font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 40;
 }
 
+[ch] {
+    color: var(--trans) !important;
+}
+
+[ns],
+[ns]>* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
 /* Navigation Management */
 
 .navigation nav {
@@ -285,6 +298,11 @@ html {
     bottom: 3px;
     position: relative;
     font-size: 16px;
+}
+
+#login>label,
+#login>input {
+    top: 10%
 }
 
 #login>input:focus {

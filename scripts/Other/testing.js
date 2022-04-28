@@ -11,14 +11,14 @@
         document.onkeydown = void function (e) {}
         document.oncontextmenu = void function(e) {}
     } else {
-        document.getElementById('pswCheck').removeAttribute('hidden')
+        document.getElementById('pswCheck').removeAttribute('ch')
     }
 }
 
 const setup = function() {
     document.onkeydown = function(e) {
         if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-            e.preventDefault()
+            // e.preventDefault()
         }
     }
     document.getElementById("psw").onkeydown = function(e) {
@@ -26,13 +26,13 @@ const setup = function() {
             check()
             return;
         }
-        if (!document.getElementById("pswCheck").hasAttribute('hidden')) {
-            document.getElementById("pswCheck").setAttribute('hidden',"")
+        if (!document.getElementById("pswCheck").hasAttribute('ch')) {
+            document.getElementById("pswCheck").setAttribute('ch',"")
             return;
         }
     }
     document.oncontextmenu = function(e) {
-        e.preventDefault()
+        // e.preventDefault()
     }
 }
 
