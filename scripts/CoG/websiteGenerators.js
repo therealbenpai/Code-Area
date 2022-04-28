@@ -123,6 +123,7 @@ async function genwin(version, width, height) {
         buttonElement.style.left = `50%`
         buttonElement.style.top = '50%'
         buttonElement.style.transform = 'translate(-50%,-50%)'
+        buttonElement.style.fontFamily = 'initial'
         buttonElement.onclick = function (e) { nw.close() }
         nw.document.body.insertAdjacentElement('afterbegin', buttonElement)
         const cStyle = nw.document.createElement('style')
@@ -142,7 +143,7 @@ async function genwin(version, width, height) {
     switch (version) {
         case 1:
             // 1 -> mouseMove Black and White Background Switch
-            nwwrite('Move Your Mouse')
+            nwwrite('<p>Move Your Mouse</p>')
             const baw = function () {
                 if (nw.document.body.style.backgroundColor == 'black') {
                     nw.document.body.style.backgroundColor = 'white'
@@ -176,7 +177,7 @@ async function genwin(version, width, height) {
                 );
                 return num
             }
-            nwwrite(`Your Number is: ${randnum()}`)
+            nwwrite(`<p>Your Number is: ${randnum()}</p>`)
             break;
         case 4:
             // 4 -> Random Name
@@ -195,7 +196,7 @@ async function genwin(version, width, height) {
                 }
                 return name;
             }
-            nwwrite(`Your name is: ${randname()}\n`);
+            nwwrite(`<p>Your name is: ${randname()}</p>`);
             break;
         case 5:
             // 5 -> Random Color
@@ -204,7 +205,7 @@ async function genwin(version, width, height) {
                 return hex;
             }
             const thex = hgen();
-            nwwrite(`Your Color is: ${thex}`);
+            nwwrite(`<p></p>`);
             nw.document.body.style.background = thex;
             break;
         case 6:
