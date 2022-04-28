@@ -17,13 +17,15 @@ function disclamer(disclamer) {
             reason = "Buggy code and/or Beta pages"
             break;
         default:
-            console.error(TypeError("Disclamer Type isn't valid"))
+            console.error(TypeError("Disclaimer Type isn't valid"))
             return;
     }
-    const disclamerPrompt = confirm(`WARNING!
+    const disclamerPrompt = confirm(
+        `WARNING!
     By opening this window type, you understand the fact that this may happen:
     ${reason}
-    To continue, press OK. Otherwise, press cancel`)
+    To continue, press OK. Otherwise, press cancel`
+    )
     return disclamerPrompt;
 }
 
@@ -39,7 +41,7 @@ function disclamer(disclamer) {
  * @returns {Window} Window Object
  * @author sparty182020
  */
-function genwin(version, width, height) {
+async function genwin(version, width, height) {
     const varnum = 6
     version = parseInt(version)
     // Checks if the version is correct
@@ -87,6 +89,15 @@ function genwin(version, width, height) {
     ) {
         throw new RangeError("Dimensions value is invalid")
     }
+
+    if (version == 1) {
+        const ver = await disclamer('ep')
+        if (!ver) {
+            console.log('no consent');
+            return;
+        }
+    }
+
     // Vars
     const nw = window.open('', '', `height:500,width:500`)
     nw.resizeTo(width, height)
@@ -118,8 +129,6 @@ function genwin(version, width, height) {
     // Finds the website version from list
     switch (version) {
         case 1:
-            const ver = disclamer('ep')
-            if (!ver) {nw.close(); console.log('no consent'); return;}
             // 1 -> mouseMove Black and White Background Switch
             nwwrite('<h1>Move Your Mouse</h1>')
             const baw = function () {
@@ -135,7 +144,10 @@ function genwin(version, width, height) {
             break
         case 2:
             // 2 -> Click Counter
-            nwwrite('<h1 id=\'counter\'>Counter = 0</h1>')
+            const counterEle = nw.document.createElement('h1')
+            counterEle.id = 'counter'
+            counterEle.innerText = "Counter = 0"
+            nw.document.body.insertAdjacentElement('afterbegin',counterEle)
             let i = 0
             function incr() {
                 i++
@@ -188,7 +200,9 @@ function genwin(version, width, height) {
             break;
         case 6:
             // 6 -> Blank
-            nwwrite('<span>Blank Page</span>');
+            const fillerEle = nw.document.createElement('p')
+            fillerEle.innerText = "&#8203;"
+            nw.document.body.insertAdjacentElement('afterbegin', fillerEle)
             break;
         default:
             throw new RangeError('Bad Version, but in the switch case statement');
