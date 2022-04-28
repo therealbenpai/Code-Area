@@ -126,13 +126,21 @@ async function genwin(version, width, height) {
         buttonElement.onclick = function (e) { nw.close() }
         nw.document.body.insertAdjacentElement('afterbegin', buttonElement)
         const cStyle = nw.document.createElement('style')
-        cStyle.innerHTML = `:root {
+        cStyle.innerHTML = `@import https://raw.githubusercontent.com/sparty182020/Code-Area/master/stylesheets/general/defults.css
+        
+:root {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+mark {
+    background-color: var(--dark100)
 }`
         nw.document.getElementsByTagName('head')[0].insertAdjacentElement('beforeend',cStyle)
     }
@@ -140,7 +148,7 @@ async function genwin(version, width, height) {
     switch (version) {
         case 1:
             // 1 -> mouseMove Black and White Background Switch
-            nwwrite('<h1>Move Your Mouse</h1>')
+            nwwrite('Move Your Mouse')
             const baw = function () {
                 if (nw.document.body.style.backgroundColor == 'black') {
                     nw.document.body.style.backgroundColor = 'white'
@@ -154,7 +162,7 @@ async function genwin(version, width, height) {
             break
         case 2:
             // 2 -> Click Counter
-            nwwrite('<h1 id=\'counter\'>Counter = 0</h1>')
+            nwwrite('<p id=\'counter\'>Counter = 0</h1>')
             let i = 0
             function incr() {
                 i++
@@ -174,7 +182,7 @@ async function genwin(version, width, height) {
                 );
                 return num
             }
-            nwwrite(`<h1>Your Number is: ${randnum()}</h1>`)
+            nwwrite(`Your Number is: ${randnum()}`)
             break;
         case 4:
             // 4 -> Random Name

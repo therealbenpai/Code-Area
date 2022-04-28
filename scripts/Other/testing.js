@@ -76,6 +76,7 @@ class cFunction {
         return `${date} ${time}`
     }
     static keyGen(length) {
+        if (length < 1 || isNaN(length)) return console.error(TypeError('length isn\'t valid'))
         let key = 0
         for (let i = length; i > 0; i--) {
             key += (Math.round(Math.random() * 8) + 1) * Math.pow(10, i)
