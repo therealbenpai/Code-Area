@@ -13,20 +13,15 @@ div#toolbox-container h1 {
     background-clip: text;
     color: transparent;
     font-size: 24px;
-    animation: rainbow 4s cubic-bezier(0.405, 0.945, 0.685, 0.080) infinite;
+    animation: rainbow 8s linear infinite;
 }
 
 @keyframes rainbow {
-    0% {
+    from {
         background-position: 0% 50%
     }
-
-    50% {
+    to {
         background-position: 100% 25%
-    }
-
-    100% {
-        background-position: 0% 50%
     }
 }
 
@@ -54,7 +49,7 @@ div#toolbox-container div.innerdiv > button:last-child {
 }
 
 div#toolbox-container div.innerdiv > button:hover {
-    animation: scale-up-center 250ms cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+    animation: scale-up-center 250ms linear both;
 }
 
 @keyframes scale-up-center {
@@ -62,7 +57,7 @@ div#toolbox-container div.innerdiv > button:hover {
       transform: scale(1);
     }
     100% {
-      transform: scale(1.125);
+      transform: scale(1.1);
     }
   }
   

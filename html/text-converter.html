@@ -103,7 +103,7 @@
         </div>
     </div>
     <!-- Script for the singular inputs-->
-    <script async>
+    <script>
         function sconvert(e) {
             const textel = document.getElementById("sitextinput")
             document.getElementById("siletter").innerHTML = `<mark>${e.key}</mark>`
@@ -116,7 +116,7 @@
         document.getElementById("sitextinput").addEventListener('keydown', sconvert)
     </script>
     <!-- Script for the Mutiple inputs-->
-    <script async>
+    <script>
         function mconvert(e) {
             const textel = document.getElementById("mitextinput")
             document.getElementById("mibinary").innerHTML = `<mark>${stbi(textel.value)}</mark>`
