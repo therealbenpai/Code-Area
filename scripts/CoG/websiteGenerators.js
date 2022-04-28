@@ -3,7 +3,7 @@
  * @param {String} disclamer Disclamer Reason
  * @returns {Boolean}
  */
-function disclamer(disclamer) {
+ function disclamer(disclamer) {
     if (disclamer == null || disclamer == undefined) return;
     let reason;
     switch (disclamer) {
@@ -22,9 +22,9 @@ function disclamer(disclamer) {
     }
     const disclamerPrompt = confirm(
         `WARNING!
-    By opening this window type, you understand the fact that this may happen:
-    ${reason}
-    To continue, press OK. Otherwise, press cancel`
+By opening this window type, you understand the fact that this may happen:
+${reason}
+To continue, press OK. Otherwise, press cancel`
     )
     return disclamerPrompt;
 }
@@ -125,6 +125,16 @@ async function genwin(version, width, height) {
         buttonElement.style.transform = 'translate(-50%,-50%)'
         buttonElement.onclick = function (e) { nw.close() }
         nw.document.body.insertAdjacentElement('afterbegin', buttonElement)
+        const cStyle = nw.document.createElement('style')
+        cStyle.innerHTML = `:root {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}`
+        nw.document.getElementsByTagName('head')[0].insertAdjacentElement('beforeend',cStyle)
     }
     // Finds the website version from list
     switch (version) {
@@ -144,10 +154,7 @@ async function genwin(version, width, height) {
             break
         case 2:
             // 2 -> Click Counter
-            const counterEle = nw.document.createElement('h1')
-            counterEle.id = 'counter'
-            counterEle.innerText = "Counter = 0"
-            nw.document.body.insertAdjacentElement('afterbegin',counterEle)
+            nwwrite('<h1 id=\'counter\'>Counter = 0</h1>')
             let i = 0
             function incr() {
                 i++
@@ -158,7 +165,7 @@ async function genwin(version, width, height) {
                 nw.document.getElementById('counter')
                     .innerText = `Counter = ${counter}`;
             }
-            break
+            break;
         case 3:
             // 3 -> Random Number
             const randnum = function () {

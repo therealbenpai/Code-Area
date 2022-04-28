@@ -1,6 +1,11 @@
 /* Assistant Font */
 
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&display=swap');
+@font-face {
+    font-family: 'Assistant';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/Assisstant1.woff2') format('woff2');
+}
 
 /* Icon Fonts */
 
@@ -8,13 +13,13 @@
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+    src: url('../../fonts/materialIcons.woff2') format('woff2');
 }
 
 @font-face {
     font-family: "IcoFont";
-    font-weight: normal;
-    font-style: "Regular";
+    font-style: normal;
+    font-weight: 400;
     src: url("../../fonts/icofont.woff2") format("woff2"),
         url("../../fonts/icofont.woff") format("woff");
 }
@@ -253,8 +258,8 @@ html {
     border: 3px solid black;
     border-radius: 8px;
     padding: 16px;
-    width: fit-content;
-    height: fit-content;
+    width: 500px;
+    height: 200px;
     background: var(--dark200);
     top: 50%;
     left: 50%;
@@ -268,8 +273,9 @@ html {
     justify-content: center;
 }
 
-#input>label {
+#login>label {
     font-size: 32px;
+    margin-bottom: 15px;
 }
 
 #login>input {
@@ -278,10 +284,21 @@ html {
     border-radius: 4px;
     bottom: 3px;
     position: relative;
+    font-size: 16px;
 }
 
 #login>input:focus {
     background-color: #4B4B4B;
+    border: 2px solid green;
+    border-radius: 4px;
+}
+
+#pswCheck {
+    font-size: 32px;
+}
+
+#pswCheck>icons3 {
+    transform: translateY(8px);
 }
 
 #blocker {

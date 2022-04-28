@@ -1,27 +1,38 @@
 /**
  * @description Attempts To Login
  */
-const check = function () {
+ const check = function () {
     const passwordField = document.getElementById("psw").value
     const md5hash = "5729bd72fab93f0e443b0dcbc8186c60";
     const pswfieldhash = CryptoJS.MD5(passwordField)
     if (pswfieldhash == md5hash) {
         document.getElementById("login").remove()
         document.getElementById("blocker").remove()
+        document.onkeydown = void function (e) {}
+        document.oncontextmenu = void function(e) {}
     } else {
         document.getElementById('pswCheck').removeAttribute('hidden')
     }
 }
 
 const setup = function() {
+    document.onkeydown = function(e) {
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+            e.preventDefault()
+        }
+    }
     document.getElementById("psw").onkeydown = function(e) {
+        if (e.keyCode == 13) {
+            check()
+            return;
+        }
         if (!document.getElementById("pswCheck").hasAttribute('hidden')) {
             document.getElementById("pswCheck").setAttribute('hidden',"")
             return;
         }
-        if (e.keyCode == 13) {
-            check()
-        }
+    }
+    document.oncontextmenu = function(e) {
+        e.preventDefault()
     }
 }
 
