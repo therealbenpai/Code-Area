@@ -112,15 +112,15 @@ icons3 {
     -webkit-font-smoothing: antialiased;
 }
 
-icon3.outline {
+icons3.outline {
     font-family: 'Material Symbols Outlined';
 }
 
-icon3.rounded {
+icons3.rounded {
     font-family: 'Material Symbols Rounded';
 }
 
-icon3.sharp {
+icons3.sharp {
     font-family: 'Material Symbols Sharp';
 }
 
@@ -176,7 +176,7 @@ icons {
 }
 
 .ff {
-    font-variant-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 40;
+    font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 40;
 }
 
 /* Navigation Management */
@@ -254,20 +254,25 @@ html {
     border-radius: 8px;
     padding: 16px;
     width: fit-content;
+    height: fit-content;
+    background: var(--dark200);
     top: 50%;
     left: 50%;
     position: fixed;
     transform: translate(-50%, -50%);
-    display: block;
+    display: flex;
     text-align: center;
     align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-#input > label {
+#input>label {
     font-size: 32px;
 }
 
-#login > input {
+#login>input {
     height: 20px;
     border: 2px solid green;
     border-radius: 4px;
@@ -275,8 +280,8 @@ html {
     position: relative;
 }
 
-#login > input:focus {
-    transform: scale(1.1) translateX(4px);
+#login>input:focus {
+    background-color: #4B4B4B;
 }
 
 #blocker {
@@ -309,5 +314,5 @@ html {
     --mvh: 100vh;
     --ma: 100%;
     --ifs: 36px;
-    --translatec: translate(-50%,-50%);
+    --translatec: translate(-50%, -50%);
 }

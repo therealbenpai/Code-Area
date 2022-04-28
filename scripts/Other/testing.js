@@ -9,15 +9,14 @@ const check = function () {
         document.getElementById("login").remove()
         document.getElementById("blocker").remove()
     } else {
-        document.getElementById("pswCheck").hidden = false
+        document.getElementById('pswCheck').removeAttribute('hidden')
     }
 }
 
 const setup = function() {
     document.getElementById("psw").onkeydown = function(e) {
-        e.preventDefault()
-        if (document.getElementById("pswCheck").hidden != true) {
-            document.getElementById("pswCheck").hidden = true
+        if (!document.getElementById("pswCheck").hasAttribute('hidden')) {
+            document.getElementById("pswCheck").setAttribute('hidden',"")
             return;
         }
         if (e.keyCode == 13) {
