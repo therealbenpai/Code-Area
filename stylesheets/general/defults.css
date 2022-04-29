@@ -69,7 +69,7 @@ notice {
     font-weight: 425;
 }
 
-notice > icons3 {
+notice>icons3 {
     transform: translateY(20%);
 }
 
@@ -208,29 +208,27 @@ icons {
 }
 
 [rbt] {
-    background-image: repeating-linear-gradient(
-        to right,
-        red 9%,
-        blue 18%,
-        red 27%,
-        blue 36%,
-        red 45%,
-        blue 54%,
-        red 63%,
-        blue 72%,
-        red 81%,
-        blue 90%,
-        red 99%
-        );
+    background-image: repeating-linear-gradient(to right,
+            red 9%,
+            blue 18%,
+            red 27%,
+            blue 36%,
+            red 45%,
+            blue 54%,
+            red 63%,
+            blue 72%,
+            red 81%,
+            blue 90%,
+            red 99%);
     text-shadow: 1px 1px black;
     text-align: center;
-    background-size: 800% 800%;
+    background-size: 200% 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
     color: transparent;
     font-size: 24px;
-    animation: rainbow 4s linear infinite;
+    animation: rainbow 2s linear infinite;
 }
 
 /* Navigation Management */
@@ -394,6 +392,7 @@ html {
     from {
         background-position: 0% 50%
     }
+
     to {
         background-position: 100% 25%
     }
