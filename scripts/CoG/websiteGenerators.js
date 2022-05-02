@@ -129,7 +129,11 @@ async function genwin(version, width, height) {
         buttonElement.onclick = function (e) { nw.close() }
         nw.document.body.insertAdjacentElement('afterbegin', buttonElement)
         const cStyle = nw.document.createElement('style')
-        cStyle.innerHTML = `body > * {
+        cStyle.innerHTML = `html {
+    overflow: hidden;
+}
+        
+body > * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
