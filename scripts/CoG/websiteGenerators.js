@@ -136,6 +136,20 @@ async function genwin(version, width, height) {
     user-select: none;
     font-size: 32px;
     font-weight: bolder;
+}
+
+button {
+    background: linear-gradient(45deg, red, blue);
+    border: 0px solid transparent;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 8px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: initial;
+    font-size: 12px;
 }`
         nw.document.getElementsByTagName('head')[0].insertAdjacentElement('beforeend',cStyle)
     }
@@ -157,7 +171,7 @@ async function genwin(version, width, height) {
             break
         case 2:
             // 2 -> Click Counter
-            nwwrite('<p id=\'counter\'>Counter = 0</h1>')
+            nwwrite('<p id=\'counter\'>Counter = 0</p>')
             let i = 0
             function incr() {
                 i++
@@ -205,7 +219,7 @@ async function genwin(version, width, height) {
                 return hex;
             }
             const thex = hgen();
-            nwwrite(`<p></p>`);
+            nwwrite(`<p>Your color is ${thex}</p>`);
             nw.document.body.style.background = thex;
             break;
         case 6:
