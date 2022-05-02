@@ -89,15 +89,17 @@ async function genwin(version, width, height) {
     ) {
         throw new RangeError("Dimensions value is invalid")
     }
-
-    if (version == 1) {
-        const ver = await disclamer('ep')
-        if (!ver) {
-            console.log('no consent');
-            return;
+    function checkdisclamers() {
+        if (version == 1) {
+            const ver = disclamer('ep')
+            if (!ver) {
+                console.log('no consent');
+                return false
+            }
         }
+        return true;
     }
-
+    if (!checkdisclamers()) return;
     // Vars
     const nw = window.open('', '', `height:500,width:500`)
     nw.resizeTo(width, height)
