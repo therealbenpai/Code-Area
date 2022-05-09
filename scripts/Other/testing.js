@@ -139,9 +139,9 @@ class cFunction {
             }
         }
         const results = {
-            iterations: it,
+            iterations: it + 1,
             maxNumber: mn,
-            maxNumberIndex: mnp,
+            maxNumberIndex: mnp + 1,
             completed: f
         }
         switch (results.completed) {
