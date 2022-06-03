@@ -1,37 +1,38 @@
 /**
  * @description Attempts To Login
  */
- const check = function () {
+const check = function () {
     const passwordField = document.getElementById("psw").value
     const md5hash = "5729bd72fab93f0e443b0dcbc8186c60";
     const pswfieldhash = CryptoJS.MD5(passwordField)
     if (pswfieldhash == md5hash) {
         document.getElementById("login").remove()
         document.getElementById("blocker").remove()
-        document.onkeydown = void function (e) {}
-        document.oncontextmenu = void function(e) {}
+        document.onkeydown = void function (e) { }
+        document.oncontextmenu = void function (e) { }
     } else {
         document.getElementById('pswCheck').removeAttribute('ch')
     }
 }
 
-const setup = function() {
-    document.onkeydown = function(e) {
+const setup = function () {
+    document.onkeydown = function (e) {
         if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-            // e.preventDefault()
+            //? prevents devtools
+            e.preventDefault()
         }
     }
-    document.getElementById("psw").onkeydown = function(e) {
+    document.getElementById("psw").onkeydown = function (e) {
         if (e.keyCode == 13) {
             check()
             return;
         }
         if (!document.getElementById("pswCheck").hasAttribute('ch')) {
-            document.getElementById("pswCheck").setAttribute('ch',"")
+            document.getElementById("pswCheck").setAttribute('ch', "")
             return;
         }
     }
-    document.oncontextmenu = function(e) {
+    document.oncontextmenu = function (e) {
         // e.preventDefault()
     }
 }
@@ -88,26 +89,20 @@ class cFunction {
     * @param {Number} sn Starting Number
     * @param {Number=} mi Max Iterations
     * @author Sparty182020
-    * @returns {Console}
+    * @returns {void}
     **/
     static collatz(sn, mi) {
-        if (sn <= 0) {
-            throw new Error('Starting Number must be greater than 0')
-        }
+        if (sn <= 0) throw new Error('Starting Number must be greater than 0');
         // fmi = Formated Max Iterations
-        let fmi = 0
         // it = Iterations
-        let it = 0
         // f = Finished
-        let f;
         // mn = Max Number
-        let mn = sn
         // mnp = Max Number Index
-        let mnp = 1
-        if (mi != null || mi != undefined) {
-            fmi = mi;
-        } else {
+        let [fmi, it, f, mn, mnp] = [0, 0, undefined, sn, 1]
+        if (!mi) {
             fmi = 1000;
+        } else {
+            fmi = mi;
         }
         for (let i = 0; i <= fmi; i++) {
             // Runs if max iterations have been reached
@@ -125,7 +120,7 @@ class cFunction {
             // Statitistics
             if (sn > mn) {
                 mn = sn
-                mnp = i + 1
+                mnp++
             }
             // Stops the script once the program has reached the number 4 (Loop begins here)
             if (sn == 4) {
@@ -158,13 +153,5 @@ class cFunction {
                     'font-size:16px;text-decoration:underline;font-weight:700;color:red'
                 )
         }
-    }
-}
-
-class Key {
-    constructor(length) {
-        this.constructionTime = cFunction.getFullDate()
-        this.key = cFunction.keyGen(length)
-        this.keyLength = length
     }
 }

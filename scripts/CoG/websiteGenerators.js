@@ -3,7 +3,7 @@
  * @param {String} disclamer Disclamer Reason
  * @returns {Boolean}
  */
- function disclamer(disclamer) {
+function disclamer(disclamer) {
     if (disclamer == null || disclamer == undefined) return;
     let reason;
     switch (disclamer) {
@@ -36,8 +36,8 @@ To continue, press OK. Otherwise, press cancel`
 /**
  * @description This function Generates a window using a required "version" value and an optional "width" and "height" value
  * @param {Number} version The window "version"
- * @param {Number=} width The width of the window
- * @param {Number=} height The height of the window
+ * @param {Number | 300} width The width of the window
+ * @param {Number | 300} height The height of the window
  * @returns {Window} Window Object
  * @author sparty182020
  */
@@ -137,7 +137,7 @@ async function genwin(version, width, height) {
     font-size: 32px;
     font-weight: bolder;
 }`
-        nw.document.getElementsByTagName('head')[0].insertAdjacentElement('beforeend',cStyle)
+        nw.document.getElementsByTagName('head')[0].insertAdjacentElement('beforeend', cStyle)
     }
     // Finds the website version from list
     switch (version) {
