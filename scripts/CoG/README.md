@@ -8,17 +8,17 @@
 
 Numerical values (version):
 
-0  →  Black and White color changing page using `mousemove` event in Javascript
+1  →    Black and White color changing page using `mousemove` event in Javascript
 
-1  → 	Click Counter
+2  → 	Click Counter
 
-2  → 	Random Number Generator
+3  → 	Random Number Generator
 
-3  → 	Random Name Generator
+4  → 	Random Name Generator
 
-4  → 	Random Color Generator
+5  → 	Random Color Generator
 
-5  → 	Blank Page
+6  → 	Blank Page
 
 ## [String Converters (Exc. Morse Code)](https://raw.githubusercontent.com/sparty182020/Code-Area/master/scripts/CoG/converter.js)
 
@@ -47,8 +47,6 @@ Information:
 `stmca` is the dictionary that the Morse Code Converter functions use. It has a `string -> Morse Code` value system
 
 `stmc(string)` is the function to convert from a string to Morse Code
-
-`mcts(morseCode)` is the function to convert from Morse Code to a string
 
 ## [Random Generators](https://raw.githubusercontent.com/sparty182020/Code-Area/master/scripts/CoG/randomGenerators.js)
 
