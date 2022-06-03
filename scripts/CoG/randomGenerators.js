@@ -25,7 +25,7 @@ class RandomGenerators {
     
     // Random Hex Generator
     static randHex(prefix) {
-        if (prefix == undefined) {
+        if (!prefix) {
             return `${Math.floor(Math.random()*Math.pow(16,6)).toString(16)}`
         } else {
             return `${prefix}${Math.floor(Math.random()*Math.pow(16,6)).toString(16)}`
@@ -39,7 +39,7 @@ class RandomGenerators {
         }
         let hexRaw = 's'
         for (let index = 0; index < amount; index++) {
-            const hex = randHex(prefix)
+            const hex = randHex(prefix | false)
             hexRaw += `.${hex}`
         }
         return hexRaw.split('s.').join('').split('.')

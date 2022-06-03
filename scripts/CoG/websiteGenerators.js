@@ -4,7 +4,7 @@
  * @returns {Boolean}
  */
 function disclamer(disclamer) {
-    if (disclamer == null || disclamer == undefined) return;
+    if (Boolean(disclamer == null | undefined)) return;
     let reason;
     switch (disclamer) {
         case "ep":
