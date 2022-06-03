@@ -1,21 +1,23 @@
 /**
  * @description Attempts To Login
  */
-const check = function () {
+let check = function (x) {
     const passwordField = document.getElementById("psw").value
     const md5hash = "5729bd72fab93f0e443b0dcbc8186c60";
     const pswfieldhash = CryptoJS.MD5(passwordField)
-    if (pswfieldhash == md5hash) {
+    if (pswfieldhash == md5hash || x) {
         document.getElementById("login").remove()
         document.getElementById("blocker").remove()
         document.onkeydown = void function (e) { }
         document.oncontextmenu = void function (e) { }
+        setup = void function () { }
+        check = void function () { }
     } else {
         document.getElementById('pswCheck').removeAttribute('ch')
     }
 }
 
-const setup = function () {
+let setup = function () {
     if (sessionStorage.getItem('key') == "passwordKey-020281ytraps:6169209715") {
         check(true)
         return;
