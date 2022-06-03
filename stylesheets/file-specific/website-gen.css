@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-#button-area>icon[type=1] {
+#button-area>icon[type=type="1"] {
     width: auto;
     margin: 4px;
     align-items: center;
