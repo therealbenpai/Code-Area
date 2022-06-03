@@ -5,7 +5,7 @@ const check = function () {
     const passwordField = document.getElementById("psw").value
     const md5hash = "5729bd72fab93f0e443b0dcbc8186c60";
     const pswfieldhash = CryptoJS.MD5(passwordField)
-    if (pswfieldhash == md5hash || fsetup == true) {
+    if (pswfieldhash == md5hash) {
         document.getElementById("login").remove()
         document.getElementById("blocker").remove()
         document.onkeydown = void function (e) { }
