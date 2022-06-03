@@ -69,7 +69,7 @@ notice {
     font-weight: 425;
 }
 
-notice>icons3 {
+notice>icon[type=3] {
     transform: translateY(20%);
 }
 
@@ -109,7 +109,9 @@ error p::before {
     content: "DETAILS: ";
 }
 
-icons3 {
+/* Icon Elements */
+
+icon[type=3] {
     font-weight: normal;
     font-style: normal;
     font-size: var(--ifs);
@@ -123,38 +125,40 @@ icons3 {
     -webkit-font-feature-settings: "liga";
     font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 40;
 }
 
-icons3.outline {
+icon[type=3][outline]{
     font-family: 'Material Symbols Outlined';
 }
 
-icons3.rounded {
+icon[type=3][rounded] {
     font-family: 'Material Symbols Rounded';
 }
 
-icons3.sharp {
+icon[type=3][sharp] {
     font-family: 'Material Symbols Sharp';
 }
 
-icons2 {
+icon[type=2] {
     font-family: 'IcoFont';
     font-style: normal;
     font-weight: normal;
+    font-size: var(--ifs);
+    line-height: 1;
     font-variant: normal;
     text-transform: none;
+    display: default;
     white-space: nowrap;
-    font-size: var(--ifs);
-    transform: translateY(25%);
     word-wrap: normal;
     direction: ltr;
-    line-height: 1;
     -webkit-font-feature-settings: "liga";
     font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased;
+    transform: translateY(25%);
 }
 
-icons {
+icon[type=1] {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
@@ -172,24 +176,12 @@ icons {
     transform: translateY(23%);
 }
 
-.dark {
+[dark] {
     color: var(--dark700);
 }
 
-.dark.inactive {
+[dark][inactive] {
     color: var(--dark300);
-}
-
-.light {
-    color: rgba(255, 255, 255, 1);
-}
-
-.light.inactive {
-    color: rgba(255, 255, 255, 0.3);
-}
-
-.ff {
-    font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 40;
 }
 
 [ch] {
@@ -349,7 +341,7 @@ html {
     font-size: 32px;
 }
 
-#pswCheck>icons3 {
+#pswCheck>icon[type=3] {
     transform: translateY(8px);
 }
 
