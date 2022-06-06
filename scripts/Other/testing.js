@@ -110,7 +110,7 @@ class cFunction {
         } else {
             fmi = mi;
         }
-        for (let i = 0; i <= fmi; i++) {
+        for (let i = 1; i <= fmi; i++) {
             // Runs if max iterations have been reached
             if (i == fmi) {
                 it = i
@@ -136,15 +136,15 @@ class cFunction {
             }
         }
         const results = {
-            iterations: it + 1,
+            iterations: it,
             maxNumber: mn,
-            maxNumberIndex: mnp + 1,
+            maxNumberIndex: mnp,
             completed: f
         }
         switch (results.completed) {
             case true:
                 return console.log(
-                    `%cResults:\nIterations = ${results.iterations}\nHighest Number Reached = ${results.maxNumber}\nHighest Number Reached at Step #${results.maxNumberIndex}\nLoop started before function ended = %cTrue`
+                    `%cResults:\nIterations = ${results.iterations}\nHighest Number Reached = ${results.maxNumber}\nHighest Number Reached at Step #${results.maxNumberIndex}\nConjecture proven before function terminated = %cTrue`
                     ,
                     'font-size:16px;text-decoration:underline;font-weight:700;color:blue'
                     ,
@@ -152,7 +152,7 @@ class cFunction {
                 )
             case false:
                 return console.log(
-                    `%cResults:\nIterations = ${results.iterations}\nHighest Number Reached = ${results.maxNumber}\nHighest Number Reached at Step #${results.maxNumberIndex}\nLoop started before function ended = %cFalse`
+                    `%cResults:\nIterations = ${results.iterations}\nHighest Number Reached = ${results.maxNumber}\nHighest Number Reached at Step #${results.maxNumberIndex}\nConjecture proven before function terminated = %cFalse`
                     ,
                     'font-size:16px;text-decoration:underline;font-weight:700;color:blue'
                     ,
