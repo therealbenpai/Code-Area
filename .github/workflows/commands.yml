@@ -7,7 +7,7 @@ on:
 jobs:
   lock-issue:
     runs-on: ubuntu-latest
-    if: includes(github.event.comment.body, 'bot.lock') == true
+    if: contains(github.event.comment.body, 'bot.lock') == true
     steps:
       - name: Lock issue
         uses: actions-cool/issues-helper@v3
@@ -17,7 +17,7 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
   close-issue:
     runs-on: ubuntu-latest
-    if: includes(github.event.comment.body, 'bot.close') == true
+    if: contains(github.event.comment.body, 'bot.close') == true
     steps:
       - name: Close issue
         uses: actions-cool/issues-helper@v3
