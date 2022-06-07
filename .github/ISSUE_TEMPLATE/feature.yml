@@ -8,6 +8,7 @@ body:
       value: |
         Thanks for taking the time to fill out this feature recommendation!
   - type: checkboxs
+    id: checklist
     attributes:
       label: Feature Submition Checklist
       options:
