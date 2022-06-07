@@ -18,7 +18,7 @@ jobs:
           labels: 'bug'
   add-feature-label:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.issue.title, '[FEATURE REQUEST]') == true || contains(github.event.issue.body, 'feature request') == true
+    if: startsWith(github.event.issue.title, '[Feature]') == true || contains(github.event.issue.body, 'feature request') == true
     steps:
       - name: Add label
         uses: actions-cool/issues-helper@v3

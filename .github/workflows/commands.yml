@@ -1,4 +1,4 @@
-name: Lock Issue
+name: Command Testing
 
 on:
   issue_comment:
@@ -25,3 +25,25 @@ jobs:
           actions: 'close-issue'
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
+  add-bug-label:
+    runs-on: ubuntu-latest
+    if: contains(github.event.comment.body, 'bot.addl.bug') == true
+    steps:
+      - name: Add label
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'add-label'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          labels: 'bug'
+  add-feature-label:
+    runs-on: ubuntu-latest
+    if: contains(github.event.comment.body, 'bot.addl.feature') == true
+    steps:
+      - name: Add label
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'add-label'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          labels: 'enhancement'
