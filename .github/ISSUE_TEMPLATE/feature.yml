@@ -7,14 +7,18 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this feature recommendation!
-  - type: checkbox
+  - type: checkboxs
     attributes:
+      label: Feature Submition Checklist
       options:
         - label: I have read the [Code of Conduct](https://github.com/sparty182020/Code-Area/blob/master/CODE_OF_CONDUCT.md)
+          required: true
         - label: I have checked other issues for similar feature requests
+          required: true
         - label: I have checked that it can be implemented
+          required: true
         - label: I have a working demo of the feature available to the public displaying the feature
-        required: true
+          required: true
   - type: input
     id: demo
     attributes:

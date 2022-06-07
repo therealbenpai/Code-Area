@@ -7,12 +7,14 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: checkbox
+  - type: checkboxs
     attributes:
+      label: Bug Submition Checklist
       options:
         - label: I have read
+          required: true
         - label: I have checked the code
-        required: true
+          required: true
   - type: input
     id: contact
     attributes:
