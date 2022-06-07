@@ -1,5 +1,5 @@
 name: Bug Report
-description: File a bug report
+description: File a bug report using this pre-build template
 title: "[Bug]: "
 labels: "bug"
 body:
@@ -45,9 +45,5 @@ body:
         - Microsoft Edge
         - Opera
         - Other
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+    validations:
+      required: true
