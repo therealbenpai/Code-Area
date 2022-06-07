@@ -32,7 +32,7 @@ jobs:
       - name: Add label
         uses: actions-cool/issues-helper@v3
         with:
-          actions: 'add-label'
+          actions: 'add-labels'
           token: ${{ secrets.PAK }}
           issue-number: ${{ github.event.issue.number }}
           labels: 'bug'
@@ -43,17 +43,17 @@ jobs:
       - name: Add label
         uses: actions-cool/issues-helper@v3
         with:
-          actions: 'add-label'
+          actions: 'add-labels'
           token: ${{ secrets.PAK }}
           issue-number: ${{ github.event.issue.number }}
           labels: 'enhancement'
-  delete-issue:
-    runs-on: ubuntu-latest
-    if: contains(github.event.comment.body, 'bot.delete') == true && github.event.comment.user.login == 'sparty182020'
-    steps:
-      - name: Delete issue
-        uses: actions-cool/issues-helper@v3
-        with:
-          actions: 'delete-issue'
-          token: ${{ secrets.PAK }}
-          issue-number: ${{ github.event.issue.number }}
+#  delete-issue:
+#    runs-on: ubuntu-latest
+#    if: contains(github.event.comment.body, 'bot.delete') == true && github.event.comment.user.login == 'sparty182020'
+#    steps:
+#      - name: Delete issue
+#        uses: actions-cool/issues-helper@v3
+#        with:
+#          actions: 'delete-issue'
+#          token: ${{ secrets.PAK }}
+#          issue-number: ${{ github.event.issue.number }}
