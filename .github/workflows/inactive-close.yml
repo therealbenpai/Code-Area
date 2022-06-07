@@ -12,6 +12,6 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'close-issues'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.pac }}
           exclude-labels: 'no-close'
           inactive-day: 7
