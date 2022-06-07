@@ -12,6 +12,6 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'lock-issues'
-          token: ${{ secrets.pac }}
+          token: ${{ secrets.PAK }}
           lock-reason: 'Inactive Issue (90 days)'
           inactive-day: 90

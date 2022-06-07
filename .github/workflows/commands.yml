@@ -13,7 +13,7 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'lock-issue'
-          token: ${{ secrets.pac }}
+          token: ${{ secrets.PAK }}
           issue-number: ${{ github.event.issue.number }}
   close-issue:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'close-issue'
-          token: ${{ secrets.pac }}
+          token: ${{ secrets.PAK }}
           issue-number: ${{ github.event.issue.number }}
   add-bug-label:
     runs-on: ubuntu-latest
@@ -33,7 +33,7 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'add-label'
-          token: ${{ secrets.pac }}
+          token: ${{ secrets.PAK }}
           issue-number: ${{ github.event.issue.number }}
           labels: 'bug'
   add-feature-label:
@@ -44,7 +44,7 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'add-label'
-          token: ${{ secrets.pac }}
+          token: ${{ secrets.PAK }}
           issue-number: ${{ github.event.issue.number }}
           labels: 'enhancement'
   delete-issue:
@@ -55,5 +55,5 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'delete-issue'
-          token: ${{ secrets.pac }}
+          token: ${{ secrets.PAK }}
           issue-number: ${{ github.event.issue.number }}

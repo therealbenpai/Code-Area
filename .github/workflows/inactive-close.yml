@@ -12,6 +12,6 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'close-issues'
-          token: ${{ secrets.pac }}
+          token: ${{ secrets.PAK }}
           exclude-labels: 'no-close'
           inactive-day: 7
