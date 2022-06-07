@@ -1,0 +1,27 @@
+name: Lock Issue
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  lock-issue:
+    runs-on: ubuntu-latest
+    if: includes(github.event.comment.body, 'bot.lock') == true
+    steps:
+      - name: Lock issue
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'lock-issue'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+  close-issue:
+    runs-on: ubuntu-latest
+    if: includes(github.event.comment.body, 'bot.close') == true
+    steps:
+      - name: Close issue
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'close-issue'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}

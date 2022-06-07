@@ -1,0 +1,17 @@
+name: Inactive Issue Worker
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  close-inactive-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: close-inactive-issues
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'close-issues'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          exclude-labels: 'no-close'
+          inactive-day: 7

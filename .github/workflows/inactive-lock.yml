@@ -1,0 +1,17 @@
+name: Lock inactive issues
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  lock-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lock-issues
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'lock-issues'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          lock-reason: 'Inactive Issue (90 days)'
+          inactive-day: 90
