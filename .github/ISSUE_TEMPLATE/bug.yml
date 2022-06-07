@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: checkbox
+  - type: checkboxes
     id: checklist
     attributes:
       label: Bug Submition Checklist
