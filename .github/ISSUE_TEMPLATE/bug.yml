@@ -10,12 +10,16 @@ body:
   - type: checkboxes
     id: checklist
     attributes:
-      label: Bug Submition Checklist
+      label: Feature Submition Checklist
       options:
-        - label: I have read
+        - label: I have read the [Code of Conduct](https://github.com/sparty182020/Code-Area/blob/master/CODE_OF_CONDUCT.md)
           required: true
-        - label: I have checked the code
+        - label: I have checked other issues for similar bug reports
           required: true
+        - label: I have checked that it is not due to a configuration setting on my computer
+           required: true
+        - label: I have a working fix for this bug
+          required: false
   - type: input
     id: contact
     attributes:
@@ -36,7 +40,7 @@ body:
   - type: dropdown
     id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: What browser(s) are you seeing the problem on?
       multiple: true
       options:
         - Firefox
@@ -47,3 +51,38 @@ body:
         - Other
     validations:
       required: true
+  - type: dropdown
+    id: operating-systems
+    attributes:
+      label: What operating system(s) are you seeing the problem on?
+      multiple: true
+      options:
+        - Windows
+        - Mac
+        - Linux
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: What device(s) are you seeing the problem on?
+      multiple: true
+      options:
+        - Desktop
+        - Mobile
+        - Tablet
+        - Other
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## Notes from the developers team:
+        ### Information for the future
+
+        Thanks for submitting a bug report! A qualified developer will look into this bug report and get back to you as soon as possible. If you need to contact us, please use the contact details provided [here](mailto:support@sparty182020.anonaddy.com).
+
+        Signed,
+
+        @sparty182020 (Head Developer/Repository Owner)
