@@ -1,6 +1,10 @@
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <!-- Meta Tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Sparty182020 Website">
     <meta name="description" content="Sparty182020's Custom Coded Website">
     <meta name="keywords" content="Sparty182020">
@@ -11,28 +15,27 @@
     <meta name="author" content="Sparty182020">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sparty182020.github.io/Code-Area/">
-    <meta property="og:title" content="JavaScript Testing #2 (private)">
+    <meta property="og:title" content="TikTok Follower Page">
     <meta property="og:description" content="Sparty182020's Custom Coded Website">
     <meta property="og:image" content="https://i.ibb.co/Gs8BsdF/Screenshot-2022-02-28-5-45-23-PM.png">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sparty182020.github.io/Code-Area/">
-    <meta property="twitter:title" content="JavaScript Testing #2 (private)">
+    <meta property="twitter:title" content="TikTok Follower Page">
     <meta property="twitter:description" content="Sparty182020's Custom Coded Website">
     <meta property="twitter:image" content="https://i.ibb.co/Gs8BsdF/Screenshot-2022-02-28-5-45-23-PM.png">
-    <link rel="icon" href="../media/images/icon.ico" type="image/x-icon">
     <!-- CSS -->
-    <link href="../stylesheets/file-specific/custom.css" type="text/css" rel="stylesheet">
     <link href="../stylesheets/general/defults.css" rel="stylesheet" type="text/css">
     <link href="../stylesheets/general/fonts.css" rel="stylesheet" type="text/css">
     <link href="../stylesheets/general/custom_elements.css" rel="stylesheet" type="text/css">
-    <link href="../stylesheets/general/lock.css" rel="stylesheet" type="text/css">
-    <script defer src="../scripts/Other/testing.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
-        integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="../stylesheets/file-specific/tiktok.css" rel="stylesheet" type="text/css">
+    <!-- JavaScript -->
+    <script src="../scripts/File-Specific/tiktok.js"></script>
+    <!-- Title -->
+    <link rel="icon" href="../media/images/icon.ico" type="image/x-icon">
+    <title>TikTok Followers</title>
 </head>
 
-<body onload="setup()">
+<body>
     <div class="navigation">
         <nav>
             <ul>
@@ -42,22 +45,15 @@
                 <li><a href="./text-converter.html">Text Converter</a></li>
                 <li><a href="./game.html">Game</a></li>
                 <li><a href="./socials.html">Socials</a></li>
-                <li><a href="./tiktok.html">TikTok Followers</a></li>
+                <li class="selected">TikTok Followers</li>
             </ul>
         </nav>
     </div>
-    <lb></lb>
-    <noticearea>
-        <notice>This page is under construction</notice>
-    </noticearea>
-    <lb></lb>
-    <div id="blocker"></div>
-    <div id="login">
-        <label for="psw">Admin Password: </label>
-        <input type="password" id="psw" minlength="4">
-        <p id="pswCheck" style="color:red;" ch ns>
-            <icon type="3" rounded>error</icon> Password Incorrect <icon type="3" rounded>error</icon>
-        </p>
+    <div id="followers">
+        <h2 class="div-title">TikTok Followers</h2>
+        <ul>
+            <li><a href=""></a></li>
+        </ul>
     </div>
 </body>
 
