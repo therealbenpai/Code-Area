@@ -32,7 +32,7 @@
     color: var(--dark800)
 }
 
-.navigation nav li.selelcted {
+.navigation nav li.selected {
     color: var(--dark300)
 }
 
@@ -101,11 +101,7 @@ html {
 }
 
 @keyframes scale-up-center {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
+    to {
         transform: scale(1.1);
     }
 }
