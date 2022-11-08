@@ -1,5 +1,6 @@
 :root {
     margin-block: 0 0;
+    --buttonSize: 64px;
 }
 
 html {
@@ -54,5 +55,23 @@ button {
     width: 100%;
     border: none;
     background: none;
-    font-size: 64px;
+    font-size: var(--buttonSize);
+}
+
+#add-button {
+    background: rgba(0, 255, 0, 1);
+}
+
+#delete-button {
+    background: rgba(255, 0, 0, 1);
+}
+
+@media screen and (max-width: 600px) {
+    #main-body > *:not(#number) {
+        width: 100vw;
+        height: 100vh;
+    }
+    :root {
+        --buttonSize: 32px;
+    }
 }
