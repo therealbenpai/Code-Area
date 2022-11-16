@@ -30,6 +30,8 @@
 			"\t<!-- CSS -->",
 			"\t<link href=\"../stylesheets/general/defults.css\" rel=\"stylesheet\" type=\"text/css\">",
 			"\t<link href=\"../stylesheets/general/fonts.css\" rel=\"stylesheet\" type=\"text/css\">",
+			"\t<link href=\"../stylesheets/general/attr_manager.css\" rel=\"stylesheet\" type=\"text/css\">",
+			"\t<link href=\"../stylesheets/general/animation_manager.css\" rel=\"stylesheet\" type=\"text/css\">",
 			"\t<link href=\"../stylesheets/general/custom_elements.css\" rel=\"stylesheet\" type=\"text/css\">",
 			"\t<link href=\"../stylesheets/file-specific/$TM_FILENAME_BASE.css\" rel=\"stylesheet\" type=\"text/css\">",
 			"\t<!-- JavaScript -->",
