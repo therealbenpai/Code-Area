@@ -42,14 +42,6 @@
 
 /* SVG Background */
 
-:root {
-    min-width: var(--mvw);
-    width: var(--mvw);
-    max-width: var(--mvw);
-    height: var(--mvh);
-    font-family: 'Assistant', sans-serif;
-}
-
 html {
     background-repeat: no-repeat;
     background-position: center;
@@ -66,42 +58,7 @@ html {
     text-decoration: underline red 4px;
 }
 
-/* Custom Vars */
-
-:root {
-    --rtb: linear-gradient(45deg, red, blue);
-    --dark000: #696969;
-    --dark100: #545454;
-    --dark200: #4B4B4B;
-    --dark300: #454545;
-    --dark400: #404040;
-    --dark500: #353535;
-    --dark600: #272727;
-    --dark700: #1A1A1A;
-    --dark800: #121212;
-    --dark900: #040404;
-    --trans: rgba(0, 0, 0, 0);
-    --mvw: 100vw;
-    --mvh: 100vh;
-    --ma: 100%;
-    --ifs: 36px;
-    --translatec: translate(-50%, -50%);
-}
-
-/* Keyframes */
-
-@keyframes rainbow {
-    from {
-        background-position: 0% 50%
-    }
-
-    to {
-        background-position: 100% 25%
-    }
-}
-
-@keyframes scale-up-center {
-    to {
-        transform: scale(1.1);
-    }
+strong, i, strike, b, del, ins, dfn, em, s {
+    font-style: normal;
+    text-decoration: none;
 }

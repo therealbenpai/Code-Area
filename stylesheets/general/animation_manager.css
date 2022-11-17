@@ -1,16 +1,3 @@
-/* Root Varables */
-:root {
-    --bg: rgba(24,25,31,1);
-    --bk: rgba(0,0,0,0.5);
-    --lb: rgba(0,114,255,1);
-    --gscale: 2;
-    --gts: 500ms;
-    --rot-multi: 6;
-    --rot-time: calc(var(--gts) * var(--rot-multi));
-    --bump-multi: 0.6;
-    --bump-time: calc(var(--gts) * var(--bump-multi));
-}
-
 /* Custom Tags */
 [hover] {
     border-radius: 9999px;
@@ -100,5 +87,55 @@
 
     to {
         filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes rainbow {
+    from {
+        background-position: 0% 50%
+    }
+
+    to {
+        background-position: 100% 25%
+    }
+}
+
+@keyframes scale-up-center {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes ball-bounce {
+    0% {
+        transform: scale(1, 0.7)
+    }
+
+    40% {
+        transform: scale(0.8, 1.2)
+    }
+
+    60% {
+        transform: scale(1, 1)
+    }
+
+    100% {
+        bottom: 140px
+    }
+}
+
+@keyframes loading-step {
+    0% {
+        box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
+            0 10px 0 #fff,
+            -35px 50px 0 #fff,
+            -70px 90px 0 #fff;
+    }
+
+    100% {
+        box-shadow: 0 10px 0 #fff,
+            -35px 50px 0 #fff,
+            -70px 90px 0 #fff,
+            -70px 90px 0 rgba(0, 0, 0, 0);
     }
 }
