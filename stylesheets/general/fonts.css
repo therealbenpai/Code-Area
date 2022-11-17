@@ -1,5 +1,6 @@
-/* Fonts */
+@import "./font_awesome_keyreg.css";
 
+/* Fonts */
 @font-face {
     font-family: 'Assistant';
     font-style: normal;
@@ -43,6 +44,66 @@
     src: url("../../fonts/materialSymbolsRounded.woff2") format('woff2');
 }
 
+@font-face {
+    font-family: 'Font Awesome Brands';
+    src: url("../../fonts/Font_Awesome/Brands/fa-brands.woff2") format("woff2"),
+        url("../../fonts/Font_Awesome/Brands/fa-brands.woff") format("woff"),
+        url("../../fonts/Font_Awesome/Brands/fa-brands.ttf") format("truetype");
+    font-style: normal;
+    font-display: block;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Font Awesome Duotone';
+    src: url("../../fonts/Font_Awesome/Duotone/fa-duotone.woff2") format("woff2"),
+        url("../../fonts/Font_Awesome/Duotone/fa-duotone.woff") format("woff"),
+        url("../../fonts/Font_Awesome/Duotone/fa-duotone.ttf") format("truetype");
+    font-style: normal;
+    font-display: block;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Font Awesome Light';
+    src: url("../../fonts/Font_Awesome/Light/fa-light.woff2") format("woff2"),
+        url("../../fonts/Font_Awesome/Light/fa-light.woff") format("woff"),
+        url("../../fonts/Font_Awesome/Light/fa-light.ttf") format("truetype");
+    font-style: normal;
+    font-display: block;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Font Awesome Regular';
+    src: url("../../fonts/Font_Awesome/Regular/fa-regular.woff2") format("woff2"),
+        url("../../fonts/Font_Awesome/Regular/fa-regular.woff") format("woff"),
+        url("../../fonts/Font_Awesome/Regular/fa-regular.ttf") format("truetype");
+    font-style: normal;
+    font-display: block;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Font Awesome Solid';
+    src: url("../../fonts/Font_Awesome/Solid/fa-solid.woff2") format("woff2"),
+        url("../../fonts/Font_Awesome/Solid/fa-solid.woff") format("woff"),
+        url("../../fonts/Font_Awesome/Solid/fa-solid.ttf") format("truetype");
+    font-style: normal;
+    font-display: block;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Font Awesome Thin';
+    src: url("../../fonts/Font_Awesome/Thin/fa-thin.woff2") format("woff2"),
+        url("../../fonts/Font_Awesome/Thin/fa-thin.woff") format("woff"),
+        url("../../fonts/Font_Awesome/Thin/fa-thin.ttf") format("truetype");
+    font-style: normal;
+    font-display: block;
+    font-weight: 100;
+}
+
 icon[type="3"] {
     font-weight: normal;
     font-style: normal;
@@ -60,7 +121,7 @@ icon[type="3"] {
     font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 40;
 }
 
-icon[type="3"][outline]{
+icon[type="3"][outline] {
     font-family: 'Material Symbols Outlined';
 }
 
@@ -114,4 +175,35 @@ icon[type="1"] {
 
 [dark][inactive] {
     color: var(--dark300);
+}
+
+.fa-regular,
+.far {
+    font-family: 'Font Awesome Regular';
+}
+
+.fa-solid,
+.fas,
+.fa {
+    font-family: 'Font Awesome Solid';
+}
+
+.fa-light,
+.fal {
+    font-family: 'Font Awesome Light';
+}
+
+.fa-duotone,
+.fad {
+    font-family: 'Font Awesome Duotone';
+}
+
+.fa-thin,
+.fat {
+    font-family: 'Font Awesome Thin';
+}
+
+.fa-brands,
+.fab {
+    font-family: 'Font Awesome Brands';
 }
