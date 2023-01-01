@@ -23,6 +23,15 @@
     <link href="../stylesheets/file-specific/index.css" rel="stylesheet" type="text/css">
     <link href="../stylesheets/general/combined.css" rel="stylesheet" type="text/css">
     <script defer src="../scripts/File-Specific/index.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6YPYMWR4K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-V6YPYMWR4K');
+    </script>
     <script src="https://browser.sentry-cdn.com/7.20.1/bundle.min.js"
         integrity="sha384-ksXx74Cski/cokZPVeTXHKKlYYiMlbqL3Wl6IM4q/+7FFg1WyPyqabLu65X844KT"
         crossorigin="anonymous"></script>
@@ -33,7 +42,6 @@
         Sentry.init({
             dsn: "https://2e639e2f659146c6b04d387deb6f4636@o1236511.ingest.sentry.io/4504200250982400",
             integrations: [new Sentry.BrowserTracing()],
-
             // Set tracesSampleRate to 1.0 to capture 100%
             // of transactions for performance monitoring.
             // We recommend adjusting this value in production
