@@ -63,226 +63,179 @@ const stmca = {
 }
 
 // String to Morse Code
-function stmc(string, sd) {
+/**
+ * 
+ * @param {String} string 
+ * @returns {String}
+ */
+function stmc(string) {
     let output = ''
-    if (sd !== true) {
-        const splitstr = string.toLowerCase().split('')
-        const length = splitstr.length
-        let i;
-        for (i = 0; i < length; i++) {
-            if (splitstr[i] == "0") {
-                output += `${stmca.numbers.zero} `
-            } else if (splitstr[i] == "1") {
-                output += `${stmca.numbers.one} `
-            } else if (splitstr[i] == "2") {
-                output += `${stmca.numbers.two} `
-            } else if (splitstr[i] == "3") {
-                output += `${stmca.numbers.three} `
-            } else if (splitstr[i] == "4") {
-                output += `${stmca.numbers.four} `
-            } else if (splitstr[i] == "5") {
-                output += `${stmca.numbers.five} `
-            } else if (splitstr[i] == "6") {
-                output += `${stmca.numbers.six} `
-            } else if (splitstr[i] == "7") {
-                output += `${stmca.numbers.seven} `
-            } else if (splitstr[i] == "8") {
-                output += `${stmca.numbers.eight} `
-            } else if (splitstr[i] == "9") {
-                output += `${stmca.numbers.nine} `
-            } else if (splitstr[i] == " ") {
-                output += `${stmca.specials.space} `
-            } else if (splitstr[i] == ".") {
-                output += `${stmca.specials.period} `
-            } else if (splitstr[i] == ",") {
-                output += `${stmca.specials.comma} `
-            } else if (splitstr[i] == "-") {
-                output += `${stmca.specials.dash} `
-            } else if (splitstr[i] == "/") {
-                output += `${stmca.specials.slash} `
-            } else if (splitstr[i] == "'") {
-                output += `${stmca.specials.apostrophe} `
-            } else if (splitstr[i] == "?") {
-                output += `${stmca.specials.qmark} `
-            } else if (splitstr[i] == "!") {
-                output += `${stmca.specials.emark} `
-            } else if (splitstr[i] == "\"") {
-                output += `${stmca.specials.quote} `
-            } else if (splitstr[i] == ":") {
-                output += `${stmca.specials.colon} `
-            } else if (splitstr[i] == "=") {
-                output += `${stmca.specials.equal} `
-            } else if (splitstr[i] == "+") {
-                output += `${stmca.specials.add} `
-            } else if (splitstr[i] == "(") {
-                output += `${stmca.specials.oper} `
-            } else if (splitstr[i] == ")") {
-                output += `${stmca.specials.cper} `
-            } else if (splitstr[i] == "&") {
-                output += `${stmca.specials.ampersand} `
-            } else if (splitstr[i] == "@") {
-                output += `${stmca.specials.at} `
-            } else if (splitstr[i] == "a") {
-                output += `${stmca.a} `
-            } else if (splitstr[i] == "b") {
-                output += `${stmca.b} `
-            } else if (splitstr[i] == "c") {
-                output += `${stmca.c} `
-            } else if (splitstr[i] == "d") {
-                output += `${stmca.d} `
-            } else if (splitstr[i] == "e") {
-                output += `${stmca.e} `
-            } else if (splitstr[i] == "f") {
-                output += `${stmca.f} `
-            } else if (splitstr[i] == "g") {
-                output += `${stmca.g} `
-            } else if (splitstr[i] == "h") {
-                output += `${stmca.h} `
-            } else if (splitstr[i] == "i") {
-                output += `${stmca.i} `
-            } else if (splitstr[i] == "j") {
-                output += `${stmca.j} `
-            } else if (splitstr[i] == "k") {
-                output += `${stmca.k} `
-            } else if (splitstr[i] == "l") {
-                output += `${stmca.l} `
-            } else if (splitstr[i] == "m") {
-                output += `${stmca.m} `
-            } else if (splitstr[i] == "n") {
-                output += `${stmca.n} `
-            } else if (splitstr[i] == "o") {
-                output += `${stmca.o} `
-            } else if (splitstr[i] == "p") {
-                output += `${stmca.p} `
-            } else if (splitstr[i] == "q") {
-                output += `${stmca.q} `
-            } else if (splitstr[i] == "r") {
-                output += `${stmca.r} `
-            } else if (splitstr[i] == "s") {
-                output += `${stmca.s} `
-            } else if (splitstr[i] == "t") {
-                output += `${stmca.t} `
-            } else if (splitstr[i] == "u") {
-                output += `${stmca.u} `
-            } else if (splitstr[i] == "v") {
-                output += `${stmca.v} `
-            } else if (splitstr[i] == "w") {
-                output += `${stmca.w} `
-            } else if (splitstr[i] == "x") {
-                output += `${stmca.x} `
-            } else if (splitstr[i] == "y") {
-                output += `${stmca.y} `
-            } else if (splitstr[i] == "z") {
-                output += `${stmca.z} `
+    const splitstr = string
+        .toLowerCase()
+        .split('')
+        .map(
+            (char) => {
+                switch (char) {
+                    case "0":
+                        char = stmca.numbers.zero
+                        break;
+                    case "1":
+                        char = stmca.numbers.one
+                        break;
+                    case "2":
+                        char = stmca.numbers.two
+                        break;
+                    case "3":
+                        char = stmca.numbers.three
+                        break;
+                    case "4":
+                        char = stmca.numbers.four
+                        break;
+                    case "5":
+                        char = stmca.numbers.five
+                        break;
+                    case "6":
+                        char = stmca.numbers.six
+                        break;
+                    case "7":
+                        char = stmca.numbers.seven
+                        break;
+                    case "8":
+                        char = stmca.numbers.eight
+                        break;
+                    case "9":
+                        char = stmca.numbers.nine
+                        break;
+                    case " ":
+                        char = stmca.specials.space
+                        break;
+                    case ".":
+                        char = stmca.specials.period
+                        break;
+                    case ",":
+                        char = stmca.specials.comma
+                        break;
+                    case "-":
+                        char = stmca.specials.dash
+                        break;
+                    case "/":
+                        char = stmca.specials.slash
+                        break;
+                    case "'":
+                        char = stmca.specials.apostrophe
+                        break;
+                    case "?":
+                        char = stmca.specials.qmark
+                        break;
+                    case "!":
+                        char = stmca.specials.emark
+                        break;
+                    case "\"":
+                        char = stmca.specials.quote
+                        break;
+                    case ":":
+                        char = stmca.specials.colon
+                        break;
+                    case "=":
+                        char = stmca.specials.equal
+                        break;
+                    case "+":
+                        char = stmca.specials.add
+                        break;
+                    case "(":
+                        char = stmca.specials.oper
+                        break;
+                    case ")":
+                        char = stmca.specials.cper
+                        break;
+                    case "&":
+                        char = stmca.specials.ampersand
+                        break;
+                    case "@":
+                        char = stmca.specials.at
+                        break;
+                    case "a":
+                        char = stmca.a
+                        break;
+                    case "b":
+                        char = stmca.b
+                        break;
+                    case "c":
+                        char = stmca.c
+                        break;
+                    case "d":
+                        char = stmca.d
+                        break;
+                    case "e":
+                        char = stmca.e
+                        break;
+                    case "f":
+                        char = stmca.f
+                        break;
+                    case "g":
+                        char = stmca.g
+                        break;
+                    case "h":
+                        char = stmca.h
+                        break;
+                    case "i":
+                        char = stmca.i
+                        break;
+                    case "j":
+                        char = stmca.j
+                        break;
+                    case "k":
+                        char = stmca.k
+                        break;
+                    case "l":
+                        char = stmca.l
+                        break;
+                    case "m":
+                        char = stmca.m
+                        break;
+                    case "n":
+                        char = stmca.n
+                        break;
+                    case "o":
+                        char = stmca.o
+                        break;
+                    case "p":
+                        char = stmca.p
+                        break;
+                    case "q":
+                        char = stmca.q
+                        break;
+                    case "r":
+                        char = stmca.r
+                        break;
+                    case "s":
+                        char = stmca.s
+                        break;
+                    case "t":
+                        char = stmca.t
+                        break;
+                    case "u":
+                        char = stmca.u
+                        break;
+                    case "v":
+                        char = stmca.v
+                        break;
+                    case "w":
+                        char = stmca.w
+                        break;
+                    case "x":
+                        char = stmca.x
+                        break;
+                    case "y":
+                        char = stmca.y
+                        break;
+                    case "z":
+                        char = stmca.z
+                        break;
+                }
+                return char
             }
-        }
-        output = output.replace(/^[ \t]+|[ \t]+$/gmi, '')
-    } else {
-        if (string == "a") {
-            output = `${stmca.a}`
-        } else if (string == "b") {
-            output = `${stmca.b}`
-        } else if (string == "c") {
-            output = `${stmca.c}`
-        } else if (string == "d") {
-            output = `${stmca.d}`
-        } else if (string == "e") {
-            output = `${stmca.e}`
-        } else if (string == "f") {
-            output = `${stmca.f}`
-        } else if (string == "g") {
-            output = `${stmca.g}`
-        } else if (string == "h") {
-            output = `${stmca.h}`
-        } else if (string == "i") {
-            output = `${stmca.i}`
-        } else if (string == "j") {
-            output = `${stmca.j}`
-        } else if (string == "k") {
-            output = `${stmca.k}`
-        } else if (string == "l") {
-            output = `${stmca.l}`
-        } else if (string == "m") {
-            output = `${stmca.m}`
-        } else if (string == "n") {
-            output = `${stmca.n}`
-        } else if (string == "o") {
-            output = `${stmca.o}`
-        } else if (string == "p") {
-            output = `${stmca.p}`
-        } else if (string == "q") {
-            output = `${stmca.q}`
-        } else if (string == "r") {
-            output = `${stmca.r}`
-        } else if (string == "s") {
-            output = `${stmca.s}`
-        } else if (string == "t") {
-            output = `${stmca.t}`
-        } else if (string == "u") {
-            output = `${stmca.u}`
-        } else if (string == "v") {
-            output = `${stmca.v}`
-        } else if (string == "w") {
-            output = `${stmca.w}`
-        } else if (string == "x") {
-            output = `${stmca.x}`
-        } else if (string == "y") {
-            output = `${stmca.y}`
-        } else if (string == "z") {
-            output = `${stmca.z}`
-        } else if (string == "0") {
-            output = `${stmca.numbers.zero}`
-        } else if (string == "1") {
-            output = `${stmca.numbers.one}`
-        } else if (string == "2") {
-            output = `${stmca.numbers.two}`
-        } else if (string == "3") {
-            output = `${stmca.numbers.three}`
-        } else if (string == "4") {
-            output = `${stmca.numbers.four}`
-        } else if (string == "5") {
-            output = `${stmca.numbers.five}`
-        } else if (string == "6") {
-            output = `${stmca.numbers.six}`
-        } else if (string == "7") {
-            output = `${stmca.numbers.seven}`
-        } else if (string == "8") {
-            output = `${stmca.numbers.eight}`
-        } else if (string == "9") {
-            output = `${stmca.numbers.nine}`
-        } else if (string == ' ') {
-            output = `${stmca.specials.space}`
-        } else if (string == '.') {
-            output = `${stmca.specials.period}`
-        } else if (string == ',') {
-            output = `${stmca.specials.comma}`
-        } else if (string == '-') {
-            output = `${stmca.specials.dash}`
-        } else if (string == '/') {
-            output = `${stmca.specials.slash}`
-        } else if (string == "'") {
-            output = `${stmca.specials.apostrophe}`
-        } else if (string == '?') {
-            output = `${stmca.specials.qmark}`
-        } else if (string == '!') {
-            output = `${stmca.specials.emark}`
-        } else if (string == "\"") {
-            output = `${stmca.specials.quote} `
-        } else if (string == ":") {
-            output = `${stmca.specials.colon} `
-        } else if (string == "=") {
-            output = `${stmca.specials.equal} `
-        } else if (string == "+") {
-            output = `${stmca.specials.add} `
-        } else if (string == "(") {
-            output = `${stmca.specials.oper} `
-        } else if (string == ")") {
-            output = `${stmca.specials.cper} `
-        } else if (string == "&") {
-            output = `${stmca.specials.ampersand} `
-        } else if (string == "@") {
-            output = `${stmca.specials.at} `
-        }
-    }
-    return output
+        )
+        .join(' ')
+    return splitstr
 }

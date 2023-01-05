@@ -1,90 +1,37 @@
+//@ts-nocheck
 /**
 * @copyright GNU GENERAL PUBLIC LICENSE (v3)
 */
 
 // String to binary
-function stbi(string, num) {
-    let output = ''
-    if (!num) {
-        const length = string.split('').length
-        let i;
-        for (i = 0; i < length; i++) {
-            output += string.charCodeAt(i).toString(2) + " "
-        }
-        output = output.replace(/[ \t]+$/gmi, '')
-    } else {
-        output = parseInt(string,10).toString(2)
-    }
-    return output
+/**
+ * @param {string} string
+ */
+function stbi(string) {
+    return string.split('').map(char => String(char).charCodeAt(0).toString(2)).join(' ')
 }
 
 // Binary to string
 function bits(binary) {
-    const length = binary.split(' ').length
-    let i;
-    let output = ''
-    for (i = 0; i < length; i++) {
-        const splitbi = binary.split(' ')
-        const charcode = parseInt(splitbi[i], 2).toString(10)
-        output += String.fromCharCode(charcode)
-    }
-    return output
+    return binary.split(' ').map(char => String.fromCharCode(parseInt(char, 2).toString(10))).join('')
 }
 
 // String to hex
-function sth(string, num) {
-    let output = ''
-    if (!num) {
-        const length = string.split('').length
-        let i;
-        for (i = 0; i < length; i++) {
-            output += string.charCodeAt(i).toString(16) + " "
-        }
-        output = output.replace(/[ \t]+$/gmi, '')
-    } else {
-        output = parseInt(string,10).toString(16)
-    }
-    return output
+function sth(string) {
+    return string.split('').map(char => String(char).charCodeAt(0).toString(16)).join(' ')
 }
 
 // Hex to string
 function hts(hex) {
-    const length = hex.split(' ').length
-    let i;
-    let output = ''
-    for (i = 0; i < length; i++) {
-        const splith = hex.split(' ')
-        const charcode = parseInt(splith[i], 16).toString(10)
-        output += String.fromCharCode(charcode)
-    }
-    return output
+    return hex.split(' ').map(char => String.fromCharCode(parseInt(char, 16).toString(10))).join('')
 }
 
 // String to Base32
-function stb32(string, num) {
-    let output = ''
-    if (!num) {
-        const length = string.split('').length
-        let i;
-        for (i = 0; i < length; i++) {
-            output += string.charCodeAt(i).toString(32) + " "
-        }
-        output = output.replace(/[ \t]+$/gmi, '')
-    } else {
-        output = parseInt(string,10).toString(32)
-    }
-    return output
+function stb32(string) {
+    return string.split('').map(char => String(char).charCodeAt(0).toString(32)).join(' ')
 }
 
 // Base32 to string
 function b32ts(b32) {
-    const length = b32.split(' ').length
-    let i;
-    let output = ''
-    for (i = 0; i < length; i++) {
-        const splitb32 = b32.split(' ')
-        const charcode = parseInt(splitb32[i], 32).toString(10)
-        output += String.fromCharCode(charcode)
-    }
-    return output
+    return b32.split(' ').map(char => String.fromCharCode(parseInt(char, 32).toString(10))).join('')
 }
