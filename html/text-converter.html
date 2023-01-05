@@ -109,7 +109,7 @@
         function sconvert(e) {
             const textel = document.getElementById("sitextinput")
             document.getElementById("siletter").innerHTML = `<mark>${e.key}</mark>`
-            document.getElementById("sicharCode").innerHTML = `<mark>${String(e.key)}</mark>`
+            document.getElementById("sicharCode").innerHTML = `<mark>${String(e.keyCode)}</mark>`
             document.getElementById("sibinary").innerHTML = `<mark>${stbi(String(e.key))}</mark>`
             document.getElementById("sihex").innerHTML = `<mark>${sth(String(e.key))}</mark>`
             document.getElementById("sib32").innerHTML = `<mark>${stb32(String(e.key))}</mark>`
