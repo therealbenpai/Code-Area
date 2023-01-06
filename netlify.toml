@@ -15,14 +15,14 @@
 
 [[redirects]]
     from="/css/d"
-    to="stylesheets/general/combined.css"
+    to="/stylesheets/general/combined.css"
     status=200
     [redirects.headers]
         Content-Type = "text/css"
     
 [[redirects]]
     from="/css/f/*"
-    to="stylesheets/file-specific/:splat"
+    to="/stylesheets/file-specific/:splat"
     status=200
     [redirects.headers]
         Content-Type = "text/css"
