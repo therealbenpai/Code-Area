@@ -37,7 +37,7 @@
 			"\t<!-- JavaScript -->",
 			"\t<script src=\"../scripts/File-Specific/$TM_FILENAME_BASE.js\"></script>",
 			"\t<!-- Title -->",
-			"\t<link rel=\"icon\" href=\"../media/images/icon.ico\" type=\"image/x-icon\">",
+			"\t<link rel=\"icon\" href=\"/icon\" type=\"image/x-icon\">",
 			"\t<title>$2</title>",
 			"</head>\n",
 			"<body>",

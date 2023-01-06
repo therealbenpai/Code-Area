@@ -4,11 +4,6 @@
     status=200
 
 [[redirects]]
-    from="/socials"
-    to="https://sparty182020.carrd.co/"
-    status=301
-
-[[redirects]]
     from="/css/d"
     to="/stylesheets/general/combined.css"
     status=200
@@ -31,11 +26,34 @@
     force=true
     [redirects.headers]
         Content-Type = "text/css"
+    
+[[redirects]]
+    from="/icon"
+    to="/media/images/icon.ico"
+    status=200
+    [redirects.headers]
+        Content-Type = "image/x-icon"
+
+# External Redirects Below
 
 [[redirects]]
     from="/repo"
     to="https://github.com/sparty182020/Code-Area"
     status=301
+
+[[redirects]]
+    from="/socials"
+    to="https://sparty182020.carrd.co/"
+    status=301
+
+[[redirects]]
+    from="/thumbnail"
+    to="https://i.ibb.co/Gs8BsdF/Screenshot-2022-02-28-5-45-23-PM.png"
+    status=200
+    [redirects.headers]
+        Content-Type = "image/png"
+
+# Global Redirects Below
 
 [[redirects]]
     from="/*"
