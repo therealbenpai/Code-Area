@@ -33,7 +33,7 @@
 			"\t<link href=\"../stylesheets/general/attr_manager.css\" rel=\"stylesheet\" type=\"text/css\">",
 			"\t<link href=\"../stylesheets/general/animation_manager.css\" rel=\"stylesheet\" type=\"text/css\">",
 			"\t<link href=\"../stylesheets/general/custom_elements.css\" rel=\"stylesheet\" type=\"text/css\">",
-			"\t<link href=\"../stylesheets/file-specific/$TM_FILENAME_BASE.css\" rel=\"stylesheet\" type=\"text/css\">",
+			"\t<link href=\"/css/f/$TM_FILENAME_BASE.css\" rel=\"stylesheet\" type=\"text/css\">",
 			"\t<!-- JavaScript -->",
 			"\t<script src=\"../scripts/File-Specific/$TM_FILENAME_BASE.js\"></script>",
 			"\t<!-- Title -->",
