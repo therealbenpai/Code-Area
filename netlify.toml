@@ -16,7 +16,7 @@
     [redirects.headers]
         Content-Type = "text/css"
 [[redirects]]
-    from="/css/c"
+    from="/css/c/*"
     to="/stylesheets/general/:splat"
     status=200
     force=true
