@@ -1,0 +1,38 @@
+[[redirects]]
+    from="/"
+    to="/html/"
+    status=200
+
+[[redirects]]
+    from="/socials"
+    to="https://sparty182020.carrd.co/"
+    status=301
+
+[[redirects]]
+    from="/*"
+    to="/html/:splat"
+    status=200
+
+[[redirects]]
+    from="/css/d"
+    to="stylesheets/general/combined.css"
+    status=200
+    [redirects.headers]
+        Content-Type = "text/css"
+    
+[[redirects]]
+    from="/css/f/*"
+    to="stylesheets/file-specific/:splat"
+    status=200
+    [redirects.headers]
+        Content-Type = "text/css"
+
+[[redirects]]
+    from="/repo"
+    to="https://github.com/sparty182020/Code-Area"
+    status=301
+
+[[headers]]
+    for="*"
+    [headers.values]
+        X-Repo="https://github.com/sparty182020/Code-Area"
