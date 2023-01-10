@@ -4,7 +4,7 @@
  * 
  * @param {string?} disclamer 
  */
-function disclamer(disclamer=null) {
+function disclamer(disclamer = null) {
     if (disclamer == null || typeof disclamer !== "string") return;
     let reason;
     switch (disclamer) {
@@ -49,14 +49,14 @@ async function genwin(version, width, height) {
     if (isNaN(width)) width = 300;
     if (isNaN(height)) height = 300;
     var mindem = {
-        1: [250,250],
-        2: [300,100],
-        3: [300,100],
-        4: [300,100],
-        5: [300,100],
-        6: [150,150]
+        1: [250, 250],
+        2: [300, 100],
+        3: [300, 100],
+        4: [300, 100],
+        5: [300, 100],
+        6: [150, 150]
     }
-    if (width < mindem[version][0] || height < mindem[version][1] ) throw new RangeError("Dimensions value is invalid");
+    if (width < mindem[version][0] || height < mindem[version][1]) throw new RangeError("Dimensions value is invalid");
     const nw = window.open('about:blank', '', `height:500,width:500`)
     nw.resizeTo(width, height)
     const nwwrite = (content) => nw.document.write(content)
@@ -79,7 +79,7 @@ async function genwin(version, width, height) {
         buttonElement.style.top = '50%'
         buttonElement.style.transform = 'translate(-50%,-50%)'
         buttonElement.style.fontFamily = 'initial'
-        buttonElement.onclick = () => nw.close()
+        buttonElement.onclick = nw.close
         nw.document.body.insertAdjacentElement('afterbegin', buttonElement)
         const cStyle = nw.document.createElement('style')
         cStyle.innerHTML = `html {
@@ -119,16 +119,15 @@ button {
             // 1 -> mouseMove Black and White Background Switch
             nwwrite('<p>Move Your Mouse</p>')
             const baw = () => {
-                const {backgroundColor: bgc, color: c} = nw.document.body.style
-                if (bgc == 'black') {
-                    bgc = 'white'
-                    c = 'black'
-                } else {
-                    bgc = 'black'
-                    c = 'white'
+                if (nw.document.body.style.backgroundColor == 'black') {
+                    nw.document.body.style.backgroundColor = 'white'
+                    nw.document.body.style.color = 'black'
+                    return;
                 }
+                nw.document.body.style.backgroundColor = 'black'
+                nw.document.body.style.color = 'white'
             }
-            nw.document.onmousemove = () => baw()
+            nw.document.onmousemove = baw
             break
         case 2:
             // 2 -> Click Counter
