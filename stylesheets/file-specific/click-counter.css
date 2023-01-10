@@ -23,12 +23,6 @@ body {
     justify-items: center;
 }
 
-#add {
-}
-
-#delete {
-}
-
 #number {
     position: absolute;
     top: 50%;

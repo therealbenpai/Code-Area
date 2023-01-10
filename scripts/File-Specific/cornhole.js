@@ -1,55 +1,53 @@
+//@ts-nocheck
 class Player {
-    constructor(name) {
+    constructor(name="Player") {
         this.gamePoints = 0;
         this.roundPoints = 0;
         this.startThrows = 4;
         this.throwsRemain = 0;
         this.throwsUsed = 0;
         this.roundsPlayed = 0;
-        this.stats = [0, 0, 0] // board:hole:miss
+        /**
+         * Board : Hole : Miss
+         */
+        this.stats = [0, 0, 0];
         this.properStart = false;
-        this.name = (name || "Player")
+        this.name = name
         this.bustRulesEnabled = false;
         this.goalScore = 21
         this.bustScore = 15
         this.changed = 0
     }
     landBoard() {
-        if (!this.properStart) return console.error(ReferenceError("This player hasn't been setup properly"))
-        if (this.throwsRemain < 1) {
-            return console.error(RangeError("No throws remaining"))
-        }
-        this.roundPoints += 1
-        this.throwsUsed += 1
-        this.throwsRemain -= 1
-        this.stats = [this.stats[0] + 1, this.stats[1], this.stats[2]]
-    }
-    landHole() {
-        if (this.throwsRemain < 1) {
-            return console.error(RangeError("No throws remaining"))
-        }
-        this.roundPoints += 3
-        this.throwsUsed += 1
-        this.throwsRemain -= 1
-        this.stats = [this.stats[0], this.stats[1] + 1, this.stats[2]]
-    }
-    slideHole() {
-        if (this.throwsUsed < 1 || this.changed >= this.throwsUsed) return
-        this.roundPoints += 2
-        this.changed += 1
-    }
-    slideOff() {
-        if (this.throwsUsed < 1 || this.changed >= this.throwsUsed) return
-        this.roundPoints -= 1
-        this.changed += 1
-    }
-    miss() {
-        if (this.throwsRemain < 1) {
-            return console.error(RangeError("No throws remaining"))
-        }
+        if (!this.properStart) throw new ReferenceError("This player hasn't been setup properly");
+        if (this.throwsRemain < 1) throw new RangeError("No throws remaining");
+        this.roundPoints++
         this.throwsUsed++
         this.throwsRemain--
-        this.stats = [this.stats[0], this.stats[1], this.stats[2]++]
+        this.stats[0]++
+    }
+    landHole() {
+        if (this.throwsRemain < 1) throw new RangeError("No throws remaining");
+        this.roundPoints += 3
+        this.throwsUsed++
+        this.throwsRemain--
+        this.stats[1]++
+    }
+    slideHole() {
+        if (this.throwsUsed < 1 || this.changed >= this.throwsUsed) return;
+        this.roundPoints += 2
+        this.changed++
+    }
+    slideOff() {
+        if (this.throwsUsed < 1 || this.changed >= this.throwsUsed) return;
+        this.roundPoints--
+        this.changed++
+    }
+    miss() {
+        if (this.throwsRemain < 1) throw new RangeError("No throws remaining");
+        this.throwsUsed++
+        this.throwsRemain--
+        this.stats[2]++
     }
     endRound() {
         this.roundsPlayed++
@@ -68,26 +66,24 @@ class Player {
         this.startThrows = amount
     }
     enableBust() {
-        if (this.bustRulesEnabled) return console.error(ReferenceError("Bust was already enabled"))
+        if (this.bustRulesEnabled) throw new ReferenceError("Bust was already enabled");
         this.bustRulesEnabled = true
     }
     disableBust() {
-        if (!this.bustRulesEnabled) return console.error(ReferenceError("Bust was already disabled"))
+        if (!this.bustRulesEnabled) throw new ReferenceError("Bust was already disabled");
         this.bustRulesEnabled = false
     }
     changeBustScore(amount) {
-        if (!this.bustRulesEnabled) return console.error(ReferenceError("Bust must be enabled"))
+        if (!this.bustRulesEnabled) throw new ReferenceError("Bust must be enabled");
         this.bustScore = amount
     }
     changeWinScore(amount) {
         this.goalScore = amount
     }
     addGameScore(score) {
-        this.gamePoints = this.gamePoints + score
+        this.gamePoints += score
         this.roundPoints = 0
-        if (this.bustRulesEnabled && this.gamePoints > this.goalScore) {
-            this.bust()
-        }
+        if (this.bustRulesEnabled && this.gamePoints > this.goalScore) this.bust();
     }
     bust() {
         this.gamePoints = this.bustScore
@@ -95,19 +91,14 @@ class Player {
 }
 
 class Game {
-    constructor() { }
     static calcScore(p1s, p2s) {
         p1s = Number(p1s)
         p2s = Number(p2s)
         let esa = [0, 0]
         const diff = p1s - p2s
-        if (diff < 0) {
-            esa = [0, Math.abs(diff)]
-        } else if (diff > 0) {
-            esa = [Math.abs(diff), 0]
-        } else if (diff == 0) {
-            esa = [0, 0]
-        }
+        if (diff < 0) esa = [0, Math.abs(diff)];
+        else if (diff > 0) esa = [Math.abs(diff), 0];
+        else esa = [0, 0];
         return esa
     }
 }
@@ -159,7 +150,6 @@ function gameEvent(player, eventID) {
                     break
                 default:
                     throw TypeError("invalid Game Event ID")
-                    break
             }
             break
         case 2:
@@ -196,30 +186,23 @@ function gameEvent(player, eventID) {
 
 class quickDOMEdit {
     static area1RS(data) {
-        const ele = document.getElementById("rs1")
-        ele.innerText = data
+        document.getElementById("rs1").innerText = data
     }
     static area2RS(data) {
-        const ele = document.getElementById("rs2")
-        ele.innerText = data
+        document.getElementById("rs2").innerText = data
     }
     static area1GS(data) {
-        const ele = document.getElementById("gs1")
-        ele.innerText = data
+        document.getElementById("gs1").innerText = data
     }
     static area2GS(data) {
-        const ele = document.getElementById("gs2")
-        ele.innerText = data
+        document.getElementById("gs2").innerText = data
     }
 }
 
-function searchCheck() {
-    if (location.search.includes("bust=true") || location.search.includes("bust=1")) return true
-    return false
-}
+const searchCheck = location.search.includes("bust=true") || location.search.includes("bust=1")
 
 function setup() {
-    if (searchCheck()) {
+    if (searchCheck) {
         player1.enableBust()
         player2.enableBust()
     }

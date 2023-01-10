@@ -1,55 +1,42 @@
 //@ts-nocheck
-
-function add() {
-    let counter = document.getElementById("counter");
-    count++;
-    counter.innerText = count;
-}
-
-function remove() {
-    if (count < 1) return;
-    let counter = document.getElementById("counter");
-    count--;
-    counter.innerText = count;
-}
-
 let count = 0;
-
 let addBtn = document.getElementById("add-button");
 let removeBtn = document.getElementById("delete-button");
 
-addBtn.ontouchstart = function (e) {
+addBtn.ontouchstart = (e) => {
     e.preventDefault();
-    add();
+    document.getElementById("counter").innerText = count++;
 }
 
-addBtn.onclick = function (e) {
+addBtn.onclick = (e) => {
     e.preventDefault();
-    add();
+    document.getElementById("counter").innerText = count++;
 }
 
-addBtn.ontouchmove = function (e) {
-    e.preventDefault();
-}
-
-addBtn.ontouchend = function (e) {
+addBtn.ontouchmove = (e) => {
     e.preventDefault();
 }
 
-removeBtn.ontouchstart = function (e) {
-    e.preventDefault();
-    remove();
-}
-
-removeBtn.onclick = function (e) {
-    e.preventDefault();
-    remove();
-}
-
-removeBtn.ontouchmove = function (e) {
+addBtn.ontouchend = (e) => {
     e.preventDefault();
 }
 
-removeBtn.ontouchend = function (e) {
+removeBtn.ontouchstart = (e) => {
+    e.preventDefault();
+    if (count == 0) return;
+    document.getElementById("counter").innerText = count--;;
+}
+
+removeBtn.onclick = (e) => {
+    e.preventDefault();
+    if (count == 0) return;
+    document.getElementById("counter").innerText = count--;;
+}
+
+removeBtn.ontouchmove = (e) => {
+    e.preventDefault();
+}
+
+removeBtn.ontouchend = (e) => {
     e.preventDefault();
 }

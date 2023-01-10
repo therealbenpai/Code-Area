@@ -34,5 +34,3 @@ loading[type="ball-stair"]:after {
     box-shadow: 0 5px 0 #fff, -35px 50px 0 #fff, -70px 95px 0 #fff;
     animation: loading-step 1s ease-in-out infinite;
 }
-
-/*! Loader Type 2 */

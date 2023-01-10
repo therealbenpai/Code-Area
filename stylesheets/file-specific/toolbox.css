@@ -3,13 +3,13 @@ div#toolbox-container {
     border-radius: 6px;
 }
 
-div#toolbox-container div.innerdiv {
+div#toolbox-container>div.innerdiv {
     display: flex;
     justify-content: space-evenly;
     align-content: space-around;
 }
 
-div#toolbox-container div.innerdiv>button {
+div#toolbox-container>div.innerdiv>button {
     width: 15%;
     margin: 1%;
     margin-bottom: auto;
@@ -19,14 +19,14 @@ div#toolbox-container div.innerdiv>button {
     font-size: 16px;
 }
 
-div#toolbox-container div.innerdiv>button:first-child {
+div#toolbox-container>div.innerdiv>button:first-child {
     margin-left: none;
 }
 
-div#toolbox-container div.innerdiv>button:last-child {
+div#toolbox-container>div.innerdiv>button:last-child {
     margin-right: none;
 }
 
-div#toolbox-container div.innerdiv>button:hover {
+div#toolbox-container>div.innerdiv>button:hover {
     animation: scale-up-center 250ms linear both;
 }

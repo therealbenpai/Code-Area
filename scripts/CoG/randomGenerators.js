@@ -3,63 +3,34 @@
 */
 
 class RandomGenerators {
-    static ranNum(max) {
-        if (max < 1) {
-            throw new RangeError('Max must be at least 1');
-        }
-        const num = Math.round(Math.random() * max);
-        return num;
+    static ranNum(max=10) {
+        if (max < 1) throw new RangeError('max must be at least 1');
+        return Math.round(Math.random() * max);
     }
 
-    static bRanNum(amount,max) {
-        if (amount <= 1 || max <= 1) {
-            throw new RangeError("Number must be greater than 1")
-        }
+    static bRanNum(amount=1,max=10) {
+        if (amount <= 1) throw new RangeError("Both number and max must be greater than 1");
         let bnum = "s"
-        for (let index = 0; index < amount; index++) {
-            const num = ranNum(max)
-            bnum += `.${num}`
-        }
+        for (let i = 0; i < amount; i++) bnum += `.${this.ranNum(max)}`;
         return bnum.split('s.').join('').split('.')
     }
     
-    // Random Hex Generator
-    static randHex(prefix) {
-        if (!prefix) {
-            return `${Math.floor(Math.random()*Math.pow(16,6)).toString(16)}`
-        } else {
-            return `${prefix}${Math.floor(Math.random()*Math.pow(16,6)).toString(16)}`
-        }
+    static randHex(prefix='') {
+        return `${prefix}${Math.floor(Math.random()*Math.pow(16,6)).toString(16)}`
     }
     
-    // Bulk Hex Generator
-    static bRandHex(amount,prefix) {
-        if (amount <= 1) {
-            throw new RangeError('Amount must be greator than one')
-        }
+    static bRandHex(amount=1,prefix='') {
+        if (amount <= 1) throw new RangeError('amount must be greater than one');
         let hexRaw = 's'
-        for (let index = 0; index < amount; index++) {
-            const hex = randHex(prefix | false)
-            hexRaw += `.${hex}`
-        }
+        for (let i = 0; i < amount; i++) hexRaw += `.${this.randHex(prefix)}`;
         return hexRaw.split('s.').join('').split('.')
     }
     
-    static customNumberGenerator(min,max) {
-        // Bug Check
-        if (max <= 0 || min <= 0) {
-            throw new RangeError("Values need to be above 0")
-        }
-        if (min >= max) {
-            throw new RangeError("Min must be less than max")
-        }
-        if (max > Math.pow(10,6)) {
-            throw new RangeError(`Max must be less than ${Math.pow(10,6)}`)
-        }
-        min = Number(min)
-        max = Number(max)
-        const fmax = max - min
-        const random = Math.round(Math.random()*fmax) + min
-        return random
+    static customNumberGenerator(min=0,max=100) {
+        if (max <= 0 || min <= 0) throw new RangeError("Both min and max need to be above 0");
+        if (!(min < max)) throw new RangeError("min must be less than max");
+        if (max > Math.pow(10,6)) throw new RangeError(`max must be less than ${Math.pow(10,6)}`);
+        const fmax = Number(max) - Number(min)
+        return Math.round(Math.random()*fmax) + Number(min)
     }
 }

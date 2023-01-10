@@ -50,6 +50,22 @@
     force=true
     [redirects.headers]
         Content-Type = "text/javascript"
+
+[[redirects]]
+    from="/f/fa/*"
+    to="/fonts/Font_Awesome/:splat"
+    status=200
+    force=true
+    [redirects.headers]
+        Content-Type = "text/javascript"
+
+[[redirects]]
+    from="/f/*"
+    to="/fonts/:splat"
+    status=200
+    force=true
+    [redirects.headers]
+        Content-Type = "text/javascript"
     
 [[redirects]]
     from="/icon"

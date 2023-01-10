@@ -3,18 +3,10 @@
 // Classes
 class Util {
     static getTime() {
-        const datemod = new Date()
-        const time = datemod.toLocaleTimeString(
-            'en-US',
-            {
-                timeZone: 'EST'
-            }
-        )
-        return time
+        return new Date().toLocaleTimeString('en-US', { timeZone: 'EST' })
     }
     static getDate() {
-        const datemod = new Date();
-        const date = datemod.toLocaleDateString(
+        return new Date().toLocaleDateString(
             'en-US',
             {
                 timeZone: 'EST',
@@ -23,7 +15,6 @@ class Util {
                 day: "2-digit"
             }
         )
-        return date;
     }
     static getFullDate() {
         const date = this.getDate()
@@ -32,16 +23,13 @@ class Util {
     }
     static writeClipboard(index) {
         const writeables = [
-            "to",
-            "",
-            "",
-            "",
-            ""
+            "#1",
+            "#2",
+            "#3",
+            "#4",
+            "#5"
         ]
-        if (index > writeables.length) {
-            return new Error("Failed To Write: Invalid Index")
-        } else {
-            return navigator.clipboard.writeText(writeables[index - 1])
-        }
+        if (index > writeables.length) throw new ReferenceError("Failed To Write: Invalid Index");
+        return navigator.clipboard.writeText(writeables[index - 1])
     }
 }

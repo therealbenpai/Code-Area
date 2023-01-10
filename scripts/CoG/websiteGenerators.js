@@ -1,10 +1,11 @@
+//@ts-nocheck
 // Disclamer Function for usage in special windows
 /**
- * @param {String} disclamer Disclamer Reason
- * @returns {Boolean}
+ * 
+ * @param {string?} disclamer 
  */
-function disclamer(disclamer) {
-    if (Boolean(disclamer == null | undefined)) return;
+function disclamer(disclamer=null) {
+    if (disclamer == null || typeof disclamer !== "string") return;
     let reason;
     switch (disclamer) {
         case "ep":
@@ -35,81 +36,33 @@ To continue, press OK. Otherwise, press cancel`
 
 /**
  * @description This function Generates a window using a required "version" value and an optional "width" and "height" value
- * @param {Number} version The window "version"
- * @param {Number | 300} width The width of the window
- * @param {Number | 300} height The height of the window
- * @returns {Window} Window Object
+ * @param {number | string} version The window "version"
+ * @param {number | 300} width The width of the window
+ * @param {number | 300} height The height of the window
  * @author sparty182020
  */
 async function genwin(version, width, height) {
     const varnum = 6
-    version = parseInt(version)
+    version = Math.floor(Number(version))
     // Checks if the version is correct
-    if (version <= 0 ||
-        version > varnum
-    ) {
-        console.error(RangeError(`Bad Version\n\n Version must be between 0 and ${varnum}`))
-        return;
-    }
-    if (isNaN(width)) {
-        width = 300
-    }
-    if (isNaN(height)) {
-        height = 300
-    }
+    if (version <= 0 || version > varnum) throw new RangeError(`Bad Version\n\n Version must be between 0 and ${varnum}`);
+    if (isNaN(width)) width = 300;
+    if (isNaN(height)) height = 300;
     var mindem = {
-        1: [
-            250,
-            250
-        ],
-        2: [
-            300,
-            100
-        ],
-        3: [
-            300,
-            100
-        ],
-        4: [
-            300,
-            100
-        ],
-        5: [
-            300,
-            100
-        ],
-        6: [
-            150,
-            150
-        ]
+        1: [250,250],
+        2: [300,100],
+        3: [300,100],
+        4: [300,100],
+        5: [300,100],
+        6: [150,150]
     }
-    if (
-        width < mindem[version][0] || // checks if the width is not valid
-        height < mindem[version][1] // checks if the height is not valid
-    ) {
-        throw new RangeError("Dimensions value is invalid")
-    }
-    function checkdisclamers() {
-        if (version == 1) {
-            const ver = disclamer('ep')
-            if (!ver) {
-                console.log('no consent');
-                return false
-            }
-        }
-        return true;
-    }
-    if (!checkdisclamers()) return;
-    // Vars
-    const nw = window.open('', '', `height:500,width:500`)
+    if (width < mindem[version][0] || height < mindem[version][1] ) throw new RangeError("Dimensions value is invalid");
+    const nw = window.open('about:blank', '', `height:500,width:500`)
     nw.resizeTo(width, height)
-    /**
-    * @param {String} content Content of the window
-    */
-    const nwwrite = function (content) { nw.document.write(content) }
+    const nwwrite = (content) => nw.document.write(content)
     const bodyareastyle = nw.document.body.style
     // Writes Styleing Function
-    const writeStyles = function () {
+    const writeStyles = () => {
         nwwrite('<br>')
         // DOM short vars
         const buttonElement = nw.document.createElement('button')
@@ -126,7 +79,7 @@ async function genwin(version, width, height) {
         buttonElement.style.top = '50%'
         buttonElement.style.transform = 'translate(-50%,-50%)'
         buttonElement.style.fontFamily = 'initial'
-        buttonElement.onclick = function (e) { nw.close() }
+        buttonElement.onclick = () => nw.close()
         nw.document.body.insertAdjacentElement('afterbegin', buttonElement)
         const cStyle = nw.document.createElement('style')
         cStyle.innerHTML = `html {
@@ -162,15 +115,17 @@ button {
     // Finds the website version from list
     switch (version) {
         case 1:
+            if (!disclamer('ep')) return;
             // 1 -> mouseMove Black and White Background Switch
             nwwrite('<p>Move Your Mouse</p>')
-            const baw = function () {
-                if (nw.document.body.style.backgroundColor == 'black') {
-                    nw.document.body.style.backgroundColor = 'white'
-                    nw.document.body.style.color = 'black'
+            const baw = () => {
+                const {backgroundColor: bgc, color: c} = nw.document.body.style
+                if (bgc == 'black') {
+                    bgc = 'white'
+                    c = 'black'
                 } else {
-                    nw.document.body.style.backgroundColor = 'black'
-                    nw.document.body.style.color = 'white'
+                    bgc = 'black'
+                    c = 'white'
                 }
             }
             nw.document.onmousemove = (e) => baw()
@@ -179,11 +134,8 @@ button {
             // 2 -> Click Counter
             nwwrite('<p id=\'counter\'>Counter = 0</p>')
             let i = 0
-            function incr() {
-                i++
-                return i
-            }
-            nw.document.onclick = function () {
+            const incr = () => i++
+            nw.document.onclick = _ => {
                 const counter = incr()
                 nw.document.getElementById('counter')
                     .innerText = `Counter = ${counter}`;
@@ -191,12 +143,7 @@ button {
             break;
         case 3:
             // 3 -> Random Number
-            const randnum = function () {
-                const num = Math.round(
-                    Math.random() * Math.pow(10, 6)
-                );
-                return num
-            }
+            const randnum = () => Math.round(Math.random() * Math.pow(10, 6))
             nwwrite(`<p>Your Number is: ${randnum()}</p>`)
             break;
         case 4:
@@ -220,11 +167,8 @@ button {
             break;
         case 5:
             // 5 -> Random Color
-            const hgen = function () {
-                const hex = `#${Math.floor(Math.random() * Math.pow(16, 6)).toString(16)}`;
-                return hex;
-            }
-            const thex = hgen();
+            const hgen = () => `#${Math.floor(Math.random() * Math.pow(16, 6)).toString(16)}`
+            const thex = hgen;
             nwwrite(`<p>Your color is ${thex}</p>`);
             nw.document.body.style.background = thex;
             break;
