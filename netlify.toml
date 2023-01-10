@@ -26,6 +26,30 @@
     force=true
     [redirects.headers]
         Content-Type = "text/css"
+
+[[redirects]]
+    from="/js/fs/*"
+    to="/scripts/File-Specific/:splat"
+    status=200
+    force=true
+    [redirects.headers]
+        Content-Type = "text/javascript"
+
+[[redirects]]
+    from="/js/cg/*"
+    to="/script/CoG/:splat"
+    status=200
+    force=true
+    [redirects.headers]
+        Content-Type = "text/javascript"
+
+[[redirects]]
+    from="/js/o/*"
+    to="/scripts/Other/:splat"
+    status=200
+    force=true
+    [redirects.headers]
+        Content-Type = "text/javascript"
     
 [[redirects]]
     from="/icon"
