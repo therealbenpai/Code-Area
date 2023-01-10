@@ -1,21 +1,20 @@
 // About Me animation
-var i = 0;
-var speed = 50;
+let i = 0;
+const speed = 50;
 const text = 'About Me'
 
 function animation() {
     const element = document.getElementById('aboutme')
-    const splitStr = text.split('')
     if (i < text.length) {
-        if (i == 6) {
+        if (text[i-1] == ' ') {
             const ct = element.innerText
-            const nt = ct + " " + splitStr[i]
+            const nt = ct + " " + text[i]
             element.innerText = nt
             i++
             setTimeout(animation, speed);
         } else {
             const ct = element.innerText
-            const nt = ct + splitStr[i]
+            const nt = ct + text[i]
             element.innerText = nt
             i++;
             setTimeout(animation, speed);
@@ -23,4 +22,4 @@ function animation() {
     }
 }
 
-setTimeout(animation, 1000)
+animation()
