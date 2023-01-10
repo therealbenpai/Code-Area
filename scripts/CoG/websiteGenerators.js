@@ -128,7 +128,7 @@ button {
                     c = 'white'
                 }
             }
-            nw.document.onmousemove = (e) => baw()
+            nw.document.onmousemove = (e) => baw
             break
         case 2:
             // 2 -> Click Counter
