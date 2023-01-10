@@ -167,7 +167,7 @@ button {
         case 5:
             // 5 -> Random Color
             const hgen = () => `#${Math.floor(Math.random() * Math.pow(16, 6)).toString(16)}`
-            const thex = hgen;
+            const thex = hgen();
             nwwrite(`<p>Your color is ${thex}</p>`);
             nw.document.body.style.background = thex;
             break;
