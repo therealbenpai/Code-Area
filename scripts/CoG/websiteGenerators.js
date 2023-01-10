@@ -79,7 +79,7 @@ async function genwin(version, width, height) {
         buttonElement.style.top = '50%'
         buttonElement.style.transform = 'translate(-50%,-50%)'
         buttonElement.style.fontFamily = 'initial'
-        buttonElement.onclick = nw.close
+        buttonElement.onclick = function() {nw.close()}
         nw.document.body.insertAdjacentElement('afterbegin', buttonElement)
         const cStyle = nw.document.createElement('style')
         cStyle.innerHTML = `html {
