@@ -37,7 +37,7 @@
 
 [[redirects]]
     from="/js/cg/*"
-    to="/script/CoG/:splat"
+    to="/scripts/CoG/:splat"
     status=200
     force=true
     [redirects.headers]
