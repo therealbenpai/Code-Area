@@ -1,3 +1,7 @@
+:root {
+    background: rgb(127, 127, 127, 1);
+}
+
 form {
     display: grid;
     align-content: center;
@@ -12,16 +16,14 @@ form {
     position: absolute;
     transform: translateX(-50%);
     background: rgba(100, 100, 100, 0.5);
+    animation: hue_rotate var(--rot-time) linear infinite;
 }
 
 form>* {
     width: min-content;
     text-align: center;
     padding: 10px;
-}
-
-:root {
-    background: rgb(127, 127, 127, 1);
+    color: red;
 }
 
 button {
