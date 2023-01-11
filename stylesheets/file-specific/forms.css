@@ -1,0 +1,21 @@
+form {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid black;
+    border-radius: 80px;
+    width: max-content;
+    padding: 34px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    background: rgba(100,100,100,0.5);
+}
+
+form>* {
+    width:min-content;
+    text-align: center;
+    padding: 10px;
+}
