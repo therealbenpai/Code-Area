@@ -21,14 +21,25 @@
     <meta property="twitter:title" content="Cornhole Page">
     <meta property="twitter:description" content="Sparty182020's Custom Coded Website">
     <meta property="twitter:image" content="/thumbnail">
-    <!-- CSS -->
     <link href="/css/d" rel="stylesheet" type="text/css">
     <link href="/css/f/cornhole.css" rel="stylesheet" type="text/css">
-    <!-- JavaScript -->
     <script src="/js/fs/cornhole.js"></script>
-    <!-- Title -->
     <link rel="icon" href="/icon" type="image/x-icon">
     <title>Cornhole Score Keeper</title>
+    <script type='application/ld+json'>
+        {
+          "@context": "http://www.schema.org",
+          "@type": "person",
+          "name": "Sparty182020",
+          "jobTitle": "CEO, Manager, Developer",
+          "height": "68 inches",
+          "gender": "male",
+          "url": "https://sparty18.me",
+          "email": "admin@sparty18.me",
+          "birthDate": "2007-12-18",
+          "nationality": "American"
+        }
+        </script>
 </head>
 
 <body onload="setup()">
@@ -52,8 +63,10 @@
                 <h1 class="name">Player 1</h1>
             </div>
             <div class="score">
-                <h2 rs>Round: <p id="rs1">0</p></h2>
-                <h2 gs>Game: <p id="gs1">0</p></h2>
+                <h2 rs>Round: <p id="rs1">0</p>
+                </h2>
+                <h2 gs>Game: <p id="gs1">0</p>
+                </h2>
             </div>
             <div class="point">
                 <button class="score onboard" onclick="gameEvent(1,1)">Land on board<br>(+1)</button>
@@ -69,8 +82,10 @@
                 <h1 class="name">Player 2</h1>
             </div>
             <div class="score">
-                <h2 rs>Round: <p id="rs2">0</p></h2>
-                <h2 gs>Game: <p id="gs2">0</p></h2>
+                <h2 rs>Round: <p id="rs2">0</p>
+                </h2>
+                <h2 gs>Game: <p id="gs2">0</p>
+                </h2>
             </div>
             <div class="point">
                 <button class="score onboard" onclick="gameEvent(2,1)">Land on board<br>(+1)</button>
