@@ -74,6 +74,13 @@
     [redirects.headers]
         Content-Type = "image/x-icon"
 
+[[redirects]]
+    from="/bg"
+    to="/media/images/background.svg"
+    status=200
+    [redirects.headers]
+        Content-Type = "image/svg+xml"
+
 # External Redirects Below
 
 [[redirects]]
