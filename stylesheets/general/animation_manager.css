@@ -46,26 +46,26 @@
 /* Animation Managers */
 @keyframes bump_in {
     from {
-        box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+        box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.2),
             5px 5px 10px rgba(0, 0, 0, 0.25);
     }
 
     to {
-        box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.6),
+        box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.2),
             1px 1px 5px rgba(0, 0, 0, 0.3),
-            inset -2px -2px 5px rgba(255, 255, 255, 1),
+            inset -2px -2px 5px rgba(255, 255, 255, 0.8),
             inset 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 }
 
 @keyframes bump_out {
     from {
-        box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+        box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.2),
             5px 5px 10px rgba(0, 0, 0, 0.25);
     }
 
     to {
-        box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.6),
+        box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.5),
             1px 1px 5px rgba(0, 0, 0, 0.3);
     }
 }

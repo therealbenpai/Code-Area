@@ -28,4 +28,10 @@ button {
     background-color: #fff;
     border: 1px solid black;
     border-radius: 50px;
+    width: 200px;
+}
+
+input {
+    border-radius: 20px;
+    background-color: rgba(127,127,127,0.5);
 }
