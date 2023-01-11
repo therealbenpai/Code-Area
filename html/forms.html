@@ -31,7 +31,7 @@
 
 <body>
     <h1>Sign up for the Chess Event</h1>
-    <form action="/success" method="post" data-netlify="true" name="Chess Signup">
+    <form action="/success" method="post" data-netlify="true" name="Chess Signup" data-netlify-recaptcha="true">
         <label for="display">Display Name
             <input type="text" name="DisplayName" id="display" placeholder="Your Name..." required>
         </label>
@@ -41,6 +41,7 @@
         <label for="chess">Chess Username
             <input type="text" name="ChessName" id="chess" placeholder="Username on chess.com" required>
         </label>
+        <div data-netlify-recaptcha="true"></div>
         <button type="submit">Send</button>
     </form>
 </body>
