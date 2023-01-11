@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a form</title>
+</head>
+
+<body>
+    <h1>Sign up for the Chess Event</h1>
+    <form action="/success" method="post" data-netlify="true" name="Chess Signup">
+        <label for="display">Display Name
+            <input type="text" name="DisplayName" id="display" placeholder="Your Name..." required>
+        </label>
+        <label for="discord">Discord Username
+            <input type="text" name="DiscordName" id="discord" placeholder="username#0000" required>
+        </label>
+        <label for="chess">Chess Username
+            <input type="text" name="ChessName" id="chess" placeholder="Username on chess.com" required>
+        </label>
+        <button type="submit">Send</button>
+    </form>
+</body>
+
+</html>
