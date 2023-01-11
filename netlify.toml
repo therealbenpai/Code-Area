@@ -6,7 +6,7 @@
 [[redirects]]
     from="/css/d"
     to="/stylesheets/general/combined.css"
-    status=200
+    status=308
     force=true
     [redirects.headers]
         Content-Type = "text/css"
@@ -70,16 +70,32 @@
 [[redirects]]
     from="/icon"
     to="/media/images/icon.ico"
-    status=200
+    status=308
     [redirects.headers]
         Content-Type = "image/x-icon"
 
 [[redirects]]
     from="/bg"
     to="/media/images/background.svg"
-    status=200
+    status=308
     [redirects.headers]
         Content-Type = "image/svg+xml"
+
+[[redirects]]
+    from="/robots.txt"
+    to="/metadata/robots.txt"
+    status=308
+    force=true
+    [redirects.headers]
+        Content-Type = "text/plain"
+
+[[redirects]]
+    from="/sitemap"
+    to="/metadata/sitemap.xml"
+    status=309
+    force=true
+    [redirects.headers]
+        Content-Type = "application/xml"
 
 # External Redirects Below
 
