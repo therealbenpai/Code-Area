@@ -5,6 +5,7 @@
     font-family: 'Assistant';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url('/f/Assisstant1.woff2') format('woff2');
 }
 
@@ -12,6 +13,7 @@
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url('/f/materialIcons.woff2') format('woff2');
 }
 
@@ -19,6 +21,7 @@
     font-family: "IcoFont";
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url("/f/icofont.woff2") format("woff2"),
         url("/f/icofont.woff") format("woff");
 }
@@ -27,6 +30,7 @@
     font-family: 'Material Symbols Outlined';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url("/f/materialSymbolsOutlined.woff2") format('woff2');
 }
 
@@ -34,6 +38,7 @@
     font-family: 'Material Symbols Sharp';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url("/f/materialSymbolsSharp.woff2") format('woff2');
 }
 
@@ -41,6 +46,7 @@
     font-family: 'Material Symbols Rounded';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url("/f/materialSymbolsRounded.woff2") format('woff2');
 }
 
@@ -50,7 +56,7 @@
         url("/f/fa/Brands/fa-brands.woff") format("woff"),
         url("/f/fa/Brands/fa-brands.ttf") format("truetype");
     font-style: normal;
-    font-display: block;
+    font-display: swap;
     font-weight: 400;
 }
 
@@ -60,7 +66,7 @@
         url("/f/fa/Duotone/fa-duotone.woff") format("woff"),
         url("/f/fa/Duotone/fa-duotone.ttf") format("truetype");
     font-style: normal;
-    font-display: block;
+    font-display: swap;
     font-weight: 900;
 }
 
@@ -70,7 +76,7 @@
         url("/f/fa/Light/fa-light.woff") format("woff"),
         url("/f/fa/Light/fa-light.ttf") format("truetype");
     font-style: normal;
-    font-display: block;
+    font-display: swap;
     font-weight: 300;
 }
 
@@ -80,7 +86,7 @@
         url("/f/fa/Regular/fa-regular.woff") format("woff"),
         url("/f/fa/Regular/fa-regular.ttf") format("truetype");
     font-style: normal;
-    font-display: block;
+    font-display: swap;
     font-weight: 400;
 }
 
@@ -90,7 +96,7 @@
         url("/f/fa/Solid/fa-solid.woff") format("woff"),
         url("/f/fa/Solid/fa-solid.ttf") format("truetype");
     font-style: normal;
-    font-display: block;
+    font-display: swap;
     font-weight: 900;
 }
 
@@ -100,7 +106,7 @@
         url("/f/fa/Thin/fa-thin.woff") format("woff"),
         url("/f/fa/Thin/fa-thin.ttf") format("truetype");
     font-style: normal;
-    font-display: block;
+    font-display: swap;
     font-weight: 100;
 }
 
