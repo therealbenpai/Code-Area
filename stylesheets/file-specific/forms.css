@@ -1,6 +1,8 @@
 :root {
     background: rgb(127, 127, 127, 1);
     animation: hue_rotate var(--rot-time) linear infinite;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 form {
