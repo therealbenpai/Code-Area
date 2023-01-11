@@ -84,7 +84,7 @@
 [[redirects]]
     from="/robots.txt"
     to="/metadata/robots.txt"
-    status=308
+    status=200
     force=true
     [redirects.headers]
         Content-Type = "text/plain"
@@ -92,7 +92,7 @@
 [[redirects]]
     from="/sitemap"
     to="/metadata/sitemap.xml"
-    status=309
+    status=308
     force=true
     [redirects.headers]
         Content-Type = "application/xml"
