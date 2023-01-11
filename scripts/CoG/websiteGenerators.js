@@ -59,15 +59,12 @@ async function genwin(version, width, height) {
     if (width < mindem[version][0] || height < mindem[version][1]) throw new RangeError("Dimensions value is invalid");
     const nw = window.open('about:blank', '', `height:500,width:500`)
     nw.resizeTo(width, height)
-    const nwwrite = (content) => nw.document.write(content)
-    const bodyareastyle = nw.document.body.style
+    const {style: bodyareastyle} = nw.document.body
     // Writes Styleing Function
     const writeStyles = () => {
-        nwwrite('<br>')
-        // DOM short vars
+        nw.document.body.insertAdjacentElement('afterbegin', nw.document.createElement('br'))
         const buttonElement = nw.document.createElement('button')
         buttonElement.innerText = "Press This Button To Close The Window"
-        // Actual Styles
         bodyareastyle.fontFamily = 'Brush Script MT, cursive'
         buttonElement.style.background = 'linear-gradient(45deg,red,blue)'
         buttonElement.style.border = '0px solid transparent'
@@ -112,12 +109,14 @@ button {
 }`
         nw.document.getElementsByTagName('head')[0].insertAdjacentElement('beforeend', cStyle)
     }
+    const p = nw.document.createElement('p')
     // Finds the website version from list
     switch (version) {
         case 1:
             if (!disclamer('ep')) return;
             // 1 -> mouseMove Black and White Background Switch
-            nwwrite('<p>Move Your Mouse</p>')
+            p.innerText = "Move Your Mouse"
+            nw.document.body.insertAdjacentElement('beforeend', p)
             const baw = () => {
                 if (nw.document.body.style.backgroundColor == 'black') {
                     nw.document.body.style.backgroundColor = 'white'
@@ -131,7 +130,9 @@ button {
             break
         case 2:
             // 2 -> Click Counter
-            nwwrite('<p id=\'counter\'>Counter = 0</p>')
+            p.innerText = "Counter = 0"
+            p.id = "counter";
+            nw.document.body.insertAdjacentElement('beforeend', p)
             let i = 0
             const incr = () => i++
             nw.document.onclick = _ => {
@@ -143,7 +144,8 @@ button {
         case 3:
             // 3 -> Random Number
             const randnum = () => Math.round(Math.random() * Math.pow(10, 6))
-            nwwrite(`<p>Your Number is: ${randnum()}</p>`)
+            p.innerText = `Your Number is: ${randnum()}`
+            nw.document.body.insertAdjacentElement('beforeend', p)
             break;
         case 4:
             // 4 -> Random Name
@@ -162,14 +164,16 @@ button {
                 }
                 return name;
             }
-            nwwrite(`<p>Your name is: ${randname()}</p>`);
+            p.innerText = `Your name is: ${randname()}`
+            nw.document.body.insertAdjacentElement('beforeend', p)
             break;
         case 5:
             // 5 -> Random Color
             const hgen = () => `#${Math.floor(Math.random() * Math.pow(16, 6)).toString(16)}`
             const thex = hgen();
-            nwwrite(`<p>Your color is ${thex}</p>`);
+            p.innerText = `Your color is ${thex}`;
             nw.document.body.style.background = thex;
+            nw.document.body.insertAdjacentElement('beforeend', p)
             break;
         case 6:
             // 6 -> Blank
