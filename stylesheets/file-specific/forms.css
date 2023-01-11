@@ -16,14 +16,14 @@ form {
     position: absolute;
     transform: translateX(-50%);
     background: rgba(100, 100, 100, 0.5);
-    animation: hue_rotate var(--rot-time) linear infinite;
 }
 
-form>* {
+form * {
     width: min-content;
     text-align: center;
     padding: 10px;
     color: red;
+    animation: hue_rotate var(--rot-time) linear infinite;
 }
 
 button {
