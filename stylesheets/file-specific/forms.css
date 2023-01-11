@@ -11,11 +11,21 @@ form {
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
-    background: rgba(100,100,100,0.5);
+    background: rgba(100, 100, 100, 0.5);
 }
 
 form>* {
-    width:min-content;
+    width: min-content;
     text-align: center;
     padding: 10px;
+}
+
+:root {
+    background: rgb(127, 127, 127, 1);
+}
+
+button {
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 50px;
 }
