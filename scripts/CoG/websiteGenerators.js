@@ -64,7 +64,7 @@ async function genwin(version, width, height) {
     const writeStyles = () => {
         const buttonElement = nw.document.createElement('button')
         buttonElement.innerText = "Press This Button To Close The Window"
-        bodyareastyle.fontFamily = 'Brush Script MT, cursive'
+        bodyareastyle.fontFamily = 'monospace, Comic Sans MS, cursive, sans-serif, serif'
         buttonElement.style.background = 'linear-gradient(45deg,red,blue)'
         buttonElement.style.border = '0px solid transparent'
         buttonElement.style.borderRadius = '16px'

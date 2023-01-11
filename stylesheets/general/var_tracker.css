@@ -29,5 +29,5 @@
     width: var(--mvw);
     max-width: var(--mvw);
     height: var(--mvh);
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Assistant', monospace, 'Comic Sans MS', cursive, sans-serif, serif;
 }
