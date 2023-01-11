@@ -62,7 +62,6 @@ async function genwin(version, width, height) {
     const {style: bodyareastyle} = nw.document.body
     // Writes Styleing Function
     const writeStyles = () => {
-        nw.document.body.insertAdjacentElement('afterbegin', nw.document.createElement('br'))
         const buttonElement = nw.document.createElement('button')
         buttonElement.innerText = "Press This Button To Close The Window"
         bodyareastyle.fontFamily = 'Brush Script MT, cursive'
