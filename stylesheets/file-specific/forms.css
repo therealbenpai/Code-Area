@@ -1,5 +1,6 @@
 :root {
     background: rgb(127, 127, 127, 1);
+    animation: hue_rotate var(--rot-time) linear infinite;
 }
 
 form {
@@ -23,7 +24,6 @@ form * {
     text-align: center;
     padding: 10px;
     color: red;
-    animation: hue_rotate var(--rot-time) linear infinite;
 }
 
 button {
