@@ -7,6 +7,8 @@ This repo was made mainly by @sparty182020 as a website repo to be hosted at [th
 ## Badges
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cada2917-df65-4f2b-95c6-0c545bab8b78/deploy-status)](https://app.netlify.com/sites/sparty182020/deploys)
 
+<a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-dark.svg" alt="Deploys by Netlify" /> </a>
+
 Thanks,
 
 @sparty182020
