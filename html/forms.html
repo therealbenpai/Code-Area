@@ -57,8 +57,44 @@
             <input type="text" name="ChessName" id="chess" placeholder="Username on chess.com" required>
         </label>
         <div data-netlify-recaptcha="true"></div>
-        <button type="submit" hover="bump_in">Send</button>
+        <button type="submit" hover="bump_in" id="submit">Send</button>
     </form>
+    <script>
+        function lock() {
+            const submit = document.querySelector('#submit');
+            const textFields = document.querySelectorAll('input');
+            submit.disabled = true;
+            submit.style.cursor = 'not-allowed';
+            submit.style.backgroundColor = 'rgba(100,100,100,0.5)';
+            textFields.forEach((field) => {
+                field.disabled = true;
+                field.style.cursor = 'not-allowed';
+                field.style.backgroundColor = 'rgba(100,100,100,0.5)';
+            });
+            const dialog = document.createElement('div');
+            const message = document.createElement('p');
+            message.innerText = 'This form is closed. Please try again later.';
+            dialog.insertAdjacentElement('afterbegin', message);
+            dialog.style.position = 'fixed';
+            dialog.style.display = 'flex';
+            dialog.style.top = '50%';
+            dialog.style.left = '50%';
+            dialog.style.transform = 'translate(-50%, -50%)';
+            dialog.style.backgroundColor = 'rgba(100,100,100,0.5)';
+            dialog.style.border = '1px solid black';
+            dialog.style.padding = '1rem';
+            dialog.style.borderRadius = '1rem';
+            dialog.style.color = 'red';
+            dialog.style.fontWeight = 'bold';
+            dialog.style.fontSize = '32px';
+            dialog.style.width = '300px';
+            dialog.style.height = '100px';
+            dialog.style.textAlign = 'center';
+            dialog.style.alignItems = 'center';
+            document.body.insertAdjacentElement('afterbegin', dialog);
+        }
+        if (Date.now() > 1674223200000) lock();
+    </script>
 </body>
 
 </html>
