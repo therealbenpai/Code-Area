@@ -1,17 +1,17 @@
-/* /html/:splat 301
-/css/c/* /stylesheets/general/:splat 301
-/css/f/* /stylesheets/file-specific/:splat 301
-/js/fs/* /scripts/File-Specific/:splat 301
-/js/cg/* /scripts/CoG/:splat 301
-/js/o/* /scripts/Other/:splat 301
-/f/fa/* /fonts/Font_Awesome/:splat 301
-/f/* /fonts/:splat 301
-/ /html/index.html 301
-/css/d /stylesheets/general/combined.css 301
-/icon /media/images/icon.ico 301
-/bg /media/images/background.svg 301
-/robots.txt /metadata/robots.txt 301
-/sitemap /metadata/sitemap.xml 301
+/* /html/:splat
+/css/c/* /stylesheets/general/:splat 
+/css/f/* /stylesheets/file-specific/:splat 
+/js/fs/* /scripts/File-Specific/:splat 
+/js/cg/* /scripts/CoG/:splat 
+/js/o/* /scripts/Other/:splat 
+/f/fa/* /fonts/Font_Awesome/:splat 
+/f/* /fonts/:splat
+/ /html/index.html
+/css/d /stylesheets/general/combined.css  
+/icon /media/images/icon.ico 
+/bg /media/images/background.svg 
+/robots.txt /metadata/robots.txt 
+/sitemap /metadata/sitemap.xml 
 /repo https://github.com/sparty182020/Code-Area 301
 /socials https://sparty182020.carrd.co/ 301
 /thumbnail https://i.ibb.co/Gs8BsdF/Screenshot-2022-02-28-5-45-23-PM.png 301
