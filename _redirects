@@ -1,11 +1,3 @@
-/* /html/:splat
-/css/c/* /stylesheets/general/:splat 
-/css/f/* /stylesheets/file-specific/:splat 
-/js/fs/* /scripts/File-Specific/:splat 
-/js/cg/* /scripts/CoG/:splat 
-/js/o/* /scripts/Other/:splat 
-/f/fa/* /fonts/Font_Awesome/:splat 
-/f/* /fonts/:splat
 / /html/index.html
 /css/d /stylesheets/general/combined.css  
 /icon /media/images/icon.ico 
@@ -15,3 +7,11 @@
 /repo https://github.com/sparty182020/Code-Area 301
 /socials https://sparty182020.carrd.co/ 301
 /thumbnail https://i.ibb.co/Gs8BsdF/Screenshot-2022-02-28-5-45-23-PM.png 301
+/* /html/:splat
+/css/c/* /stylesheets/general/:splat 
+/css/f/* /stylesheets/file-specific/:splat 
+/js/fs/* /scripts/File-Specific/:splat 
+/js/cg/* /scripts/CoG/:splat 
+/js/o/* /scripts/Other/:splat 
+/f/fa/* /fonts/Font_Awesome/:splat 
+/f/* /fonts/:splat
