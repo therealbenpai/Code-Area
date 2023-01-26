@@ -76,6 +76,14 @@
         Content-Type = "application/json"
 
 [[redirects]]
+    from="/api/staff"
+    to="/quick_data/staff.json"
+    status=200
+    force=true
+    [redirects.headers]
+        Content-Type = "application/json"
+
+[[redirects]]
     from="/api/qd/*"
     to="/quick_data/:splat"
     status=200
