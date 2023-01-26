@@ -12,7 +12,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Owner of the server"
         ]
     },
@@ -29,7 +29,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Helped develop the bot",
             "Core Server Manager",
             "Builder of the staff panel and website",
@@ -49,7 +49,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Main developer of the bot",
             "Core Server Manager",
             "Helped build of the staff panel and website",
@@ -69,7 +69,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Core Server Manager",
             "Early Supporter"
         ]
@@ -87,24 +87,24 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Early Supporter"
         ]
     },
     "fighthammer": {
         "name": "Stefan **[REDACTED]**",
         "role": "Administrator",
-        "bio": "",
+        "bio": "Femboys are top tier and idc what u say",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Black",
+                "hex": "000000"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Pizza",
+            "book": "Harry Potter and the Order of the Phoenix",
+            "tv": "Mortal Kombat"
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Server Admin",
             "Early Supporter"
         ]
@@ -122,16 +122,16 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Original Creator of the server",
             "Server Admin",
             "Early Supporter"
         ]
     },
     "oblong": {
-        "name": "Unknown",
+        "name": "Aaron",
         "role": "Jr. Administrator",
-        "bio": "",
+        "bio": "He has several issues with Barcelona",
         "favs": {
             "color": {
                 "name": "",
@@ -141,7 +141,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Jr Administrator",
             "Highest level on the server"
         ]
@@ -159,7 +159,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Server Moderator"
         ]
     },
@@ -176,7 +176,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Server Moderator"
         ]
     },
@@ -193,7 +193,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Server Moderator",
             "Early Supporter"
         ]
@@ -211,7 +211,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Server Moderator",
             "Early Supporter"
         ]
@@ -219,17 +219,17 @@
     "alex": {
         "name": "Unknown",
         "role": "Moderator",
-        "bio": "",
+        "bio": "Hi, my name is Khalid, but you can call me Alex. I'm a 16 year old boy from Jordan.",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Yellow",
+                "hex": "ffff00"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Chicken Liver",
+            "book": "Diary of a Wimpy Kid",
+            "tv": "The Blacklist"
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Server Moderator",
             "Early Supporter"
         ]
@@ -247,7 +247,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Server Moderator"
         ]
     },
@@ -264,7 +264,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Jr Moderator"
         ]
     },
@@ -281,7 +281,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Jr Moderator",
             "Early Supporter"
         ]
@@ -299,7 +299,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Jr Moderator",
             "Chess Manager",
             "Server Bot Developer"
@@ -318,7 +318,7 @@
             "book": "",
             "tv": ""
         },
-        "notiable-contribs": [
+        "notable-contribs": [
             "Jr Moderator"
         ]
     }
