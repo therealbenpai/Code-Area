@@ -66,6 +66,22 @@
     force=true
     [redirects.headers]
         Content-Type = "text/javascript"
+
+[[redirects]]
+    from="/api/names"
+    to="/quick_data/names.json"
+    status=200
+    force=true
+    [redirects.headers]
+        Content-Type = "application/json"
+
+[[redirects]]
+    from="/api/qd/*"
+    to="/quick_data/:splat"
+    status=200
+    force=true
+    [redirects.headers]
+        Content-Type = "text/plain"
     
 [[redirects]]
     from="/icon"
