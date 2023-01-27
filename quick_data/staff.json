@@ -20,15 +20,15 @@
     "ted": {
         "name": "Ted",
         "role": "Server Manager",
-        "bio": "",
+        "bio": "Hi! I'm ted, 14 from the uk currently studying cs for gcse and do programming and tech theatre as a side hobby",
         "favs": {
             "color": {
-                "name": "",
-                "dec": ""
+                "name": "Orange",
+                "dec": 15105570
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Pizza / Pasta",
+            "book": "Road to a Millionaire",
+            "tv": "The Simpsons"
         },
         "notable-contribs": [
             "Helped develop the bot",
