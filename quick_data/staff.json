@@ -42,15 +42,15 @@
     "ryan": {
         "name": "Dev/Ryan",
         "role": "Server Manager",
-        "bio": "",
+        "bio": "Hey, I'm Dev! I develop nearly all day and when I'm not I'm playing games. I hate school it's useless and Ted is ma bbg ❤️",
         "favs": {
             "color": {
-                "name": "",
-                "dec": ""
+                "name": "Baby Blue",
+                "dec": 4934887
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Pasta",
+            "book": "BOOKS MY ASS",
+            "tv": "I spend all day coding or playing games. Don't watch anything much"
         },
         "notable-contribs": [
             "Main developer of the bot",
