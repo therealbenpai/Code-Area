@@ -178,17 +178,17 @@
         "id": "505458216474378271"
     },
     "evie": {
-        "name": "Unknown",
+        "name": "Evie/Evelyn",
         "role": "Moderator",
-        "bio": "",
+        "bio": "Hi, im evie!",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Sage Green",
+                "hex": "B2AC88"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Salmon and Avocado Sushi / Spicy Noodles.",
+            "book": "The Daily Stoic 366 Meditations on Wisdom, Perseverance and the Art of Living",
+            "tv": "Call Me by Your Name"
         },
         "notable-contribs": [
             "Server Moderator"
