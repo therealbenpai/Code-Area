@@ -79,6 +79,27 @@
         ],
         "id": "708670684603351041"
     },
+    "kazkas": {
+        "name": "Unknown",
+        "role": "Retired Server Management",
+        "bio": "Hi I’m kažkas! I am sorta a jack of all trades as I can do a lot. I’m my free time (off discord) I like to hangout with friends, eat, horse ride, bike, 4-wheel (atv), hike, travel, eat, sleep, and much more. I’m from Europe but currently live in USA for now. I really love technology, planes and animals.",
+        "favs": {
+            "color": {
+                "name": "Orange",
+                "dec": 15105570
+            },
+            "food": "Borscht",
+            "book": "Lord of The Rings",
+            "tv": "The Good Place / The Giver"
+        },
+        "notable-contribs": [
+            "Retired Staff Member",
+            "Retired Server Manager",
+            "Original Staff",
+            "Early Supporter"
+        ],
+        "id": "668204008820834312"
+    },
     "ovoid": {
         "name": "Unknown",
         "role": "Deputy Manager",
@@ -136,27 +157,6 @@
             "Early Supporter"
         ],
         "id": "960183462994784257"
-    },
-    "kazkas": {
-        "name": "Unknown",
-        "role": "Retired Administrator",
-        "bio": "",
-        "favs": {
-            "color": {
-                "name": "",
-                "dec": ""
-            },
-            "food": "",
-            "book": "",
-            "tv": ""
-        },
-        "notable-contribs": [
-            "Retired Staff Member",
-            "Retired Administator",
-            "Original Staff",
-            "Early Supporter"
-        ],
-        "id": "668204008820834312"
     },
     "oblong": {
         "name": "Aaron",
@@ -289,6 +289,26 @@
             "Server Moderator"
         ],
         "id": "832886884387782696"
+    },
+    "wizard": {
+        "name": "wizard",
+        "role": "Ex- Moderator",
+        "bio": "Hi, im wizard, video game and sneaker enthusiast from the UK, big fan of all things tech, always down for a chill conversation or vc when im not busy studying :)",
+        "favs": {
+            "color": {
+                "name": "Cyan",
+                "dec": 3447003
+            },
+            "food": "Thin Crust Pizza",
+            "book": "Harry Potter and the Chamber of Secrets",
+            "tv": "Reservoir Dogs"
+        },
+        "notable-contribs": [
+            "Ex- Moderator",
+            "Original Staff",
+            "Early Supporter"
+        ],
+        "id": "577207159214047232"
     },
     "noxiee": {
         "name": "Unknown",
