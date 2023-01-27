@@ -271,15 +271,15 @@
     "sienna": {
         "name": "Unknown",
         "role": "Jr. Moderator",
-        "bio": "",
+        "bio": "SW0gbm90IGdheSx0cnVzdCBtZSAK",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Sky Blue",
+                "hex": "87CEEB"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Spaghetti Bolognese",
+            "book": "Principia Mathematica",
+            "tv": "Marley and Me"
         },
         "notable-contribs": [
             "Jr Moderator",
