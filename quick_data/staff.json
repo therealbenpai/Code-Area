@@ -67,7 +67,7 @@
         "favs": {
             "color": {
                 "name": "Dark Blue",
-                "hex": "000088"
+                "hex": 2123412
             },
             "food": "'Nothing in particular'",
             "book": "Frankenstein",
@@ -104,7 +104,7 @@
         "favs": {
             "color": {
                 "name": "Black",
-                "hex": "000000"
+                "hex": 0
             },
             "food": "Pizza",
             "book": "Harry Potter and the Order of the Phoenix",
@@ -123,7 +123,7 @@
         "favs": {
             "color": {
                 "name": "Navy Blue",
-                "hex": "000080"
+                "hex": 2899536
             },
             "food": "Borger",
             "book": "WW2 books",
@@ -165,7 +165,7 @@
         "favs": {
             "color": {
                 "name": "Purple",
-                "hex": "7DA8D4"
+                "hex": 10181046
             },
             "food": "Garlic Bread",
             "book": "Minecraft Blockopedia",
@@ -184,7 +184,7 @@
         "favs": {
             "color": {
                 "name": "Sage Green",
-                "hex": "B2AC88"
+                "hex": 10268552
             },
             "food": "Salmon and Avocado Sushi / Spicy Noodles.",
             "book": "The Daily Stoic 366 Meditations on Wisdom, Perseverance and the Art of Living",
@@ -202,7 +202,7 @@
         "favs": {
             "color": {
                 "name": "Orange",
-                "hex": "ff7f00"
+                "hex": 11027200
             },
             "food": "Garlic Bread",
             "book": "Hunger Games series",
@@ -220,7 +220,7 @@
         "favs": {
             "color": {
                 "name": "beige",
-                "hex": "E1C699"
+                "hex": 14796441
             },
             "food": "Żurek (Soup)",
             "book": "Sniper by Chris Kyle",
@@ -240,7 +240,7 @@
         "favs": {
             "color": {
                 "name": "Red",
-                "hex": "aa0000"
+                "hex": 10038562
             },
             "food": "Butter Chicken",
             "book": "Quran",
@@ -260,7 +260,7 @@
         "favs": {
             "color": {
                 "name": "Yellow",
-                "hex": "ffff00"
+                "hex": 16776960
             },
             "food": "Chicken Liver",
             "book": "The Art of War by Sun Tzu",
@@ -279,7 +279,7 @@
         "favs": {
             "color": {
                 "name": "Navy Blue",
-                "hex": "000080"
+                "hex": 2899536
             },
             "food": "Pizza",
             "book": "Oasis Supersonic",
@@ -315,7 +315,7 @@
         "favs": {
             "color": {
                 "name": "Sky Blue",
-                "hex": "87CEEB"
+                "hex": 3447003
             },
             "food": "Spaghetti Bolognese",
             "book": "Principia Mathematica",
@@ -334,7 +334,7 @@
         "favs": {
             "color": {
                 "name": "Pink",
-                "hex": "ff8888"
+                "hex": 15277667
             },
             "food": "Ice Cream",
             "book": "The Giver",
@@ -350,11 +350,11 @@
     "waffle": {
         "name": "Unknown",
         "role": "Jr. Moderator",
-        "bio": "",
+        "bio": "Waffles are pancakes BUT with abbs. Hence their superiority.",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Magenta",
+                "hex": 11342935
             },
             "food": "",
             "book": "",
@@ -372,7 +372,7 @@
         "favs": {
             "color": {
                 "name": "Aqua Marine",
-                "hex": "0D98BA"
+                "hex": 1146986
             },
             "food": "Stroopwafels",
             "book": "Inheritance games",
