@@ -364,5 +364,25 @@
             "Jr Moderator"
         ],
         "id": "972947809928110190"
+    },
+    "sirvanwickrath": {
+        "name": "Unknown",
+        "role": "Ex- Jr. Moderator",
+        "bio": "I'm SirVonWickrath, history, geography, eurovision and genealogy are my hobbies and things I love to do.",
+        "favs": {
+            "color": {
+                "name": "Aqua Marine",
+                "hex": "0D98BA"
+            },
+            "food": "Stroopwafels",
+            "book": "Inheritance games",
+            "tv": "Eurovision / Downton Abbey"
+        },
+        "notable-contribs": [
+            "Ex- Jr Moderator",
+            "Original Staff",
+            "Early Supporter"
+        ],
+        "id": "873549560889356349"
     }
 }
