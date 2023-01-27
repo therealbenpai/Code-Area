@@ -14,7 +14,8 @@
         },
         "notable-contribs": [
             "Owner of the server"
-        ]
+        ],
+        "id": "934857402132611082"
     },
     "ted": {
         "name": "Ted",
@@ -35,7 +36,8 @@
             "Builder of the staff panel and website",
             "Original Staff",
             "Early Supporter"
-        ]
+        ],
+        "id": "378251417267339264"
     },
     "ryan": {
         "name": "Dev/Ryan",
@@ -55,7 +57,8 @@
             "Core Server Manager",
             "Helped build of the staff panel and website",
             "Early Supporter"
-        ]
+        ],
+        "id": "948892965022076978"
     },
     "mcduck": {
         "name": "Unknown",
@@ -73,7 +76,8 @@
         "notable-contribs": [
             "Core Server Manager",
             "Early Supporter"
-        ]
+        ],
+        "id": "708670684603351041"
     },
     "ovoid": {
         "name": "Unknown",
@@ -90,7 +94,8 @@
         },
         "notable-contribs": [
             "Early Supporter"
-        ]
+        ],
+        "id": "564360797996843018"
     },
     "fighthammer": {
         "name": "Stefan **[REDACTED]**",
@@ -108,7 +113,8 @@
         "notable-contribs": [
             "Server Admin",
             "Early Supporter"
-        ]
+        ],
+        "id": "755076881753309194"
     },
     "foxtrot": {
         "name": "Foxtrot",
@@ -128,7 +134,8 @@
             "Server Admin",
             "Original Staff",
             "Early Supporter"
-        ]
+        ],
+        "id": "960183462994784257"
     },
     "kazkas": {
         "name": "Unknown",
@@ -148,7 +155,8 @@
             "Retired Administator",
             "Original Staff",
             "Early Supporter"
-        ]
+        ],
+        "id": "668204008820834312"
     },
     "oblong": {
         "name": "Aaron",
@@ -166,7 +174,8 @@
         "notable-contribs": [
             "Jr Administrator",
             "Highest level on the server"
-        ]
+        ],
+        "id": "505458216474378271"
     },
     "evie": {
         "name": "Unknown",
@@ -183,7 +192,8 @@
         },
         "notable-contribs": [
             "Server Moderator"
-        ]
+        ],
+        "id": "1016084468123058198"
     },
     "google": {
         "name": "Unknown",
@@ -200,7 +210,8 @@
         },
         "notable-contribs": [
             "Server Moderator"
-        ]
+        ],
+        "id": "936733039424340039"
     },
     "koji": {
         "name": "Koji",
@@ -219,7 +230,8 @@
             "Retired Staff Member",
             "Server Moderator",
             "Early Supporter"
-        ]
+        ],
+        "id": "627936290075049994"
     },
     "comrade": {
         "name": "Unknown",
@@ -237,7 +249,8 @@
         "notable-contribs": [
             "Server Moderator",
             "Early Supporter"
-        ]
+        ],
+        "id": "632548984170479646"
     },
     "alex": {
         "name": "Khalid",
@@ -255,7 +268,8 @@
         "notable-contribs": [
             "Server Moderator",
             "Early Supporter"
-        ]
+        ],
+        "id": "530748350119673896"
     },
     "square": {
         "name": "Alex",
@@ -272,7 +286,8 @@
         },
         "notable-contribs": [
             "Server Moderator"
-        ]
+        ],
+        "id": "832886884387782696"
     },
     "noxiee": {
         "name": "Unknown",
@@ -289,7 +304,8 @@
         },
         "notable-contribs": [
             "Jr Moderator"
-        ]
+        ],
+        "id": "649288402818170880"
     },
     "sienna": {
         "name": "Sienna",
@@ -307,7 +323,8 @@
         "notable-contribs": [
             "Jr Moderator",
             "Early Supporter"
-        ]
+        ],
+        "id": "1042143588307456040"
     },
     "benpai": {
         "name": "Benjamin",
@@ -315,18 +332,19 @@
         "bio": "",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Pink",
+                "hex": "ff8888"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Ice Cream",
+            "book": "The Giver",
+            "tv": "The Men Who Built America"
         },
         "notable-contribs": [
             "Jr Moderator",
             "Chess Manager",
             "Server Bot Developer"
-        ]
+        ],
+        "id": "783855260300869632"
     },
     "waffle": {
         "name": "Unknown",
@@ -343,6 +361,7 @@
         },
         "notable-contribs": [
             "Jr Moderator"
-        ]
+        ],
+        "id": "972947809928110190"
     }
 }
