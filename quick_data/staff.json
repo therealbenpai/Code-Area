@@ -186,12 +186,12 @@
         "bio": "",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "beige",
+                "hex": "E1C699"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Żurek (Soup)",
+            "book": "Sniper by Chris Kyle",
+            "tv": "Ranczo"
         },
         "notable-contribs": [
             "Retired Staff Member",
