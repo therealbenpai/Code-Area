@@ -6,7 +6,7 @@
         "favs": {
             "color": {
                 "name": "",
-                "hex": ""
+                "dec": ""
             },
             "food": "",
             "book": "",
@@ -24,7 +24,7 @@
         "favs": {
             "color": {
                 "name": "",
-                "hex": ""
+                "dec": ""
             },
             "food": "",
             "book": "",
@@ -46,7 +46,7 @@
         "favs": {
             "color": {
                 "name": "",
-                "hex": ""
+                "dec": ""
             },
             "food": "",
             "book": "",
@@ -67,7 +67,7 @@
         "favs": {
             "color": {
                 "name": "Dark Blue",
-                "hex": 2123412
+                "dec": 2123412
             },
             "food": "'Nothing in particular'",
             "book": "Frankenstein",
@@ -86,7 +86,7 @@
         "favs": {
             "color": {
                 "name": "",
-                "hex": ""
+                "dec": ""
             },
             "food": "",
             "book": "",
@@ -103,8 +103,8 @@
         "bio": "Femboys are top tier and idc what u say",
         "favs": {
             "color": {
-                "name": "Black",
-                "hex": 0
+                "name": "Red",
+                "dec": 10038562
             },
             "food": "Pizza",
             "book": "Harry Potter and the Order of the Phoenix",
@@ -123,7 +123,7 @@
         "favs": {
             "color": {
                 "name": "Navy Blue",
-                "hex": 2899536
+                "dec": 2899536
             },
             "food": "Borger",
             "book": "WW2 books",
@@ -144,7 +144,7 @@
         "favs": {
             "color": {
                 "name": "",
-                "hex": ""
+                "dec": ""
             },
             "food": "",
             "book": "",
@@ -165,7 +165,7 @@
         "favs": {
             "color": {
                 "name": "Purple",
-                "hex": 10181046
+                "dec": 10181046
             },
             "food": "Garlic Bread",
             "book": "Minecraft Blockopedia",
@@ -184,7 +184,7 @@
         "favs": {
             "color": {
                 "name": "Sage Green",
-                "hex": 10268552
+                "dec": 10268552
             },
             "food": "Salmon and Avocado Sushi / Spicy Noodles.",
             "book": "The Daily Stoic 366 Meditations on Wisdom, Perseverance and the Art of Living",
@@ -202,7 +202,7 @@
         "favs": {
             "color": {
                 "name": "Orange",
-                "hex": 11027200
+                "dec": 11027200
             },
             "food": "Garlic Bread",
             "book": "Hunger Games series",
@@ -220,7 +220,7 @@
         "favs": {
             "color": {
                 "name": "beige",
-                "hex": 14796441
+                "dec": 14796441
             },
             "food": "Żurek (Soup)",
             "book": "Sniper by Chris Kyle",
@@ -240,7 +240,7 @@
         "favs": {
             "color": {
                 "name": "Red",
-                "hex": 10038562
+                "dec": 10038562
             },
             "food": "Butter Chicken",
             "book": "Quran",
@@ -260,7 +260,7 @@
         "favs": {
             "color": {
                 "name": "Yellow",
-                "hex": 16776960
+                "dec": 16776960
             },
             "food": "Chicken Liver",
             "book": "The Art of War by Sun Tzu",
@@ -279,7 +279,7 @@
         "favs": {
             "color": {
                 "name": "Navy Blue",
-                "hex": 2899536
+                "dec": 2899536
             },
             "food": "Pizza",
             "book": "Oasis Supersonic",
@@ -297,7 +297,7 @@
         "favs": {
             "color": {
                 "name": "",
-                "hex": ""
+                "dec": ""
             },
             "food": "",
             "book": "",
@@ -315,7 +315,7 @@
         "favs": {
             "color": {
                 "name": "Sky Blue",
-                "hex": 3447003
+                "dec": 3447003
             },
             "food": "Spaghetti Bolognese",
             "book": "Principia Mathematica",
@@ -334,7 +334,7 @@
         "favs": {
             "color": {
                 "name": "Pink",
-                "hex": 15277667
+                "dec": 15277667
             },
             "food": "Ice Cream",
             "book": "The Giver",
@@ -354,7 +354,7 @@
         "favs": {
             "color": {
                 "name": "Magenta",
-                "hex": 11342935
+                "dec": 11342935
             },
             "food": "",
             "book": "",
@@ -372,7 +372,7 @@
         "favs": {
             "color": {
                 "name": "Aqua Marine",
-                "hex": 1146986
+                "dec": 1146986
             },
             "food": "Stroopwafels",
             "book": "Inheritance games",
