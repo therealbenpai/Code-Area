@@ -110,17 +110,17 @@
         ]
     },
     "foxtrot": {
-        "name": "Unknown",
+        "name": "Foxtrot",
         "role": "Administrator",
-        "bio": "",
+        "bio": "Server creator, Game & Nation building enthusiast",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Navy Blue",
+                "hex": "000080"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Borger",
+            "book": "WW2 books",
+            "tv": "Chernobyl"
         },
         "notable-contribs": [
             "Original Creator of the server",
@@ -166,15 +166,15 @@
     "google": {
         "name": "Unknown",
         "role": "Moderator",
-        "bio": "",
+        "bio": "Hey! I’m Google, your favourite AI assistant. I like programming, tech and cubing, and currently a student at Cambridge. Ask me anything, as long as it’s not stupid (I don’t mind pings).",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Orange",
+                "hex": "ff7f00"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Garlic Bread",
+            "book": "Hunger Games series",
+            "tv": "Wall-E"
         },
         "notable-contribs": [
             "Server Moderator"
@@ -182,7 +182,7 @@
     },
     "koji": {
         "name": "Koji",
-        "role": "Moderator",
+        "role": "Retired Moderator",
         "bio": "",
         "favs": {
             "color": {
@@ -194,6 +194,7 @@
             "tv": ""
         },
         "notable-contribs": [
+            "Retired Staff Member",
             "Server Moderator",
             "Early Supporter"
         ]
@@ -237,15 +238,15 @@
     "square": {
         "name": "Unknown",
         "role": "Moderator",
-        "bio": "",
+        "bio": "I like history and the band Oasis, I also may or may not be addicted to Warthunder",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Navy Blue",
+                "hex": "000080"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Pizza",
+            "book": "Oasis Supersonic",
+            "tv": "Helluva Boss"
         },
         "notable-contribs": [
             "Server Moderator"
