@@ -134,12 +134,12 @@
         "bio": "He has several issues with Barcelona",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Purple",
+                "hex": "7DA8D4"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Garlic Bread",
+            "book": "Minecraft Blockopedia",
+            "tv": "Wall-E"
         },
         "notable-contribs": [
             "Jr Administrator",
