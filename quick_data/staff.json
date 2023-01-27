@@ -62,12 +62,12 @@
         "bio": "",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Dark Blue",
+                "hex": "000088"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "'Nothing in particular'",
+            "book": "Frankenstein",
+            "tv": "Interstellar"
         },
         "notable-contribs": [
             "Core Server Manager",
