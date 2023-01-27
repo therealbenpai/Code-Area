@@ -33,6 +33,7 @@
             "Helped develop the bot",
             "Core Server Manager",
             "Builder of the staff panel and website",
+            "Original Staff",
             "Early Supporter"
         ]
     },
@@ -125,6 +126,27 @@
         "notable-contribs": [
             "Original Creator of the server",
             "Server Admin",
+            "Original Staff",
+            "Early Supporter"
+        ]
+    },
+    "kazkas": {
+        "name": "Unknown",
+        "role": "Retired Administrator",
+        "bio": "",
+        "favs": {
+            "color": {
+                "name": "",
+                "hex": ""
+            },
+            "food": "",
+            "book": "",
+            "tv": ""
+        },
+        "notable-contribs": [
+            "Retired Staff Member",
+            "Retired Administator",
+            "Original Staff",
             "Early Supporter"
         ]
     },
