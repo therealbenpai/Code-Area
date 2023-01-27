@@ -236,15 +236,15 @@
     "comrade": {
         "name": "Unknown",
         "role": "Moderator",
-        "bio": "",
+        "bio": "Hi, I’m a developer and tech enthusiast, I make tech videos on YouTube and TikTok!",
         "favs": {
             "color": {
-                "name": "",
-                "hex": ""
+                "name": "Red",
+                "hex": "aa0000"
             },
-            "food": "",
-            "book": "",
-            "tv": ""
+            "food": "Butter Chicken",
+            "book": "Quran",
+            "tv": "Family Guy"
         },
         "notable-contribs": [
             "Server Moderator",
