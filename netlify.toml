@@ -77,7 +77,15 @@
 
 [[redirects]]
     from="/api/staff"
-    to="/quick_data/staff.json"
+    to="/API/staff.json"
+    status=200
+    force=true
+    [redirects.headers]
+        Content-Type = "application/json"
+
+[[redirects]]
+    from="/api/commands"
+    to="/API/commands.json"
     status=200
     force=true
     [redirects.headers]
