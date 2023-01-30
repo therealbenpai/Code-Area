@@ -6,7 +6,7 @@
         "favs": {
             "color": {
                 "name": "",
-                "dec": ""
+                "dec": 0
             },
             "food": "",
             "book": "",
@@ -114,7 +114,7 @@
         "favs": {
             "color": {
                 "name": "",
-                "dec": ""
+                "dec": 0
             },
             "food": "",
             "book": "",
