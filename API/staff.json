@@ -85,6 +85,26 @@
         ],
         "id": "708670684603351041"
     },
+    "ovoid": {
+        "name": "Aram",
+        "role": "Server Manager",
+        "bio": "Hi, I am Ovoid and I am a part of the staff team. I contribute to many things in my life such as the army cadet force and playing the piano. I like talking to people, so if you have any issues with the server I am free with open arms!!!",
+        "favs": {
+            "color": {
+                "name": "Royal Blue",
+                "dec": 4286945
+            },
+            "food": "",
+            "book": "Holy Qur'an",
+            "tv": "Interstellar",
+            "game": "The Forest"
+        },
+        "notable-contribs": [
+            "Core Server Manager",
+            "Early Supporter"
+        ],
+        "id": "564360797996843018"
+    },
     "kazkas": {
         "name": "Unknown",
         "role": "Retired Server Management",
@@ -106,25 +126,6 @@
             "Early Supporter"
         ],
         "id": "668204008820834312"
-    },
-    "ovoid": {
-        "name": "Unknown",
-        "role": "Deputy Manager",
-        "bio": "",
-        "favs": {
-            "color": {
-                "name": "",
-                "dec": 0
-            },
-            "food": "",
-            "book": "",
-            "tv": "",
-            "game": ""
-        },
-        "notable-contribs": [
-            "Early Supporter"
-        ],
-        "id": "564360797996843018"
     },
     "fighthammer": {
         "name": "Stefan **[REDACTED]**",
