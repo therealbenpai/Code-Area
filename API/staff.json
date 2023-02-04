@@ -372,21 +372,22 @@
     "benpai": {
         "name": "Benjamin",
         "role": "Jr. Moderator",
-        "bio": "",
+        "bio": "Hello! I am Benjamin, but I also go by Benpai. I am a Server Moderator, a developer for the server bot, and the servers official Chess manager! Have any questions? Send me an email at `ben@daad.wtf`",
         "favs": {
             "color": {
                 "name": "Pink",
                 "dec": 15277667
             },
-            "food": "Ice Cream",
-            "book": "The Giver",
-            "tv": "The Men Who Built America",
-            "game": ""
+            "food": "Chesse Curds",
+            "book": "Wonder",
+            "tv": "The Simpsons",
+            "game": "Minecraft Bedrock Edition"
         },
         "notable-contribs": [
             "Jr Moderator",
             "Chess Manager",
-            "Server Bot Developer"
+            "Server Bot Developer",
+            "Server Giveaway Sponsor"
         ],
         "id": "783855260300869632"
     },
