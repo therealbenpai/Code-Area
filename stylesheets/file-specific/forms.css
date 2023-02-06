@@ -7,7 +7,7 @@
 }
 
 html {
-    background: linear-gradient(45deg, red, blue);
+    background: linear-gradient(135deg, rgba(0,0,255,0.5), rgba(255,0,0,0.5)) !important;
     animation: hue_rotate var(--rot-time) linear infinite;
     overflow-x: hidden;
     overflow-y: scroll;
