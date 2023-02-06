@@ -45,6 +45,7 @@ button {
 input {
     border-radius: 20px;
     background-color: rgba(127,127,127,0.5);
+    text-align: left;
 }
 
 ::-webkit-input-placeholder {
