@@ -1,4 +1,4 @@
-@import "font_awesome_keyreg.css";
+@import "./font_awesome_keyreg.css";
 
 /* Fonts */
 @font-face {
@@ -6,7 +6,10 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/f/Assisstant1.woff2') format('woff2');
+    src: url('/f/Assisstant1.ttf') format('truetype')
+        url('/f/Assisstant1.woff2') format('woff2')
+        url('/f/Assisstant2.ttf') format('truetype')
+        url('/f/Assisstant2.woff2') format('woff2');
 }
 
 @font-face {
