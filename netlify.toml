@@ -148,6 +148,20 @@
     [redirects.headers]
         Content-Type = "image/png"
 
+[[redirects]]
+    from="/chessthumbnail"
+    to="https://cdn.discordapp.com/attachments/999266213697945652/1072217450306883654/image.png"
+    status=200
+    [redirects.headers]
+        Content-Type = "image/png"
+
+[[redirects]]
+    from="/chess"
+    to="/html/forms"
+    status=200
+    [redirects.headers]
+        Content-Type = "text/html"
+
 # Global Redirects Below
 
 [[redirects]]
