@@ -3,7 +3,7 @@
     --bk: rgba(0,0,0,0.5);
     --lb: rgba(0,114,255,1);
     --gscale: 2;
-    --gts: 125ms;
+    --gts: 1250ms;
     --rot-multi: 6;
     --rot-time: calc(var(--gts) * var(--rot-multi));
     --bump-multi: 0.5;

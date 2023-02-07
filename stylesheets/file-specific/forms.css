@@ -1,6 +1,5 @@
 :root {
     background: rgb(127, 127, 127, 1);
-    animation: hue_rotate var(--rot-time) linear infinite;
     overflow-x: hidden;
     overflow-y: scroll;
     text-align: center;
@@ -37,6 +36,7 @@ form {
 }
 
 form * {
+    animation: hue_rotate var(--rot-time) linear infinite;
     width: min-content;
     text-align: center;
     padding: 10px;
