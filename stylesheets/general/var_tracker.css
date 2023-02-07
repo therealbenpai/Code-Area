@@ -4,7 +4,7 @@
     --lb: rgba(0,114,255,1);
     --gscale: 2;
     --gts: 125ms;
-    --rot-multi: 0.6;
+    --rot-multi: 60;
     --rot-time: calc(var(--gts) * var(--rot-multi));
     --bump-multi: 0.5;
     --bump-time: calc(var(--gts) * var(--bump-multi));
