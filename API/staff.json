@@ -42,7 +42,7 @@
         ],
         "id": "378251417267339264"
     },
-    "ryan": {
+    "dev": {
         "name": "Dev/Ryan",
         "role": "Server Manager",
         "bio": "Hey, I'm Dev! I develop nearly all day and when I'm not I'm playing games. I hate school it's useless and Ted is ma bbg ❤️",
@@ -373,7 +373,7 @@
     "benpai": {
         "name": "Benjamin",
         "role": "Jr. Moderator",
-        "bio": "Hello! I am Benjamin, but I also go by Benpai. I am a Server Moderator, a developer for the server bot, and the servers official Chess manager! Have any questions? Send me an email at `ben@daad.wtf`",
+        "bio": "Hello! I am Benjamin, but I also go by Benpai. I am a Server Moderator and the server's official Chess manager!",
         "favs": {
             "color": {
                 "name": "Pink",
@@ -387,7 +387,7 @@
         "notable-contribs": [
             "Jr Moderator",
             "Chess Manager",
-            "Server Bot Developer",
+            "Ex-Server Bot Developer",
             "Server Giveaway Sponsor"
         ],
         "id": "783855260300869632"
